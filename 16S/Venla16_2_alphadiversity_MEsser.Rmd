@@ -1,0 +1,384 @@
+---
+title: "Venlafaxine - 16S alpha diversity analysis"
+author: "Milena Esser"
+date: "2025-05-20"
+output:
+  html_document: 
+    toc: true
+    toc_depth: 4
+    number_sections: true
+    toc_float: true
+  pdf_document: default
+editor_options:
+  chunk_output_type: console
+---
+
+## Set up
+
+```{r 2-setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
+rm(list=ls()) #Clears environment
+#Change margin size to be smaller so graphs fit in the plot panel
+par(mar = c(2, 2, 2, 2)) # Set the margin on all sides to 2
+
+
+###Loading packages
+library(phyloseq) #phyloseq will be the main package used for structuring microbiome data and diversity comparisons
+library(ggplot2) #For creating graphs
+library(ggtext)
+library(plyr) #if you load this after dpylr it messes up the dplyr functions
+library(dplyr) #Helps with data wrangling 
+library(vegan)
+library(tidyverse) #data wrangling
+library(knitr) #For R Markdown knitting
+library(RColorBrewer)
+library(ggpubr)
+library(MicEco) #to prune based on prevalence
+library(picante)
+library(ggh4x) # For facet_nested_wrap()
+library(rstatix)
+library(tidyr)
+library(purrr)
+library(readr)
+
+# Create output directory if it doesn't exist
+output_dir <- "R_output/Alpha_diversity"
+
+if (!dir.exists(output_dir)) {
+  dir.create(output_dir, recursive = TRUE)
+}
+
+```
+
+# Biofilm
+
+## Loading Data
+
+Loading the phyloseq objects
+
+```{r Loading-data-alphadiv}
+load("R_output/ps_objects/Venla_biofilm_phyloseq_filt_unnorm.RData")
+load("R_output/ps_objects/Venla_biofilm_phyloseq_filt_rar.RData")
+
+```
+
+## Data wrangling & calc
+
+```{r data-wrangling-and-calc-alphadiv, echo=TRUE}
+#PDtree <- phy_tree(ps_rare)
+otu <- otu_table(ps_biofilm)
+otu <- as.data.frame(t(otu))
+
+alpha.pd.sr<-otu
+
+
+#Adding vector to summarize replicates
+alpha.pd.sr$enclosure <- sample_data(ps_biofilm)$enclosure
+alpha.pd.sr$treatment <- sample_data(ps_biofilm)$treatment_tag
+
+#---------------------------------------------------
+#### Eveness
+alpha_diversity <- estimate_richness(ps_biofilm, measure = c("Shannon", "Observed"))
+alpha_diversity
+H <- alpha_diversity$Shannon
+S1 <- alpha_diversity$Observed
+S <- log(S1)
+eveness <- H/S
+#eveness
+alpha.pd.sr$Evenness = eveness
+
+alpha.pd.sr$Shannon = alpha_diversity$Shannon
+
+alpha.pd.sr$treatment<-factor(alpha.pd.sr$treatment, levels=c("control","4","26","138","3,727", "100,000" ))
+
+```
+
+## Plots
+
+```{r Plot-evenness-bio}
+
+# Plot
+p_all <- ggplot(data = alpha.pd.sr, aes(x = treatment, y = Evenness, fill = treatment)) + 
+  geom_boxplot(position = position_dodge2(preserve = "single")) +
+  
+  # Labels
+  labs(x = "Sample", y = "Evenness") +
+  
+  # Theme
+  theme_bw(base_size = 13) +
+  theme(
+    axis.text.x = element_text(angle = 45, hjust = 1, vjust = 1, face = "bold", size = 10),
+    axis.title.x = element_text(margin = margin(t = 6), face = "bold", size = 14),
+    axis.title.y = element_text(margin = margin(r = 6), face = "bold", size = 14),
+    axis.text.y = element_text(size = 12),
+    axis.text = element_text(face = "italic"),
+    strip.text.x = element_text(size = 13, face = "bold"),
+    legend.position = "right"
+  ) +
+  
+  # Color palette
+  scale_fill_brewer(palette = "Accent")
+
+# Show plot
+p_all
+#save plot
+ggsave(filename = file.path(output_dir, "Evenness_biofilm.pdf"), height = 6, width = 24)
+ggsave(filename = file.path(output_dir, "Evenness_biofilm.png"), height = 6, width = 24)
+
+```
+
+```{r Plot-shannon-bio}
+# Plot
+p_all <- ggplot(data = alpha.pd.sr, aes(x = treatment, y = Shannon, fill = treatment)) + 
+  geom_boxplot(position = position_dodge2(preserve = "single")) +
+  
+  # Labels
+  labs(x = "Sample", y = "Shannon") +
+  
+  # Theme
+  theme_bw(base_size = 13) +
+  theme(
+    axis.text.x = element_text(angle = 45, hjust = 1, vjust = 1, face = "bold", size = 10),
+    axis.title.x = element_text(margin = margin(t = 6), face = "bold", size = 14),
+    axis.title.y = element_text(margin = margin(r = 6), face = "bold", size = 14),
+    axis.text.y = element_text(size = 12),
+    axis.text = element_text(face = "italic"),
+    strip.text.x = element_text(size = 13, face = "bold"),
+    legend.position = "right"
+  ) +
+  
+  # Color palette
+  scale_fill_brewer(palette = "Accent")
+
+# Show plot
+p_all
+#save plot
+ggsave(filename = file.path(output_dir, "Shannon_biofilm.pdf"), height = 6, width = 24)
+ggsave(filename = file.path(output_dir, "Shannon_biofilm.png"), height = 6, width = 24)
+
+```
+
+# Sediment
+
+## Loading Data
+
+Loading the phyloseq objects
+
+```{r Loading-data-sed-alphadiv}
+# not rarefied dataset "ps_final"
+load("R_output/ps_objects/Venla_sediment_phyloseq_filt_unnorm.RData")
+
+# rarefied dataset "ps_rare"
+load("R_output/ps_objects/Venla_sediment_phyloseq_filt_rar.RData")
+
+```
+
+## Data wrangling & calc
+
+```{r data-wrangling-and-calc-sed-alphadiv, echo=TRUE}
+
+#PDtree <- phy_tree(ps_rare)
+otu <- otu_table(ps_sediment)
+otu <- as.data.frame(t(otu))
+
+alpha.pd.sr<-otu
+
+
+#Adding vector to summarize replicates
+alpha.pd.sr$enclosure <- sample_data(ps_sediment)$enclosure
+alpha.pd.sr$treatment <- sample_data(ps_sediment)$treatment_tag
+
+#---------------------------------------------------
+#### Eveness
+alpha_diversity <- estimate_richness(ps_sediment, measure = c("Shannon", "Observed"))
+alpha_diversity
+H <- alpha_diversity$Shannon
+S1 <- alpha_diversity$Observed
+S <- log(S1)
+eveness <- H/S
+#eveness
+alpha.pd.sr$Evenness = eveness
+
+alpha.pd.sr$Shannon = alpha_diversity$Shannon
+
+alpha.pd.sr$treatment<-factor(alpha.pd.sr$treatment, levels=c("control","4","26","138","719","3,727", "19,306" , "100,000" ))
+
+```
+
+## Plots
+
+```{r Plot-evenness-sed}
+
+# Plot
+p_all <- ggplot(data = alpha.pd.sr, aes(x = treatment, y = Evenness, fill = treatment)) + 
+  geom_boxplot(position = position_dodge2(preserve = "single")) +
+  
+  # Labels
+  labs(x = "Sample", y = "Evenness") +
+  
+  # Theme
+  theme_bw(base_size = 13) +
+  theme(
+    axis.text.x = element_text(angle = 45, hjust = 1, vjust = 1, face = "bold", size = 10),
+    axis.title.x = element_text(margin = margin(t = 6), face = "bold", size = 14),
+    axis.title.y = element_text(margin = margin(r = 6), face = "bold", size = 14),
+    axis.text.y = element_text(size = 12),
+    axis.text = element_text(face = "italic"),
+    strip.text.x = element_text(size = 13, face = "bold"),
+    legend.position = "right"
+  ) +
+  
+  # Color palette
+  scale_fill_brewer(palette = "Accent")
+
+# Show plot
+p_all
+#save plot
+ggsave(filename = file.path(output_dir, "Evenness_sediment.pdf"), height = 6, width = 24)
+ggsave(filename = file.path(output_dir, "Evenness_sediment.png"), height = 6, width = 24)
+
+```
+
+```{r Plot-shannon-sed}
+# Plot
+p_all <- ggplot(data = alpha.pd.sr, aes(x = treatment, y = Shannon, fill = treatment)) + 
+  geom_boxplot(position = position_dodge2(preserve = "single")) +
+  
+  # Labels
+  labs(x = "Sample", y = "Shannon") +
+  
+  # Theme
+  theme_bw(base_size = 13) +
+  theme(
+    axis.text.x = element_text(angle = 45, hjust = 1, vjust = 1, face = "bold", size = 10),
+    axis.title.x = element_text(margin = margin(t = 6), face = "bold", size = 14),
+    axis.title.y = element_text(margin = margin(r = 6), face = "bold", size = 14),
+    axis.text.y = element_text(size = 12),
+    axis.text = element_text(face = "italic"),
+    strip.text.x = element_text(size = 13, face = "bold"),
+    legend.position = "right"
+  ) +
+  
+  # Color palette
+  scale_fill_brewer(palette = "Accent")
+
+# Show plot
+p_all
+#save plot
+ggsave(filename = file.path(output_dir, "Shannon_sediment.pdf"), height = 6, width = 24)
+ggsave(filename = file.path(output_dir, "Shannon_sediment.png"), height = 6, width = 24)
+
+```
+
+# Water
+
+## Loading Data
+
+Loading the phyloseq objects
+
+```{r Loading-data-water-alphadiv}
+# not rarefied dataset "ps_final"
+load("R_output/ps_objects/Venla_water_phyloseq_filt_unnorm.RData")
+
+# rarefied dataset "ps_rare"
+load("R_output/ps_objects/Venla_water_phyloseq_filt_rar.RData")
+
+```
+
+## Data wrangling & calc
+
+```{r data-wrangling-and-calc-water-alphadiv, echo=TRUE}
+# Remove samples with "BLANK" in enclosure
+ps_water_clean <- subset_samples(ps_water, !grepl("BLANK", enclosure, ignore.case = TRUE))
+
+#PDtree <- phy_tree(ps_rare)
+otu <- otu_table(ps_water_clean)
+otu <- as.data.frame(t(otu))
+
+alpha.pd.sr<-otu
+
+
+#Adding vector to summarize replicates
+alpha.pd.sr$enclosure <- sample_data(ps_water_clean)$enclosure
+alpha.pd.sr$treatment <- sample_data(ps_water_clean)$treatment_tag
+
+#---------------------------------------------------
+#### Eveness
+alpha_diversity <- estimate_richness(ps_water_clean, measure = c("Shannon", "Observed"))
+alpha_diversity
+H <- alpha_diversity$Shannon
+S1 <- alpha_diversity$Observed
+S <- log(S1)
+eveness <- H/S
+#eveness
+alpha.pd.sr$Evenness = eveness
+
+alpha.pd.sr$Shannon = alpha_diversity$Shannon
+
+alpha.pd.sr$treatment<-factor(alpha.pd.sr$treatment, levels=c("control","4","26","138","719","3,727", "19,306" , "100,000" ))
+
+```
+
+## Plots
+
+```{r Plot-evenness-water}
+
+# Plot
+p_all <- ggplot(data = alpha.pd.sr, aes(x = treatment, y = Evenness, fill = treatment)) + 
+  geom_boxplot(position = position_dodge2(preserve = "single")) +
+  
+  # Labels
+  labs(x = "Sample", y = "Evenness") +
+  
+  # Theme
+  theme_bw(base_size = 13) +
+  theme(
+    axis.text.x = element_text(angle = 45, hjust = 1, vjust = 1, face = "bold", size = 10),
+    axis.title.x = element_text(margin = margin(t = 6), face = "bold", size = 14),
+    axis.title.y = element_text(margin = margin(r = 6), face = "bold", size = 14),
+    axis.text.y = element_text(size = 12),
+    axis.text = element_text(face = "italic"),
+    strip.text.x = element_text(size = 13, face = "bold"),
+    legend.position = "right"
+  ) +
+  
+  # Color palette
+  scale_fill_brewer(palette = "Accent")
+
+# Show plot
+p_all
+#save plot
+ggsave(filename = file.path(output_dir, "Evenness_water.pdf"), height = 6, width = 24)
+ggsave(filename = file.path(output_dir, "Evenness_water.png"), height = 6, width = 24)
+
+```
+
+```{r Plot-shannon-water}# Plot}
+p_all <- ggplot(data = alpha.pd.sr, aes(x = treatment, y = Shannon, fill = treatment)) + 
+  geom_boxplot(position = position_dodge2(preserve = "single")) +
+  
+  # Labels
+  labs(x = "Sample", y = "Shannon") +
+  
+  # Theme
+  theme_bw(base_size = 13) +
+  theme(
+    axis.text.x = element_text(angle = 45, hjust = 1, vjust = 1, face = "bold", size = 10),
+    axis.title.x = element_text(margin = margin(t = 6), face = "bold", size = 14),
+    axis.title.y = element_text(margin = margin(r = 6), face = "bold", size = 14),
+    axis.text.y = element_text(size = 12),
+    axis.text = element_text(face = "italic"),
+    strip.text.x = element_text(size = 13, face = "bold"),
+    legend.position = "right"
+  ) +
+  
+  # Color palette
+  scale_fill_brewer(palette = "Accent")
+
+# Show plot
+p_all
+#save plot
+ggsave(filename = file.path(output_dir, "Shannon_water.pdf"), height = 6, width = 24)
+ggsave(filename = file.path(output_dir, "Shannon_water.png"), height = 6, width = 24)
+
+```

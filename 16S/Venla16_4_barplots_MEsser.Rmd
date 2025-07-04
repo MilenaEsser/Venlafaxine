@@ -1,0 +1,607 @@
+---
+title: "Venlafaxine 16S - taxa bar plots"
+author: "Milena Esser"
+date: "2025-05-20"
+output:
+  html_document: 
+    toc: true
+    toc_depth: 4
+    number_sections: true
+    toc_float: true
+  pdf_document: default
+editor_options:
+  chunk_output_type: console
+---
+
+```{r setup-4, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
+rm(list=ls()) #Clears environment
+#Change margin size to be smaller so graphs fit in the plot panel
+par(mar = c(2, 2, 2, 2)) # Set the margin on all sides to 2
+#setwd("C:\\Users\\milen\\OneDrive - McMaster University\\Bow river microbiome\\R_analysis")
+
+###Loading packages
+# For phyloseq operations
+library(phyloseq)
+
+# For data manipulation
+library(dplyr)
+library(tidyr)
+library(forcats)
+
+# For plotting
+library(ggplot2)
+library(ggtext)         # optional but useful for markdown text in plots
+library(ggnewscale)     # optional if adding new fill/color scales
+
+# For faceted nested plots
+library(ggh4x)          # for facet_nested_wrap()
+
+library(tidyverse)
+library(RColorBrewer)
+library(ggnewscale)
+library(forcats)
+library(scales)
+
+```
+
+```{r loading-data-and-setup-4}
+load("R_output/ps_objects/Venla_biofilm_phyloseq_filt_unnorm.RData")
+load("R_output/ps_objects/Venla_water_phyloseq_filt_unnorm.RData")
+load("R_output/ps_objects/Venla_sediment_phyloseq_filt_unnorm.RData")
+
+# Create output directory
+output_dir <- "R_output/taxabarplot"
+dir.create(output_dir, recursive = TRUE, showWarnings = FALSE)
+
+
+#select color brewer palette
+#display.brewer.all()
+pal<-"Paired"
+```
+
+## Phylum level
+
+```{r select-phylum-number-taxa}
+taxrank <- "Phylum"   # "or "Phylum", "Family", etc.
+top_n <- 9           # Number of top taxa to display
+
+```
+
+### Biofilm
+
+```{r plot-phy-biofilm, fig.height=6, fig.width=12}
+#### STEP 1: Aggregate and transform to relative abundance ####
+ps_tax <- tax_glom(ps_biofilm, taxrank = taxrank)
+ps_relabund <- transform_sample_counts(ps_tax, function(x) x / sum(x))
+df <- psmelt(ps_relabund)
+
+#### STEP 2: Clean variables ####
+df[[taxrank]] <- as.character(df[[taxrank]])
+df[[taxrank]][is.na(df[[taxrank]])] <- "Unclassified"
+
+df <- df %>%
+  mutate(
+    treatment = as.factor(treatment_tag),
+  )
+
+df$treatment <- factor(df$treatment, levels=c("control", "4", "26", "138", "719", "3,727","19,306" , "100,000"))
+
+
+#### STEP 3: Calculate mean across replicates ####
+group_means <- df %>%
+  group_by(treatment, .data[[taxrank]]) %>%
+  summarise(mean_abundance = mean(Abundance, na.rm = TRUE), .groups = "drop")
+
+#### STEP 4: Identify top N taxa by total abundance ####
+top_taxa <- group_means %>%
+  group_by(.data[[taxrank]]) %>%
+  summarise(total_mean_abundance = sum(mean_abundance), .groups = "drop") %>%
+  slice_max(order_by = total_mean_abundance, n = top_n) %>%
+  pull(.data[[taxrank]])
+
+#### STEP 5: Recode low-abundance taxa as 'Other' ####
+group_means[[taxrank]] <- fct_other(group_means[[taxrank]], keep = top_taxa, other_level = "Other")
+
+# Step 6: Aggregate again to sum 'Other' values
+plot_data <- group_means %>%
+  group_by(treatment, .data[[taxrank]]) %>%
+  summarise(mean_abundance = sum(mean_abundance), .groups = "drop")
+
+# Normalize within each treatment:
+plot_data <- plot_data %>%
+  group_by(treatment) %>%
+  mutate(mean_abundance = mean_abundance / sum(mean_abundance)) %>%
+  ungroup()
+
+#### STEP 7: Generate color palette ####
+n_taxa <- length(unique(plot_data[[taxrank]]))
+
+if (n_taxa <= top_n) {
+  fill_scale <- scale_fill_brewer(palette = pal, name = taxrank)
+} else {
+  fill_colors <- colorRampPalette(brewer.pal(top_n, pal))(n_taxa)
+  fill_scale <- scale_fill_manual(values = fill_colors, name = taxrank)
+}
+
+#### STEP 8: plot ####
+
+  
+  p <- ggplot(plot_data, aes(x = treatment, y = mean_abundance, fill = .data[[taxrank]])) +
+    geom_bar(stat = "identity", position = "stack", color = "black") +
+    scale_y_continuous(labels = scales::percent_format()) +
+    fill_scale +
+    labs(
+    #  title = paste("City:", current_city),
+      x = "treatment",
+      y = "Mean Relative Abundance"
+    ) +
+    theme_bw(base_size = 14) +
+    theme(
+      axis.text.x = element_text(angle = 45, hjust = 1),
+      strip.text = element_text(size = 14, face = "bold"),
+      legend.position = "right",
+      legend.title = element_text(size = 14),
+      legend.text = element_text(size = 12)
+    )
+  
+ 
+  print(p)
+  
+  # === SAVE PLOTS ===
+  output_base <- file.path(output_dir, paste0(tolower(taxrank), "_biofilm_top", top_n, "_plot_"))
+  ggsave(paste0(output_base, ".png"), plot = p, width = 12, height = 6, dpi = 300)
+  ggsave(paste0(output_base, ".pdf"), plot = p, width = 12, height = 6, dpi = 300)
+  
+```
+
+### Sediment
+
+```{r plot-phy-sed, fig.height=6, fig.width=12}
+#### STEP 1: Aggregate and transform to relative abundance ####
+ps_tax <- tax_glom(ps_sediment, taxrank = taxrank)
+ps_relabund <- transform_sample_counts(ps_tax, function(x) x / sum(x))
+df <- psmelt(ps_relabund)
+
+#### STEP 2: Clean variables ####
+df[[taxrank]] <- as.character(df[[taxrank]])
+df[[taxrank]][is.na(df[[taxrank]])] <- "Unclassified"
+
+df <- df %>%
+  mutate(
+    treatment = as.factor(treatment_tag),
+  )
+
+df$treatment <- factor(df$treatment, levels=c("control", "4", "26", "138", "719", "3,727","19,306" , "100,000"))
+
+
+#### STEP 3: Calculate mean across replicates ####
+group_means <- df %>%
+  group_by(treatment, .data[[taxrank]]) %>%
+  summarise(mean_abundance = mean(Abundance, na.rm = TRUE), .groups = "drop")
+
+#### STEP 4: Identify top N taxa by total abundance ####
+top_taxa <- group_means %>%
+  group_by(.data[[taxrank]]) %>%
+  summarise(total_mean_abundance = sum(mean_abundance), .groups = "drop") %>%
+  slice_max(order_by = total_mean_abundance, n = top_n) %>%
+  pull(.data[[taxrank]])
+
+#### STEP 5: Recode low-abundance taxa as 'Other' ####
+group_means[[taxrank]] <- fct_other(group_means[[taxrank]], keep = top_taxa, other_level = "Other")
+
+# Step 6: Aggregate again to sum 'Other' values
+plot_data <- group_means %>%
+  group_by(treatment, .data[[taxrank]]) %>%
+  summarise(mean_abundance = sum(mean_abundance), .groups = "drop")
+
+# Normalize within each treatment:
+plot_data <- plot_data %>%
+  group_by(treatment) %>%
+  mutate(mean_abundance = mean_abundance / sum(mean_abundance)) %>%
+  ungroup()
+
+#### STEP 7: Generate color palette ####
+n_taxa <- length(unique(plot_data[[taxrank]]))
+
+if (n_taxa <= top_n) {
+  fill_scale <- scale_fill_brewer(palette = pal, name = taxrank)
+} else {
+  fill_colors <- colorRampPalette(brewer.pal(top_n, pal))(n_taxa)
+  fill_scale <- scale_fill_manual(values = fill_colors, name = taxrank)
+}
+
+#### STEP 8: plot ####
+
+  
+  p <- ggplot(plot_data, aes(x = treatment, y = mean_abundance, fill = .data[[taxrank]])) +
+    geom_bar(stat = "identity", position = "stack", color = "black") +
+    scale_y_continuous(labels = scales::percent_format()) +
+    fill_scale +
+    labs(
+    #  title = paste("City:", current_city),
+      x = "treatment",
+      y = "Mean Relative Abundance"
+    ) +
+    theme_bw(base_size = 14) +
+    theme(
+      axis.text.x = element_text(angle = 45, hjust = 1),
+      strip.text = element_text(size = 14, face = "bold"),
+      legend.position = "right",
+      legend.title = element_text(size = 14),
+      legend.text = element_text(size = 12)
+    )
+  
+ 
+  print(p)
+  
+  # === SAVE PLOTS ===
+  output_base <- file.path(output_dir, paste0(tolower(taxrank), "_sediment_top", top_n, "_plot_"))
+  ggsave(paste0(output_base, ".png"), plot = p, width = 12, height = 6, dpi = 300)
+  ggsave(paste0(output_base, ".pdf"), plot = p, width = 12, height = 6, dpi = 300)
+  
+```
+
+### Water
+
+```{r plot-phy-wat, results='asis', fig.height=6, fig.width=12}
+#### STEP 1: Aggregate and transform to relative abundance ####
+# Remove samples with "BLANK" in enclosure
+ps_water_clean <- subset_samples(ps_water, !grepl("BLANK", enclosure, ignore.case = TRUE))
+
+#agglomerate
+ps_tax <- tax_glom(ps_water_clean, taxrank = taxrank)
+ps_relabund <- transform_sample_counts(ps_tax, function(x) x / sum(x))
+df <- psmelt(ps_relabund)
+
+#### STEP 2: Clean variables ####
+df[[taxrank]] <- as.character(df[[taxrank]])
+df[[taxrank]][is.na(df[[taxrank]])] <- "Unclassified"
+
+df <- df %>%
+  mutate(
+    treatment = as.factor(treatment_tag),
+  )
+
+df$treatment <- factor(df$treatment, levels=c("control", "4", "26", "138", "719", "3,727","19,306" , "100,000"))
+
+
+#### STEP 3: Calculate mean across replicates ####
+group_means <- df %>%
+  group_by(treatment, .data[[taxrank]]) %>%
+  summarise(mean_abundance = mean(Abundance, na.rm = TRUE), .groups = "drop")
+
+#### STEP 4: Identify top N taxa by total abundance ####
+top_taxa <- group_means %>%
+  group_by(.data[[taxrank]]) %>%
+  summarise(total_mean_abundance = sum(mean_abundance), .groups = "drop") %>%
+  slice_max(order_by = total_mean_abundance, n = top_n) %>%
+  pull(.data[[taxrank]])
+
+#### STEP 5: Recode low-abundance taxa as 'Other' ####
+group_means[[taxrank]] <- fct_other(group_means[[taxrank]], keep = top_taxa, other_level = "Other")
+
+# Step 6: Aggregate again to sum 'Other' values
+plot_data <- group_means %>%
+  group_by(treatment, .data[[taxrank]]) %>%
+  summarise(mean_abundance = sum(mean_abundance), .groups = "drop")
+
+# Normalize within each treatment:
+plot_data <- plot_data %>%
+  group_by(treatment) %>%
+  mutate(mean_abundance = mean_abundance / sum(mean_abundance)) %>%
+  ungroup()
+
+#### STEP 7: Generate color palette ####
+n_taxa <- length(unique(plot_data[[taxrank]]))
+
+if (n_taxa <= top_n) {
+  fill_scale <- scale_fill_brewer(palette = pal, name = taxrank)
+} else {
+  fill_colors <- colorRampPalette(brewer.pal(top_n, pal))(n_taxa)
+  fill_scale <- scale_fill_manual(values = fill_colors, name = taxrank)
+}
+
+#### STEP 8: plot ####
+
+  
+  p <- ggplot(plot_data, aes(x = treatment, y = mean_abundance, fill = .data[[taxrank]])) +
+    geom_bar(stat = "identity", position = "stack", color = "black") +
+    scale_y_continuous(labels = scales::percent_format()) +
+    fill_scale +
+    labs(
+    #  title = paste("City:", current_city),
+      x = "treatment",
+      y = "Mean Relative Abundance"
+    ) +
+    theme_bw(base_size = 14) +
+    theme(
+      axis.text.x = element_text(angle = 45, hjust = 1),
+      strip.text = element_text(size = 14, face = "bold"),
+      legend.position = "right",
+      legend.title = element_text(size = 14),
+      legend.text = element_text(size = 12)
+    )
+  
+ 
+  print(p)
+  
+  # === SAVE PLOTS ===
+  output_base <- file.path(output_dir, paste0(tolower(taxrank), "_water_top", top_n, "_plot_"))
+  ggsave(paste0(output_base, ".png"), plot = p, width = 12, height = 6, dpi = 300)
+  ggsave(paste0(output_base, ".pdf"), plot = p, width = 12, height = 6, dpi = 300)
+  
+```
+
+## Family level
+
+```{r select-family-number-taxa}
+taxrank <- "Family"   # "or "Phylum", "Family", etc.
+top_n <- 12           # Number of top taxa to display
+
+```
+
+### Biofilm
+
+```{r plot-biofilm-fam, fig.height=6, fig.width=12}
+#### STEP 1: Aggregate and transform to relative abundance ####
+ps_tax <- tax_glom(ps_biofilm, taxrank = taxrank)
+ps_relabund <- transform_sample_counts(ps_tax, function(x) x / sum(x))
+df <- psmelt(ps_relabund)
+
+#### STEP 2: Clean variables ####
+df[[taxrank]] <- as.character(df[[taxrank]])
+df[[taxrank]][is.na(df[[taxrank]])] <- "Unclassified"
+
+df <- df %>%
+  mutate(
+    treatment = as.factor(treatment_tag),
+  )
+
+df$treatment <- factor(df$treatment, levels=c("control", "4", "26", "138", "719", "3,727","19,306" , "100,000"))
+
+
+#### STEP 3: Calculate mean across replicates ####
+group_means <- df %>%
+  group_by(treatment, .data[[taxrank]]) %>%
+  summarise(mean_abundance = mean(Abundance, na.rm = TRUE), .groups = "drop")
+
+#### STEP 4: Identify top N taxa by total abundance ####
+top_taxa <- group_means %>%
+  group_by(.data[[taxrank]]) %>%
+  summarise(total_mean_abundance = sum(mean_abundance), .groups = "drop") %>%
+  slice_max(order_by = total_mean_abundance, n = top_n) %>%
+  pull(.data[[taxrank]])
+
+#### STEP 5: Recode low-abundance taxa as 'Other' ####
+group_means[[taxrank]] <- fct_other(group_means[[taxrank]], keep = top_taxa, other_level = "Other")
+
+# Step 6: Aggregate again to sum 'Other' values
+plot_data <- group_means %>%
+  group_by(treatment, .data[[taxrank]]) %>%
+  summarise(mean_abundance = sum(mean_abundance), .groups = "drop")
+
+# Normalize within each treatment:
+plot_data <- plot_data %>%
+  group_by(treatment) %>%
+  mutate(mean_abundance = mean_abundance / sum(mean_abundance)) %>%
+  ungroup()
+
+#### STEP 7: Generate color palette ####
+n_taxa <- length(unique(plot_data[[taxrank]]))
+
+if (n_taxa <= top_n) {
+  fill_scale <- scale_fill_brewer(palette = pal, name = taxrank)
+} else {
+  fill_colors <- colorRampPalette(brewer.pal(top_n, pal))(n_taxa)
+  fill_scale <- scale_fill_manual(values = fill_colors, name = taxrank)
+}
+
+#### STEP 8: plot ####
+
+  
+  p <- ggplot(plot_data, aes(x = treatment, y = mean_abundance, fill = .data[[taxrank]])) +
+    geom_bar(stat = "identity", position = "stack", color = "black") +
+    scale_y_continuous(labels = scales::percent_format()) +
+    fill_scale +
+    labs(
+    #  title = paste("City:", current_city),
+      x = "treatment",
+      y = "Mean Relative Abundance"
+    ) +
+    theme_bw(base_size = 14) +
+    theme(
+      axis.text.x = element_text(angle = 45, hjust = 1),
+      strip.text = element_text(size = 14, face = "bold"),
+      legend.position = "right",
+      legend.title = element_text(size = 14),
+      legend.text = element_text(size = 12)
+    )
+  
+ 
+  print(p)
+  
+  # === SAVE PLOTS ===
+  output_base <- file.path(output_dir, paste0(tolower(taxrank), "_biofilm_top", top_n, "_plot_"))
+  ggsave(paste0(output_base, ".png"), plot = p, width = 12, height = 6, dpi = 300)
+  ggsave(paste0(output_base, ".pdf"), plot = p, width = 12, height = 6, dpi = 300)
+  
+```
+
+### Sediment
+
+```{r plot-sediment-fam, fig.height=6, fig.width=12}
+#### STEP 1: Aggregate and transform to relative abundance ####
+ps_tax <- tax_glom(ps_sediment, taxrank = taxrank)
+ps_relabund <- transform_sample_counts(ps_tax, function(x) x / sum(x))
+df <- psmelt(ps_relabund)
+
+#### STEP 2: Clean variables ####
+df[[taxrank]] <- as.character(df[[taxrank]])
+df[[taxrank]][is.na(df[[taxrank]])] <- "Unclassified"
+
+df <- df %>%
+  mutate(
+    treatment = as.factor(treatment_tag),
+  )
+
+df$treatment <- factor(df$treatment, levels=c("control", "4", "26", "138", "719", "3,727","19,306" , "100,000"))
+
+
+#### STEP 3: Calculate mean across replicates ####
+group_means <- df %>%
+  group_by(treatment, .data[[taxrank]]) %>%
+  summarise(mean_abundance = mean(Abundance, na.rm = TRUE), .groups = "drop")
+
+#### STEP 4: Identify top N taxa by total abundance ####
+top_taxa <- group_means %>%
+  group_by(.data[[taxrank]]) %>%
+  summarise(total_mean_abundance = sum(mean_abundance), .groups = "drop") %>%
+  slice_max(order_by = total_mean_abundance, n = top_n) %>%
+  pull(.data[[taxrank]])
+
+#### STEP 5: Recode low-abundance taxa as 'Other' ####
+group_means[[taxrank]] <- fct_other(group_means[[taxrank]], keep = top_taxa, other_level = "Other")
+
+# Step 6: Aggregate again to sum 'Other' values
+plot_data <- group_means %>%
+  group_by(treatment, .data[[taxrank]]) %>%
+  summarise(mean_abundance = sum(mean_abundance), .groups = "drop")
+
+# Normalize within each treatment:
+plot_data <- plot_data %>%
+  group_by(treatment) %>%
+  mutate(mean_abundance = mean_abundance / sum(mean_abundance)) %>%
+  ungroup()
+
+#### STEP 7: Generate color palette ####
+n_taxa <- length(unique(plot_data[[taxrank]]))
+
+if (n_taxa <= top_n) {
+  fill_scale <- scale_fill_brewer(palette = pal, name = taxrank)
+} else {
+  fill_colors <- colorRampPalette(brewer.pal(top_n, pal))(n_taxa)
+  fill_scale <- scale_fill_manual(values = fill_colors, name = taxrank)
+}
+
+#### STEP 8: plot ####
+
+  
+  p <- ggplot(plot_data, aes(x = treatment, y = mean_abundance, fill = .data[[taxrank]])) +
+    geom_bar(stat = "identity", position = "stack", color = "black") +
+    scale_y_continuous(labels = scales::percent_format()) +
+    fill_scale +
+    labs(
+    #  title = paste("City:", current_city),
+      x = "treatment",
+      y = "Mean Relative Abundance"
+    ) +
+    theme_bw(base_size = 14) +
+    theme(
+      axis.text.x = element_text(angle = 45, hjust = 1),
+      strip.text = element_text(size = 14, face = "bold"),
+      legend.position = "right",
+      legend.title = element_text(size = 14),
+      legend.text = element_text(size = 12)
+    )
+  
+ 
+  print(p)
+  
+  # === SAVE PLOTS ===
+  output_base <- file.path(output_dir, paste0(tolower(taxrank), "_sediment_top", top_n, "_plot_"))
+  ggsave(paste0(output_base, ".png"), plot = p, width = 12, height = 6, dpi = 300)
+  ggsave(paste0(output_base, ".pdf"), plot = p, width = 12, height = 6, dpi = 300)
+  
+```
+
+### Water
+
+```{r plot-water-fam, fig.height=6, fig.width=12}
+#### STEP 1: Aggregate and transform to relative abundance ####
+# Remove samples with "BLANK" in enclosure
+ps_water_clean <- subset_samples(ps_water, !grepl("BLANK", enclosure, ignore.case = TRUE))
+
+#agglomerate
+ps_tax <- tax_glom(ps_water_clean, taxrank = taxrank)
+ps_relabund <- transform_sample_counts(ps_tax, function(x) x / sum(x))
+df <- psmelt(ps_relabund)
+
+#### STEP 2: Clean variables ####
+df[[taxrank]] <- as.character(df[[taxrank]])
+df[[taxrank]][is.na(df[[taxrank]])] <- "Unclassified"
+
+df <- df %>%
+  mutate(
+    treatment = as.factor(treatment_tag),
+  )
+
+df$treatment <- factor(df$treatment, levels=c("control", "4", "26", "138", "719", "3,727","19,306" , "100,000"))
+
+
+#### STEP 3: Calculate mean across replicates ####
+group_means <- df %>%
+  group_by(treatment, .data[[taxrank]]) %>%
+  summarise(mean_abundance = mean(Abundance, na.rm = TRUE), .groups = "drop")
+
+#### STEP 4: Identify top N taxa by total abundance ####
+top_taxa <- group_means %>%
+  group_by(.data[[taxrank]]) %>%
+  summarise(total_mean_abundance = sum(mean_abundance), .groups = "drop") %>%
+  slice_max(order_by = total_mean_abundance, n = top_n) %>%
+  pull(.data[[taxrank]])
+
+#### STEP 5: Recode low-abundance taxa as 'Other' ####
+group_means[[taxrank]] <- fct_other(group_means[[taxrank]], keep = top_taxa, other_level = "Other")
+
+# Step 6: Aggregate again to sum 'Other' values
+plot_data <- group_means %>%
+  group_by(treatment, .data[[taxrank]]) %>%
+  summarise(mean_abundance = sum(mean_abundance), .groups = "drop")
+
+# Normalize within each treatment:
+plot_data <- plot_data %>%
+  group_by(treatment) %>%
+  mutate(mean_abundance = mean_abundance / sum(mean_abundance)) %>%
+  ungroup()
+
+#### STEP 7: Generate color palette ####
+n_taxa <- length(unique(plot_data[[taxrank]]))
+
+if (n_taxa <= top_n) {
+  fill_scale <- scale_fill_brewer(palette = pal, name = taxrank)
+} else {
+  fill_colors <- colorRampPalette(brewer.pal(top_n, pal))(n_taxa)
+  fill_scale <- scale_fill_manual(values = fill_colors, name = taxrank)
+}
+
+#### STEP 8: plot ####
+
+  
+  p <- ggplot(plot_data, aes(x = treatment, y = mean_abundance, fill = .data[[taxrank]])) +
+    geom_bar(stat = "identity", position = "stack", color = "black") +
+    scale_y_continuous(labels = scales::percent_format()) +
+    fill_scale +
+    labs(
+    #  title = paste("City:", current_city),
+      x = "treatment",
+      y = "Mean Relative Abundance"
+    ) +
+    theme_bw(base_size = 14) +
+    theme(
+      axis.text.x = element_text(angle = 45, hjust = 1),
+      strip.text = element_text(size = 14, face = "bold"),
+      legend.position = "right",
+      legend.title = element_text(size = 14),
+      legend.text = element_text(size = 12)
+    )
+  
+ 
+  print(p)
+  
+  # === SAVE PLOTS ===
+  output_base <- file.path(output_dir, paste0(tolower(taxrank), "_water_top", top_n, "_plot_"))
+  ggsave(paste0(output_base, ".png"), plot = p, width = 12, height = 6, dpi = 300)
+  ggsave(paste0(output_base, ".pdf"), plot = p, width = 12, height = 6, dpi = 300)
+  
+```

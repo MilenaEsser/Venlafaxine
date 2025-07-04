@@ -1,0 +1,835 @@
+---
+title: "Venlafaxine 16S - Creating phyloseq objects"
+author: "Milena Esser"
+date: "29/04/2025"
+output:
+  html_document: 
+    toc: true
+    toc_depth: 2
+    number_sections: true
+    toc_float: true
+  pdf_document: default
+editor_options:
+  chunk_output_type: console
+---
+
+```{r setup-1, include=F}
+knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
+rm(list=ls()) #Clears environment  
+
+
+#if (!requireNamespace("devtools", quietly = TRUE)){install.packages("devtools")}
+#devtools::install_github("jbisanz/qiime2R")
+library(qiime2R)
+library(phyloseq)
+library(stringr)
+library(tidyverse)
+library(MicEco)
+library(metagenomeSeq) # Cumulative Sum Scaling
+library(vegan)
+library(dplyr)
+library(purrr)
+library(ggplot2)
+library(Biostrings) # to add DNAStringSet object for ASV sequences in phyloseq to store DNA sequences, to allow sequence-based operations
+
+
+# Define output directory path using here()
+output_dir <- "R_output"
+
+# Create directory if it doesn't exist
+if (!dir.exists(output_dir)) {
+  dir.create(output_dir, recursive = TRUE)  # recursive=TRUE just in case parent folders don't exist
+}
+```
+
+1.  This script creates a phyloseq object from three input files:
+
+-   feature_table.tsv
+
+-   taxonomy_table.tsv
+
+-   metadata.tsv
+
+2.  After ***creating the phyloseq object***, there is a filtering step to remove contaminated samples, controls, as well as Chloroplasts and Mitochondria.
+3.  The script includes multiple options to ***normalize for varying sequencing depth*** (e.g., rarefaction, proportional normalization, CSS) for ecological metrics analysis (e.g., alpha/beta diversity0
+4.  Lastly, the resulting ***phyloseq objects are saved for use in downstream analyses*** such as diversity assessment and differential abundance. *(**IMPORTANT**: This includes normalized ps files, as well as the unnormalized ps, as some downstream analysis have their own normalization/transformation methods, e.g., DeSeq2 for differential abundance analysis using variance stabilizing transformation (VST), which normalizes for varying sequencing depth and dispersion*)
+
+# **Create and Filter Phyloseq object**
+
+```{r}
+# Read data
+tree <- read_qza("data/rooted-tree.qza")
+otus <- read_qza("data/16S_table.qza")
+taxonomy <- read_qza("data/taxonomy.qza")
+
+# Split taxonomy strings
+tax_split <- strsplit(as.character(taxonomy$data$Taxon), ";")
+
+# Remove prefixes using sub() for each element
+tax_clean <- lapply(tax_split, function(x) {
+  x_clean <- sub(".*__", "", x)
+  trimws(x_clean)
+})
+
+# Convert to matrix
+max_ranks <- max(sapply(tax_clean, length))  # to handle incomplete taxonomies
+tax_matrix <- do.call(rbind, lapply(tax_clean, function(x) {
+  length(x) <- max_ranks  # fill with NAs where missing
+  return(x)
+}))
+
+# Add column names
+colnames(tax_matrix) <- c("Kingdom","Phylum","Class","Order","Family","Genus","Species")[1:max_ranks]
+rownames(tax_matrix) <- taxonomy$data$Feature.ID
+
+# Metadata clean
+metadata_path <- "data/metadata_Ven.txt"
+metadata <- read.table(metadata_path, sep = '\t', header = TRUE, row.names = 1, comment.char = "")
+metadata <- metadata[-1, ]  # remove type specification line
+
+# Create phyloseq object
+ps <- phyloseq(
+  otu_table(otus$data, taxa_are_rows = TRUE),
+  phy_tree(tree$data),
+  tax_table(tax_matrix),
+  sample_data(metadata)
+)
+
+```
+
+The following does:
+
+1.  **Subset to experimental samples**\
+    Removes any samples where `Lifestage` is `NA`, likely excluding blanks or non-target samples.
+
+2.  **Keep only prokaryotes (Bacteria and Archaea)**\
+    Filters out all non-prokaryotic sequences such as Eukaryotes and unclassified domains. The code also tracks how many ASVs were removed and how many were Archaea.
+
+3.  **Remove organelle-derived sequences**\
+    Filters out ASVs assigned to chloroplasts or mitochondria, which are common contaminants from host or plant material in 16S datasets.
+
+4.  **Remove rare ASVs**\
+    Uses `ps_prune()` to exclude ASVs that have fewer than 5 reads and are present in fewer than 2 samples.
+
+5.  **Remove low-read samples**\
+    Filters out any samples with fewer than 1000 total reads, ensuring sufficient sequencing depth.
+
+6.  **Keep only ASVs present with \>10 reads in at least one sample**\
+    Focuses the analysis on more confidently observed taxa.
+
+7.  **Remove poorly classified ASVs at the Phylum level**\
+    Excludes any taxa that lack a clear phylum-level classification or are ambiguously labeled (e.g., `"uncharacterized"` or `"NA"`).
+
+```{r filtering-and-clean-up}
+# Step 1: Remove taxa with zero total abundance (after removing unwanted samples)
+psexp <- prune_taxa(taxa_sums(ps) > 0, ps) 
+
+# Step 2: Keep only Eukaryota
+ps_bacteria <- subset_taxa(psexp, Kingdom == "Bacteria")
+ps_bacteria_archaea <- subset_taxa(psexp, Kingdom %in% c("Bacteria", "Archaea"))
+
+# Compare ASVs retained
+cat("ASVs removed (non-Bacteria/Archaea):", ntaxa(psexp) - ntaxa(ps_bacteria_archaea), "\n")
+
+cat("Archaea-only ASVs:", ntaxa(ps_bacteria_archaea) - ntaxa(ps_bacteria), "\n")
+
+# Continue with Bacteria + Archaea
+ps1 <- ps_bacteria_archaea
+
+
+# Step 3: Remove organelle-associated ASVs (chloroplasts, mitochondria)
+ps2 <- subset_taxa(ps1, 
+                   !Order %in% c("", "Chloroplast") & 
+                   !Family %in% c("", "Mitochondria"))
+
+cat("ASVs removed (Chloroplasts/Mitochondria):", ntaxa(ps1) - ntaxa(ps2), "\n")
+
+# Step 4: Filter out low-abundance taxa (e.g., <5 reads in <2 samples)
+ps_filt <- ps_prune(ps2, min.reads = 5, min.samples = 2)
+
+# Step 5: Remove artificial "Others" category if added by ps_prune()
+ps_filt <- prune_taxa(taxa_names(ps_filt)[taxa_names(ps_filt) != "Others"], ps_filt)
+
+# Step 6: Remove any taxa with zero reads (extra precaution)
+ps_filt <- prune_taxa(taxa_sums(ps_filt) > 0, ps_filt)
+
+# Step 7: Keep only taxa present with >10 reads in at least one sample
+ps_filt <- filter_taxa(ps_filt, function(x) sum(x > 10) > 0, prune = TRUE)
+
+# Step 8: Remove unclassified or ambiguous Phylum-level taxa
+ps_filt <- subset_taxa(ps_filt, 
+                        !is.na(Phylum) & 
+                        !Phylum %in% c("", "uncharacterized", "NA"))
+
+# Output final phyloseq object
+ps_final<-ps_filt
+
+cat("Final PS object after filtering:", "\n")
+ps_final  # If you want to print the object summary
+
+cat("Original number of samples:", nsamples(psexp), "\n")
+cat("Number of samples remaining after filtering:", nsamples(ps_final), "\n")
+```
+
+# **Investigating Sequencing Depth**
+
+## Rarefaction curve
+
+```{r rarefaction-curve, fig.align="center", fig.width=8, fig.height=6, echo=FALSE, message=FALSE, warning=FALSE}
+# Extract sample info for subsetting
+sample_info <- data.frame(sample_data(ps_final))
+
+# Identify unique sample types
+sample_types <- unique(sample_info$sample_type)
+
+# Initialize list to store generated file paths
+rarefaction_files <- c()
+
+# Loop over each sample_type
+for (stype in sample_types) {
+  
+  cat("\nGenerating rarefaction curve for sample_type:", stype, "\n")
+  
+  # Subset phyloseq object
+  ps_sub <- subset_samples(ps_final, sample_type == stype)
+  
+  # Check if non-empty after subsetting
+  if (nsamples(ps_sub) == 0) {
+    cat("No samples found for", stype, "- skipping.\n")
+    next
+  }
+  
+  # Show sequencing depth stats
+  seq_depths <- sample_sums(ps_sub)
+  cat("Min depth:", min(seq_depths), "Max depth:", max(seq_depths),
+      "Total reads:", sum(seq_depths), "\n")
+  
+  # Create OTU matrix
+  tab <- otu_table(ps_sub)
+  if (taxa_are_rows(ps_sub)) {
+    tab <- t(tab)
+  }
+  tab <- as(tab, "matrix")
+  
+  # Get enclosure as grouping factor for coloring
+  sample_info_sub <- data.frame(sample_data(ps_sub))
+  sample_info_sub <- sample_info_sub[rownames(tab), , drop = FALSE]
+  
+  group_factor <- as.factor(sample_info_sub$enclosure)
+  
+  # Generate color palette
+  group_levels <- levels(group_factor)
+  group_palette <- setNames(rainbow(length(group_levels)), group_levels)
+  group_colors <- group_palette[as.character(group_factor)]
+  
+  # Define output file
+  file <- paste0(output_dir, "/rarefaction_", stype, "_by_enclosure.png")
+  
+  # Generate plot
+  png(filename = file, width = 1200, height = 800, res = 150)
+  rarecurve(tab, step = 250, label = FALSE,
+            ylab = "Observed OTUs", xlab = "Sequencing Depth",
+            col = group_colors, lwd = 2,
+            main = paste("Rarefaction Curve -", stype))
+  legend("bottomright", legend = names(group_palette),
+         col = group_palette, lty = 1, lwd = 2,
+         title = "Enclosure")
+  dev.off()
+  
+  # Store file path
+  rarefaction_files <- c(rarefaction_files, file)
+}
+
+# Display all generated plots in the report
+knitr::include_graphics(rarefaction_files)
+```
+
+## Goods coverage estimate
+
+= 1-(F1/N)
+
+F1= number of singletons (reads that only occur once)
+
+N=number of reads per sample
+
+**Rule of thumb:** Values \>95% are generally considered good coverage
+
+If your samples show lower coverage, especially inconsistently across groups, this can bias diversity estimates.
+
+```{r goods-coverage-estimate}
+# Identify unique sample types
+sample_types <- unique(sample_data(ps_final)$sample_type)
+
+# Loop over each sample_type
+for (stype in sample_types) {
+  
+  cat("\nCalculating Good's Coverage for sample_type:", stype, "\n")
+  
+  # Subset phyloseq object
+  ps_sub <- subset_samples(ps_final, sample_type == stype)
+  
+  # Skip empty subsets
+  if (nsamples(ps_sub) == 0) {
+    cat("No samples found for", stype, "- skipping.\n")
+    next
+  }
+  
+  # Prepare OTU matrix
+  otu <- otu_table(ps_sub)
+  if (taxa_are_rows(ps_sub)) {
+    otu <- t(otu)
+  }
+  otu <- as(otu, "matrix")  # Samples = rows
+  
+  # Calculate Good's Coverage
+  goods_coverage <- apply(otu, 1, function(x) {
+    singletons <- sum(x == 1)
+    total_reads <- sum(x)
+    1 - (singletons / total_reads)
+  })
+  
+  # Create summary table with metadata
+  coverage_df <- data.frame(
+    SampleID = names(goods_coverage),
+    GoodsCoverage = goods_coverage,
+    sample_data(ps_sub)[names(goods_coverage), , drop = FALSE]
+  )
+  
+  # Show summary statistics
+  cat("Good's Coverage Summary for", stype, ":\n")
+  print(summary(goods_coverage))
+  
+  # Create plot
+  coverage_plot <- ggplot(coverage_df, aes(x = treatment_tag, y = GoodsCoverage)) +
+    geom_boxplot(outlier.shape = NA, fill = "grey90") +
+    geom_jitter(width = 0.2, alpha = 0.6, aes(color = enclosure)) +
+    geom_hline(yintercept = 0.95, linetype = "dashed", color = "red") +
+    labs(title = paste("Good's Coverage by treatment -", stype),
+         y = "Good's Coverage", x = "treatment") +
+    theme_minimal() +
+    theme(legend.position = "none")
+  
+  # Save plot
+  file <- paste0(output_dir, "/GoodsCoverage_", stype, "_by_enclosure.png")
+  ggsave(file, coverage_plot, width = 7, height = 5, dpi = 300)
+  
+  # Show inline
+  knitr::include_graphics(file)
+}
+```
+
+# **Normalization**
+
+Normalization is currently a much-discussed issue of microbiome studies. Differences in read depth between samples often need to be corrected before analysis. Several normalization methods have been proposed, and no single method is perfect. It may be that the most appropriate method depends on the analysis.
+
+## Water
+
+### Rarefaction
+
+Rarefaction can be used to subset data such that the library depth is the same for each sample. Because sampling of the data is random, rarefaction can account for an effect of total read count on taxa richness. The sequencing depth differs considerably between taxonomic groups (spiders have very low read counts), therefore rarefaction may not be ideal for normalization here.
+
+This code helps finding a rarefaction level with a minimum of 3 replicates left per enclosure and sample type
+
+```{r filter-water-ps}
+ps_water <- subset_samples(ps_final, sample_type == "water")
+
+# Check how many samples remain
+cat("Number of samples in ps_water:", nsamples(ps_water), "\n")
+
+# Optional: prune taxa with zero counts across remaining samples
+ps_water <- prune_taxa(taxa_sums(ps_water) > 0, ps_water)
+
+# Check number of taxa remaining
+cat("Number of taxa in ps_water:", ntaxa(ps_water), "\n")
+```
+
+```{r identifying-rarefaction-cut-off-water, results='hide'}
+# Get sequencing depth for each sample
+depths <- sample_sums(ps_water)
+
+# Get sample metadata
+meta <- data.frame(sample_data(ps_water))
+meta$SampleID <- rownames(meta)
+meta$depth <- depths
+
+# Filter to water samples
+meta_water <- meta %>% filter(sample_type == "water")
+
+# Count replicates per treatment_tag
+replicates_per_group <- meta_water %>%
+  count(treatment_tag, name = "n_samples") %>%
+  arrange(desc(n_samples))
+
+# Print table
+print(replicates_per_group)
+
+# If you want summary:
+summary_table <- replicates_per_group %>%
+  summarise(
+    n_groups = n(),
+    min_reps = min(n_samples),
+    max_reps = max(n_samples),
+    mean_reps = mean(n_samples),
+    median_reps = median(n_samples)
+  )
+
+
+```
+
+```{r rarefaction-lvl-water}
+ # Show summary statistics
+  cat("Given the low # of reps, lowest sequencing depth is selected for rarefaction of water samples:", min(meta_water$depth), ":\n")
+
+```
+
+```{r rarefying-data-water}
+##Rarefying the data (remove samples to lead to min replicate number per sample group)
+  
+rarefaction_lvl <- min(meta_water$depth)
+cat("The selected rarefaction level for water samples is:", rarefaction_lvl," reads \n")
+
+# Rarefy the phyloseq object to the specified sequencing depth that has been identified in the previous section 
+ps_water_rare <- phyloseq::rarefy_even_depth(ps_water, sample.size = rarefaction_lvl, rngseed = 123, replace = FALSE)
+
+#Final dataset
+#sort(sample_sums(ps_rare)) 
+cat("rarefied PS object for water (ps_water_rare):","\n")
+ps_water_rare
+
+# Check minimum number of samples per replicate
+
+# Extract metadata from phyloseq object
+meta <- data.frame(sample_data(ps_water_rare))
+
+# Summarize number of samples per treatment_tag
+
+summary_treatment_tag <- meta %>%
+  group_by(treatment_tag) %>%
+  summarise(n_samples = n(), .groups = "drop")
+
+# Plot samples per site
+plot_samples_per_treatment <- ggplot(summary_treatment_tag, aes(x = treatment_tag, y = n_samples, fill = treatment_tag)) +
+  geom_bar(stat = "identity", position = "dodge") +
+  geom_hline(yintercept = 3, color = "red", linetype = "dotted", size = 1) +  # Threshold line
+  labs(
+    title = "Number of water samples per treatment",
+    x = "enclosure",
+    y = "Number of Samples"
+  ) +
+  theme_minimal() +
+  theme(
+    axis.text.x = element_text(angle = 45, hjust = 1),
+    panel.grid.major.x = element_line(color = "grey80", size = 0.5),
+    panel.grid.minor.x = element_line(color = "grey90", size = 0.25)
+  )
+
+cat("Number of samples left per treatment after rarefaction:","\n")
+plot_samples_per_treatment
+
+# Save plots to files
+ggsave(filename = file.path(output_dir, "samples_per_treatment_water.png"),
+       plot = plot_samples_per_treatment, width = 10, height = 6, dpi = 300)
+
+ggsave(filename = file.path(output_dir, "samples_per_treatment_water.pdf"),
+       plot = plot_samples_per_treatment, width = 10, height = 6)
+
+
+```
+
+### Proportion normalization
+
+Proportion normalization involves dividing each OTU count by the total sum for each sample. The resulting count data will add up to 1 (100%) for each sample.
+
+```{r TSS-normalization-water}
+# Proportion normalization:
+ps_water_prop <- transform_sample_counts(ps_water, function(x) x / sum(x))
+
+# Have a look at the resulting OTU table:
+otu_table(ps_water_prop)[1:5, 1:5]
+
+#the sums for each sample should be 1 now:
+head(sample_sums(ps_water_prop))
+```
+
+### Cumulative Sum Scaling (CSS)
+
+The *metagenomeSeq* Cumulative Sum Scaling (CSS) normalization is another option developed for microbiome data. For more information, read [Paulson et al. 2013](http://www.nature.com/articles/nmeth.2658).
+
+```{r CSS-normalization-water}
+# Convert the phyloseq object to a metagenomeseq object:
+mgs_css <- phyloseq_to_metagenomeSeq(ps_water)
+
+# Perform the Cumulative Sum Scaling:
+mgs_css <- cumNorm(mgs_css)
+
+# Extract the counts and add them to a separate phyloseq object:
+css_counts <- MRcounts(mgs_css, norm = TRUE)
+ps_water_css <- ps_water
+otu_table(ps_water_css) <- otu_table(t(css_counts), taxa_are_rows = FALSE)
+
+# Have a look at the resulting OTU table:
+otu_table(ps_water_css)[1:5, 1:5]
+
+```
+
+### **Save phyloseq object for easy reloading**
+
+```{r save-phyloseq-objects-water, results='asis', echo=FALSE}
+# Save the processed phyloseq objects to .RData files
+ps_dir <- file.path("R_output", "ps_objects")
+if (!dir.exists(ps_dir)) {
+  dir.create(ps_dir, recursive = TRUE)
+}
+# Save objects to ps_dir
+save(ps_water, file = file.path(ps_dir, "Venla_water_phyloseq_filt_unnorm.RData"))
+save(ps_water_rare,  file = file.path(ps_dir, "Venla_water_phyloseq_filt_rar.RData"))
+save(ps_water_prop,  file = file.path(ps_dir, "Venla_water_phyloseq_filt_propnorm.RData"))
+save(ps_water_css,   file = file.path(ps_dir, "Venla_water_phyloseq_filt_css.RData"))
+
+# Output explanation in Markdown
+cat("
+**Saved phyloseq objects:**  
+
+- ***ps_water_final*** (Unrarefied, filtered): `Venla_water_phyloseq_filt_unnorm.RData`  
+- ***ps_water_rare*** (Rarefied to even sequencing depth): `Venla_water_phyloseq_filt_rar.RData`  
+- ***ps_water_prop*** (Proportion-normalized to relative abundance): `Venla_water_phyloseq_filt_propnorm.RData`  
+- ***ps_water_css*** (CSS-normalized for compositionality and sequencing depth): `Venla_water_phyloseq_filt_css.RData`  
+")
+
+```
+
+## Sediment
+
+### Rarefaction
+
+```{r filter-sediment-ps}
+ps_sediment <- subset_samples(ps_final, sample_type == "sediment")
+
+# Check how many samples remain
+cat("Number of samples in ps_sediment:", nsamples(ps_sediment), "\n")
+
+# Optional: prune taxa with zero counts across remaining samples
+ps_sediment <- prune_taxa(taxa_sums(ps_sediment) > 0, ps_sediment)
+
+# Check number of taxa remaining
+cat("Number of taxa in ps_sediment:", ntaxa(ps_sediment), "\n")
+```
+
+```{r identifying-rarefaction-cut-off-sediment, results='hide'}
+# Get sequencing depth for each sample
+depths <- sample_sums(ps_sediment)
+
+# Get sample metadata
+meta <- data.frame(sample_data(ps_sediment))
+meta$SampleID <- rownames(meta)
+meta$depth <- depths
+
+# Filter to water samples
+meta_sediment <- meta %>% filter(sample_type == "sediment")
+
+# Count replicates per treatment_tag
+replicates_per_group <- meta_sediment %>%
+  count(treatment_tag, name = "n_samples") %>%
+  arrange(desc(n_samples))
+
+# Print table
+print(replicates_per_group)
+
+# If you want summary:
+summary_table <- replicates_per_group %>%
+  summarise(
+    n_groups = n(),
+    min_reps = min(n_samples),
+    max_reps = max(n_samples),
+    mean_reps = mean(n_samples),
+    median_reps = median(n_samples)
+  )
+
+
+```
+
+```{r rarefaction-lvl-sediment}
+ # Show summary statistics
+  cat("Given the low # of reps, lowest sequencing depth is selected for rarefaction of sediment samples:", min(meta_sediment$depth), ":\n")
+
+```
+
+```{r rarefying-data-sediment}
+##Rarefying the data (remove samples to lead to min replicate number per sample group)
+  
+rarefaction_lvl <- min(meta_sediment$depth)
+cat("The selected rarefaction level for sediment samples is:", rarefaction_lvl," reads \n")
+
+# Rarefy the phyloseq object to the specified sequencing depth that has been identified in the previous section 
+ps_sediment_rare <- phyloseq::rarefy_even_depth(ps_sediment, sample.size = rarefaction_lvl, rngseed = 123, replace = FALSE)
+
+#Final dataset
+#sort(sample_sums(ps_rare)) 
+cat("rarefied PS object for sediment (ps_sediment_rare):","\n")
+ps_sediment_rare
+
+# Check minimum number of samples per replicate
+
+# Extract metadata from phyloseq object
+meta <- data.frame(sample_data(ps_sediment_rare))
+
+# Summarize number of samples per treatment_tag
+
+summary_treatment_tag <- meta %>%
+  group_by(treatment_tag) %>%
+  summarise(n_samples = n(), .groups = "drop")
+
+# Plot samples per site
+plot_samples_per_treatment <- ggplot(summary_treatment_tag, aes(x = treatment_tag, y = n_samples, fill = treatment_tag)) +
+  geom_bar(stat = "identity", position = "dodge") +
+  geom_hline(yintercept = 3, color = "red", linetype = "dotted", size = 1) +  # Threshold line
+  labs(
+    title = "Number of sediment samples per treatment",
+    x = "enclosure",
+    y = "Number of Samples"
+  ) +
+  theme_minimal() +
+  theme(
+    axis.text.x = element_text(angle = 45, hjust = 1),
+    panel.grid.major.x = element_line(color = "grey80", size = 0.5),
+    panel.grid.minor.x = element_line(color = "grey90", size = 0.25)
+  )
+
+cat("Number of samples left per treatment after rarefaction:","\n")
+plot_samples_per_treatment
+
+# Save plots to files
+ggsave(filename = file.path(output_dir, "samples_per_treatment_sediment.png"),
+       plot = plot_samples_per_treatment, width = 10, height = 6, dpi = 300)
+
+ggsave(filename = file.path(output_dir, "samples_per_treatment_sediment.pdf"),
+       plot = plot_samples_per_treatment, width = 10, height = 6)
+
+
+```
+
+### Proportion normalization
+
+```{r TSS-normalization-sediment}
+# Proportion normalization:
+ps_sediment_prop <- transform_sample_counts(ps_sediment, function(x) x / sum(x))
+
+# Have a look at the resulting OTU table:
+otu_table(ps_sediment_prop)[1:5, 1:5]
+
+#the sums for each sample should be 1 now:
+head(sample_sums(ps_sediment_prop))
+```
+
+### Cumulative Sum Scaling (CSS)
+
+```{r CSS-normalization-sediment}
+# Convert the phyloseq object to a metagenomeseq object:
+mgs_css <- phyloseq_to_metagenomeSeq(ps_sediment)
+
+# Perform the Cumulative Sum Scaling:
+mgs_css <- cumNorm(mgs_css)
+
+# Extract the counts and add them to a separate phyloseq object:
+css_counts <- MRcounts(mgs_css, norm = TRUE)
+ps_sediment_css <- ps_sediment
+otu_table(ps_sediment_css) <- otu_table(t(css_counts), taxa_are_rows = FALSE)
+
+# Have a look at the resulting OTU table:
+otu_table(ps_sediment_css)[1:5, 1:5]
+
+```
+
+### **Save phyloseq object for easy reloading**
+
+```{r save-phyloseq-objects-sediment, results='asis', echo=FALSE}
+# Save the processed phyloseq objects to .RData files
+ps_dir <- file.path("R_output", "ps_objects")
+if (!dir.exists(ps_dir)) {
+  dir.create(ps_dir, recursive = TRUE)
+}
+# Save objects to ps_dir
+save(ps_sediment, file = file.path(ps_dir, "Venla_sediment_phyloseq_filt_unnorm.RData"))
+save(ps_sediment_rare,  file = file.path(ps_dir, "Venla_sediment_phyloseq_filt_rar.RData"))
+save(ps_sediment_prop,  file = file.path(ps_dir, "Venla_sediment_phyloseq_filt_propnorm.RData"))
+save(ps_sediment_css,   file = file.path(ps_dir, "Venla_sediment_phyloseq_filt_css.RData"))
+
+# Output explanation in Markdown
+cat("
+**Saved phyloseq objects:**  
+
+- ***ps_sediment_final*** (Unrarefied, filtered): `Venla_sediment_phyloseq_filt_unnorm.RData`  
+- ***ps_sediment_rare*** (Rarefied to even sequencing depth): `Venla_sediment_phyloseq_filt_rar.RData`  
+- ***ps_sediment_prop*** (Proportion-normalized to relative abundance): `Venla_sediment_phyloseq_filt_propnorm.RData`  
+- ***ps_sediment_css*** (CSS-normalized for compositionality and sequencing depth): `Venla_sediment_phyloseq_filt_css.RData`  
+")
+
+```
+
+## Biofilm
+
+### Rarefaction
+
+```{r filter-biofilm-ps}
+ps_biofilm <- subset_samples(ps_final, sample_type == "biofilm")
+
+# Check how many samples remain
+cat("Number of samples in ps_sediment:", nsamples(ps_biofilm), "\n")
+
+# prune taxa with zero counts across remaining samples
+ps_biofilm <- prune_taxa(taxa_sums(ps_biofilm) > 0, ps_biofilm)
+
+# Check number of taxa remaining
+cat("Number of taxa in ps_biofilm:", ntaxa(ps_biofilm), "\n")
+```
+
+```{r identifying-rarefaction-cut-off-biofilm, results='hide'}
+# Get sequencing depth for each sample
+depths <- sample_sums(ps_biofilm)
+
+# Get sample metadata
+meta <- data.frame(sample_data(ps_biofilm))
+meta$SampleID <- rownames(meta)
+meta$depth <- depths
+
+# Filter to water samples
+meta_biofilm <- meta %>% filter(sample_type == "biofilm")
+
+# Count replicates per treatment_tag
+replicates_per_group <- meta_biofilm %>%
+  count(treatment_tag, name = "n_samples") %>%
+  arrange(desc(n_samples))
+
+# Print table
+print(replicates_per_group)
+
+# If you want summary:
+summary_table <- replicates_per_group %>%
+  summarise(
+    n_groups = n(),
+    min_reps = min(n_samples),
+    max_reps = max(n_samples),
+    mean_reps = mean(n_samples),
+    median_reps = median(n_samples)
+  )
+
+
+```
+
+```{r rarefaction-lvl-biofilm}
+ # Show summary statistics
+  cat("Given the low # of reps, lowest sequencing depth is selected for rarefaction of biofilm samples:", min(meta_biofilm$depth), ":\n")
+
+```
+
+```{r rarefying-data-biofilm}
+##Rarefying the data (remove samples to lead to min replicate number per sample group)
+  
+rarefaction_lvl <- min(meta_biofilm$depth)
+cat("The selected rarefaction level for biofilm samples is:", rarefaction_lvl," reads \n")
+
+# Rarefy the phyloseq object to the specified sequencing depth that has been identified in the previous section 
+ps_biofilm_rare <- phyloseq::rarefy_even_depth(ps_biofilm, sample.size = rarefaction_lvl, rngseed = 123, replace = FALSE)
+
+#Final dataset
+#sort(sample_sums(ps_rare)) 
+cat("rarefied PS object for biofilm (ps_biofilm_rare):","\n")
+ps_biofilm_rare
+
+# Check minimum number of samples per replicate
+
+# Extract metadata from phyloseq object
+meta <- data.frame(sample_data(ps_biofilm_rare))
+
+# Summarize number of samples per treatment_tag
+
+summary_treatment_tag <- meta %>%
+  group_by(treatment_tag) %>%
+  summarise(n_samples = n(), .groups = "drop")
+
+# Plot samples per site
+plot_samples_per_treatment <- ggplot(summary_treatment_tag, aes(x = treatment_tag, y = n_samples, fill = treatment_tag)) +
+  geom_bar(stat = "identity", position = "dodge") +
+  geom_hline(yintercept = 3, color = "red", linetype = "dotted", size = 1) +  # Threshold line
+  labs(
+    title = "Number of biofilm samples per treatment",
+    x = "treatment",
+    y = "Number of Samples"
+  ) +
+  theme_minimal() +
+  theme(
+    axis.text.x = element_text(angle = 45, hjust = 1),
+    panel.grid.major.x = element_line(color = "grey80", size = 0.5),
+    panel.grid.minor.x = element_line(color = "grey90", size = 0.25)
+  )
+
+cat("Number of samples left per treatment after rarefaction:","\n")
+plot_samples_per_treatment
+
+# Save plots to files
+ggsave(filename = file.path(output_dir, "samples_per_treatment_biofilm.png"),
+       plot = plot_samples_per_treatment, width = 10, height = 6, dpi = 300)
+
+ggsave(filename = file.path(output_dir, "samples_per_treatment_biofilm.pdf"),
+       plot = plot_samples_per_treatment, width = 10, height = 6)
+
+
+```
+
+### Proportion normalization
+
+```{r TSS-normalization-biofilm}
+# Proportion normalization:
+ps_biofilm_prop <- transform_sample_counts(ps_biofilm, function(x) x / sum(x))
+
+# Have a look at the resulting OTU table:
+otu_table(ps_biofilm_prop)[1:5, 1:5]
+
+#the sums for each sample should be 1 now:
+head(sample_sums(ps_biofilm_prop))
+```
+
+### Cumulative Sum Scaling (CSS)
+
+```{r CSS-normalization-biofilm}
+# Convert the phyloseq object to a metagenomeseq object:
+mgs_css <- phyloseq_to_metagenomeSeq(ps_biofilm)
+
+# Perform the Cumulative Sum Scaling:
+mgs_css <- cumNorm(mgs_css)
+
+# Extract the counts and add them to a separate phyloseq object:
+css_counts <- MRcounts(mgs_css, norm = TRUE)
+ps_biofilm_css <- ps_biofilm
+otu_table(ps_biofilm_css) <- otu_table(t(css_counts), taxa_are_rows = FALSE)
+
+# Have a look at the resulting OTU table:
+otu_table(ps_biofilm_css)[1:5, 1:5]
+
+```
+
+### **Save phyloseq object for easy reloading**
+
+```{r save-phyloseq-objects-biofilm, results='asis', echo=FALSE}
+# Save the processed phyloseq objects to .RData files
+ps_dir <- file.path( "R_output", "ps_objects")
+if (!dir.exists(ps_dir)) {
+  dir.create(ps_dir, recursive = TRUE)
+}
+# Save objects to ps_dir
+save(ps_biofilm, file = file.path(ps_dir, "Venla_biofilm_phyloseq_filt_unnorm.RData"))
+save(ps_biofilm_rare,  file = file.path(ps_dir, "Venla_biofilm_phyloseq_filt_rar.RData"))
+save(ps_biofilm_prop,  file = file.path(ps_dir, "Venla_biofilm_phyloseq_filt_propnorm.RData"))
+save(ps_biofilm_css,   file = file.path(ps_dir, "Venla_biofilm_phyloseq_filt_css.RData"))
+
+# Output explanation in Markdown
+cat("
+**Saved phyloseq objects:**  
+
+- ***ps_biofilm_final*** (Unrarefied, filtered): `Venla_biofilm_phyloseq_filt_unnorm.RData`  
+- ***ps_biofilm_rare*** (Rarefied to even sequencing depth): `Venla_biofilm_phyloseq_filt_rar.RData`  
+- ***ps_biofilm_prop*** (Proportion-normalized to relative abundance): `Venla_biofilm_phyloseq_filt_propnorm.RData`  
+- ***ps_biofilm_css*** (CSS-normalized for compositionality and sequencing depth): `Venla_biofilm_phyloseq_filt_css.RData`  
+")
+
+```

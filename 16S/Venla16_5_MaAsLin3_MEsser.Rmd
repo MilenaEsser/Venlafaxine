@@ -1,0 +1,506 @@
+---
+title: "Venlafaxine 16S MaAsLin3 (Multivariate Association with Linear Models) analysis"
+author: "Milena Esser"
+date: "2025-05-20"
+output:
+  html_document: 
+    toc: true
+    toc_depth: 4
+    number_sections: true
+    toc_float: true
+  pdf_document: default
+editor_options:
+  chunk_output_type: console
+---
+
+Different from other differential abundance tools, low prevalence features need not be filtered out since the prevalence modeling in MaAsLin 3 already accounts for high proportions of zeros. However, filtering low prevalence features might improve power.
+
+There are also a few rules of thumb to keep in mind.
+
+-   Models should ideally have about 10 times as many samples (all samples for logistic fits, non-zero samples for linear fits) as covariate terms (all continuous variables plus all categorical variable levels).
+
+-   Coefficients (effect sizes) larger than about 15 in absolute value are usually suspect unless very small unstandardized predictors are being included. (A coefficient of 15 corresponds to a fold change \>30000!). If you encounter such coefficients, check that (1) no error was thrown, (2) the diagnostics look reasonable, (3) a sufficient number of samples were used in fitting, (4) the q-value is significant, (5) the metadata are not highly collinear, and (6) the random effects are plausible.
+
+Maaslin3 Model Selection Strategy\
+In Maaslin3, you specify:
+
+-   `fixed_effects`: variables you want to test or control for
+
+-   `random_effects`: grouping variables to account for non-independence (e.g., repeated measures)
+
+# Set up
+
+```{r setup-5, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
+rm(list=ls()) #Clears environment
+#Change margin size to be smaller so graphs fit in the plot panel
+par(mar = c(2, 2, 2, 2)) # Set the margin on all sides to 2
+#setwd("C:\\Users\\milen\\OneDrive - McMaster University\\Bow river microbiome\\R_analysis")
+
+
+###Loading packages
+library(phyloseq) #phyloseq will be the main package used for structuring microbiome data and diversity comparisons
+library(ggplot2) #For creating graphs
+library(ggtext)
+library(plyr) #if you load this after dpylr it messes up the dplyr functions
+library(dplyr) #Helps with data wrangling 
+library(vegan)
+library(tidyverse) #data wrangling
+library(knitr) #For R Markdown knitting
+library(RColorBrewer)
+library(ggpubr)
+library(picante)
+library(ggh4x) # For facet_nested_wrap()
+library(multcompView)
+library(data.table)
+
+library(maaslin3)
+
+setwd(file.path(getwd(), "16S"))
+```
+
+# Biofilm
+
+```{r Loading-data-maaslin3-bio}
+
+load("R_output/ps_objects/Venla_biofilm_phyloseq_filt_unnorm.RData")
+
+```
+
+```{r create-maaslin3-output-dir-bio}
+# Create output directory
+output_dir <- file.path("R_output", "MaAsLin3")
+dir.create(output_dir, recursive = TRUE, showWarnings = FALSE)
+
+```
+
+### Prepare data for analysis
+
+```{r prep-data-for-maaslin3-bio}
+#Prepare data for analysis
+#Extract abundance (e.g., genus level) Species recommended
+ps<- tax_glom(ps_biofilm, taxrank = "Species")
+
+otu <- as.data.frame(otu_table(ps))  # Features
+if (taxa_are_rows(ps)) {
+  otu <- t(otu)
+}
+
+# Ensure OTU table is a numeric data frame
+otu <- as.data.frame(otu)
+otu <- otu[, sapply(otu, is.numeric)]
+
+# Metadata
+meta <- as(sample_data(ps), "data.frame")
+
+
+sapply(meta[, c("treatment_tag", "enclosure")], class)
+str(meta[, c("treatment_tag", "enclosure")])
+
+# Drop rows not shared between OTU and meta
+shared_ids <- intersect(rownames(otu), rownames(meta))
+otu <- otu[shared_ids, , drop = FALSE]
+meta <- meta[shared_ids, , drop = FALSE]
+
+# Sort to make sure sample order matches
+otu <- otu[order(rownames(otu)), ]
+meta <- meta[order(rownames(meta)), ]
+
+# Final sanity check
+stopifnot(identical(rownames(otu), rownames(meta)))
+
+
+# Extract taxonomy table from phyloseq
+tax_table_df <- as.data.frame(tax_table(ps))
+
+# Make sure rownames are ASV IDs (should be already)
+taxonomy_df <- tax_table_df
+
+# Optional: check taxonomy columns
+head(taxonomy_df)
+```
+
+```{r rename-otu-table-to-include-species-names-bio}
+#create new otu table to have species names in final document:
+# First, create the Genus_species label
+taxonomy_df$Genus_species <- paste(taxonomy_df$Genus, taxonomy_df$Species, sep = "_")
+
+# Optionally, replace spaces or NAs if present
+taxonomy_df$Genus_species[is.na(taxonomy_df$Genus_species)] <- "Unknown_sp"
+taxonomy_df$Genus_species <- gsub(" ", "_", taxonomy_df$Genus_species)
+
+# Assign ASV names (rownames in taxonomy_df) to this new column for easy matching
+name_map <- taxonomy_df$Genus_species
+names(name_map) <- rownames(taxonomy_df)
+
+# Rename OTU table columns using the name map, but only where there is a match
+colnames(otu) <- ifelse(colnames(otu) %in% names(name_map),
+                        name_map[colnames(otu)],
+                        colnames(otu))  # leave unmatched ASVs as-is
+otu
+```
+
+```{r prevalence-filter-bio}
+#0.1-> taxa present in at least 10% samples
+prevalence_threshold <- 0.1
+prevalent_taxa <- colnames(otu)[colSums(otu > 0) >= prevalence_threshold * nrow(otu)]
+otu_filtered10 <- otu[, prevalent_taxa]
+
+cat("Prevalence filter 10%: Kept", length(prevalent_taxa), "taxa out of", ncol(otu), "\n")
+```
+
+```{r format-metadata-bio}
+# Remove commas, convert to numeric, set control = 0
+meta$treatment_conc <- as.numeric(gsub(",", "", as.character(meta$nominal_conc)))
+
+# Check it worked
+table(meta$treatment_tag, meta$treatment_conc)
+
+#for categorical testing set reference and create factor variable (reference needs to come first(control))
+meta$treatment_tag <- factor(meta$treatment_tag,
+                               levels = c("control", "4", "26", "138","719" , "3,727", "100,000"))
+
+# Add read depth
+meta$read_depth <- sample_sums(ps)
+
+# Optional: scale to thousands for interpretability
+meta$read_depth_k <- meta$read_depth / 1000
+
+#check
+#meta$read_depth
+```
+
+### MaAsLin3 biofilm
+
+fixed effects:
+
+1.  treatment (either treatment_tag -\> categorical group test, or
+
+    treatment_conc -\> continuous concentration test with nominal_conc)
+
+2.  sample read depth *(Because MaAsLin 3 identifies prevalence (presence/absence) associations, sample read depth (number of reads) should be included as a covariate if available. Deeper sequencing will likely increase feature detection in a way that could spuriously correlate with metadata of interest when read depth is not included in the model.)*
+
+inout_data:
+
+-   otu: no prevalence filter
+
+-   otu_filtered10 -\> prevalence filtered (10%)
+
+```{r maaslin3-biofilm-bio}
+
+cat("Maaslin3: with categorical testing (treatment_tag), including sequencing depth as fixed factor. No random effects. Otu table was prevalence filtered with a min prevalence of 10%.\n")
+
+#create output directory
+output_base <- file.path(output_dir, "MaAsLin3_biofilm")
+
+fit_data <- maaslin3(
+    input_data = otu_filtered10,
+    input_metadata = meta,
+    output = output_base,
+    fixed_effects = c("treatment_tag", "read_depth"),
+  reference = c("treatment_factor,control"),
+ #   random_effects = c("enclosure"),
+    normalization = 'TSS',
+    transform = 'LOG',
+    augment = TRUE,  # recommended
+    # standardize = TRUE, # uncomment if you want standardized numeric predictors
+    max_significance = 0.1,
+    median_comparison_abundance = TRUE,
+    median_comparison_prevalence = TRUE,
+    verbosity = "DEBUG",
+    small_random_effects = F
+)
+```
+
+# Sediment
+
+```{r Loading-data-maaslin3-sed}
+
+# not rarefied dataset "ps_sediment"
+
+load("R_output/ps_objects/Venla_sediment_phyloseq_filt_unnorm.RData")
+
+
+```
+
+Create output directory
+
+```{r create-maaslin3-output-dir-sed}
+# Create output directory
+output_dir <- file.path("R_output", "MaAsLin3")
+dir.create(output_dir, recursive = TRUE, showWarnings = FALSE)
+
+```
+
+### Prepare data for analysis
+
+```{r prep-data-for-maaslin3-sed}
+#Prepare data for analysis
+#Extract abundance (e.g., genus level) Species recommended
+ps<- tax_glom(ps_sediment, taxrank = "Species")
+
+otu <- as.data.frame(otu_table(ps))  # Features
+if (taxa_are_rows(ps)) {
+  otu <- t(otu)
+}
+
+# Ensure OTU table is a numeric data frame
+otu <- as.data.frame(otu)
+otu <- otu[, sapply(otu, is.numeric)]
+
+# Metadata
+meta <- as(sample_data(ps), "data.frame")
+
+
+sapply(meta[, c("treatment_tag", "enclosure")], class)
+str(meta[, c("treatment_tag", "enclosure")])
+
+# Drop rows not shared between OTU and meta
+shared_ids <- intersect(rownames(otu), rownames(meta))
+otu <- otu[shared_ids, , drop = FALSE]
+meta <- meta[shared_ids, , drop = FALSE]
+
+# Sort to make sure sample order matches
+otu <- otu[order(rownames(otu)), ]
+meta <- meta[order(rownames(meta)), ]
+
+# Final sanity check
+stopifnot(identical(rownames(otu), rownames(meta)))
+
+
+# Extract taxonomy table from phyloseq
+tax_table_df <- as.data.frame(tax_table(ps))
+
+# Make sure rownames are ASV IDs (should be already)
+taxonomy_df <- tax_table_df
+
+# Optional: check taxonomy columns
+head(taxonomy_df)
+```
+
+```{r rename-otu-table-to-include-species-names-sed}
+#create new otu table to have species names in final document:
+# First, create the Genus_species label
+taxonomy_df$Genus_species <- paste(taxonomy_df$Genus, taxonomy_df$Species, sep = "_")
+
+# Optionally, replace spaces or NAs if present
+taxonomy_df$Genus_species[is.na(taxonomy_df$Genus_species)] <- "Unknown_sp"
+taxonomy_df$Genus_species <- gsub(" ", "_", taxonomy_df$Genus_species)
+
+# Assign ASV names (rownames in taxonomy_df) to this new column for easy matching
+name_map <- taxonomy_df$Genus_species
+names(name_map) <- rownames(taxonomy_df)
+
+# Rename OTU table columns using the name map, but only where there is a match
+colnames(otu) <- ifelse(colnames(otu) %in% names(name_map),
+                        name_map[colnames(otu)],
+                        colnames(otu))  # leave unmatched ASVs as-is
+otu
+```
+
+```{r prevalence-filter-sed}
+#0.1-> taxa present in at least 10% samples
+prevalence_threshold <- 0.1
+prevalent_taxa <- colnames(otu)[colSums(otu > 0) >= prevalence_threshold * nrow(otu)]
+otu_filtered10 <- otu[, prevalent_taxa]
+
+cat("Prevalence filter 10%: Kept", length(prevalent_taxa), "taxa out of", ncol(otu), "\n")
+```
+
+```{r format-metadata-sed}
+# Remove commas, convert to numeric, set control = 0
+meta$treatment_conc <- as.numeric(gsub(",", "", as.character(meta$nominal_conc)))
+
+# Check it worked
+table(meta$treatment_tag, meta$treatment_conc)
+
+#for categorical testing set reference and create factor variable (reference needs to come first(control))
+meta$treatment_tag <- factor(meta$treatment_tag,
+                               levels = c("control", "4", "26", "138","719" , "3,727", "100,000"))
+
+# Add read depth
+meta$read_depth <- sample_sums(ps)
+
+# Optional: scale to thousands for interpretability
+meta$read_depth_k <- meta$read_depth / 1000
+
+#check
+#meta$read_depth
+```
+
+### MaAsLin3 sediment
+
+```{r maaslin3-sediment}
+
+
+cat("Maaslin3: with categorical testing (treatment_tag), including sequencing depth as fixed factor. No random effects. Otu table was prevalence filtered with a min prevalence of 10%.\n")
+
+#create output directory
+output_base <- file.path(output_dir, "MaAsLin3_sediment")
+
+fit_data <- maaslin3(
+    input_data = otu_filtered10,
+    input_metadata = meta,
+    output = output_base,
+    fixed_effects = c("treatment_tag", "read_depth"),
+  reference = c("treatment_factor,control"),
+ #   random_effects = c("enclosure"),
+    normalization = 'TSS',
+    transform = 'LOG',
+    augment = TRUE,  # recommended
+    # standardize = TRUE, # uncomment if you want standardized numeric predictors
+    max_significance = 0.1,
+    median_comparison_abundance = TRUE,
+    median_comparison_prevalence = FALSE,
+    verbosity = "DEBUG",
+    small_random_effects = F
+)
+```
+
+# Water
+
+```{r Loading-data-maaslin3-wat}
+
+# not rarefied dataset "ps_sediment"
+
+load("R_output/ps_objects/Venla_water_phyloseq_filt_unnorm.RData")
+
+
+```
+
+Create output directory
+
+```{r create-maaslin3-output-dir-wat}
+# Create output directory
+output_dir <- file.path("R_output", "MaAsLin3")
+dir.create(output_dir, recursive = TRUE, showWarnings = FALSE)
+
+```
+
+### Prepare data for analysis
+
+```{r prep-data-for-maaslin3-wat}
+#Prepare data for analysis
+# Remove samples with "BLANK" in enclosure
+ps_water_clean <- subset_samples(ps_water, !grepl("BLANK", enclosure, ignore.case = TRUE))
+
+# Then tax_glom
+ps <- tax_glom(ps_water_clean, taxrank = "Species")
+
+otu <- as.data.frame(otu_table(ps))  # Features
+if (taxa_are_rows(ps)) {
+  otu <- t(otu)
+}
+
+# Ensure OTU table is a numeric data frame
+otu <- as.data.frame(otu)
+otu <- otu[, sapply(otu, is.numeric)]
+
+# Metadata
+meta <- as(sample_data(ps), "data.frame")
+
+
+sapply(meta[, c("treatment_tag", "enclosure")], class)
+str(meta[, c("treatment_tag", "enclosure")])
+
+# Drop rows not shared between OTU and meta
+shared_ids <- intersect(rownames(otu), rownames(meta))
+otu <- otu[shared_ids, , drop = FALSE]
+meta <- meta[shared_ids, , drop = FALSE]
+
+# Sort to make sure sample order matches
+otu <- otu[order(rownames(otu)), ]
+meta <- meta[order(rownames(meta)), ]
+
+# Final sanity check
+stopifnot(identical(rownames(otu), rownames(meta)))
+
+
+# Extract taxonomy table from phyloseq
+tax_table_df <- as.data.frame(tax_table(ps))
+
+# Make sure rownames are ASV IDs (should be already)
+taxonomy_df <- tax_table_df
+
+# Optional: check taxonomy columns
+head(taxonomy_df)
+```
+
+```{r rename-otu-table-to-include-species-names-wat}
+#create new otu table to have species names in final document:
+# First, create the Genus_species label
+taxonomy_df$Genus_species <- paste(taxonomy_df$Genus, taxonomy_df$Species, sep = "_")
+
+# Optionally, replace spaces or NAs if present
+taxonomy_df$Genus_species[is.na(taxonomy_df$Genus_species)] <- "Unknown_sp"
+taxonomy_df$Genus_species <- gsub(" ", "_", taxonomy_df$Genus_species)
+
+# Assign ASV names (rownames in taxonomy_df) to this new column for easy matching
+name_map <- taxonomy_df$Genus_species
+names(name_map) <- rownames(taxonomy_df)
+
+# Rename OTU table columns using the name map, but only where there is a match
+colnames(otu) <- ifelse(colnames(otu) %in% names(name_map),
+                        name_map[colnames(otu)],
+                        colnames(otu))  # leave unmatched ASVs as-is
+otu
+```
+
+```{r prevalence-filter-wat}
+#0.1-> taxa present in at least 10% samples
+prevalence_threshold <- 0.1
+prevalent_taxa <- colnames(otu)[colSums(otu > 0) >= prevalence_threshold * nrow(otu)]
+otu_filtered10 <- otu[, prevalent_taxa]
+
+cat("Prevalence filter 10%: Kept", length(prevalent_taxa), "taxa out of", ncol(otu), "\n")
+```
+
+```{r format-metadata-wat}
+# Remove commas, convert to numeric, set control = 0
+meta$treatment_conc <- as.numeric(gsub(",", "", as.character(meta$nominal_conc)))
+
+# Check it worked
+table(meta$treatment_tag, meta$treatment_conc)
+
+#for categorical testing set reference and create factor variable (reference needs to come first(control))
+meta$treatment_tag <- factor(meta$treatment_tag,
+                               levels = c("control", "4", "26", "138","719" , "3,727", "100,000"))
+
+# Add read depth
+meta$read_depth <- sample_sums(ps)
+
+# Optional: scale to thousands for interpretability
+meta$read_depth_k <- meta$read_depth / 1000
+
+#check
+#meta$read_depth
+```
+
+### MaAsLin3 swater
+
+```{r maaslin3-wat}
+
+
+cat("Maaslin3: with categorical testing (treatment_tag), including sequencing depth as fixed factor. No random effects. Otu table was prevalence filtered with a min prevalence of 10%.\n")
+
+#create output directory
+output_base <- file.path(output_dir, "MaAsLin3_water")
+
+fit_data <- maaslin3(
+    input_data = otu_filtered10,
+    input_metadata = meta,
+    output = output_base,
+    fixed_effects = c("treatment_tag", "read_depth"),
+  reference = c("treatment_factor,control"),
+ #   random_effects = c("enclosure"),
+    normalization = 'TSS',
+    transform = 'LOG',
+    augment = TRUE,  # recommended
+    # standardize = TRUE, # uncomment if you want standardized numeric predictors
+    max_significance = 0.1,
+    median_comparison_abundance = TRUE,
+    median_comparison_prevalence = FALSE,
+    verbosity = "DEBUG",
+    small_random_effects = F
+)
+```

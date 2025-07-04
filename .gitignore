@@ -10,3 +10,4 @@ output/
 results/ 
 .DS_Store 
 Thumbs.db 
+.Rproj.user
