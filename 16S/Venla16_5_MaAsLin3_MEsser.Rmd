@@ -55,8 +55,8 @@ library(multcompView)
 library(data.table)
 
 library(maaslin3)
+setwd(file.path(dirname(rstudioapi::getActiveProject()), "venlafaxine_R_analysis/16S"))
 
-setwd(file.path(getwd(), "16S"))
 ```
 
 # Biofilm

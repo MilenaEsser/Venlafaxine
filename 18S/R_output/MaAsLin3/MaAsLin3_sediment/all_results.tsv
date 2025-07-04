@@ -1,0 +1,939 @@
+"feature"	"metadata"	"value"	"name"	"coef"	"null_hypothesis"	"stderr"	"pval_individual"	"qval_individual"	"pval_joint"	"qval_joint"	"error"	"model"	"N"	"N_not_zero"
+"Acanthamoeba_Acanthamoeba_castellanii"	"read_depth"	"read_depth"	"read_depth"	-12.8105749788882	-2.03156345764793	25.8525754708799	0.745143570365407	1	0.745143570365407	1	NA	"abundance"	10	9
+"Acanthamoeba_Acanthamoeba_castellanii"	"treatment_tag"	"100,000"	"treatment_tag100,000"	23.527591414372	2.78110641826802	42.1169424185171	0.70045545702187	1	0.70045545702187	1	NA	"abundance"	10	9
+"Acanthamoeba_Acanthamoeba_castellanii"	"treatment_tag"	"138"	"treatment_tag138"	-2.4544784690865	1.16892717517268	3.69287253668613	0.501678535608626	1	0.501678535608626	1	NA	"abundance"	10	9
+"Acanthamoeba_Acanthamoeba_castellanii"	"treatment_tag"	"26"	"treatment_tag26"	-1.72857976722458	-1.00221866179473	4.13788895858249	0.886793481745387	1	0.886793481745387	1	NA	"abundance"	10	9
+"Acanthamoeba_Acanthamoeba_castellanii"	"treatment_tag"	"3,727"	"treatment_tag3,727"	3.27759312897192	0.256192249408236	3.90595079111513	0.576257527077506	1	0.576257527077506	1	NA	"abundance"	10	9
+"Acanthamoeba_Acanthamoeba_castellanii"	"treatment_tag"	"4"	"treatment_tag4"	39.0167517665645	5.44516385065324	75.2979751976287	0.727510594612505	1	0.727510594612505	1	NA	"abundance"	10	9
+"Arcellinida_metagenome"	"read_depth"	"read_depth"	"read_depth"	0.609201172463969	-2.03156345764793	2.04965677024545	0.601716527478165	1	0.601716527478165	1	NA	"abundance"	10	10
+"Arcellinida_metagenome"	"treatment_tag"	"100,000"	"treatment_tag100,000"	-0.916068278354882	2.78110641826802	3.33913641476019	0.736501331691491	1	0.736501331691491	1	NA	"abundance"	10	10
+"Arcellinida_metagenome"	"treatment_tag"	"138"	"treatment_tag138"	1.68455756487965	1.16892717517268	0.29278016052977	0.562701895240785	1	0.562701895240785	1	NA	"abundance"	10	10
+"Arcellinida_metagenome"	"treatment_tag"	"26"	"treatment_tag26"	-1.32141428917386	-1.00221866179473	0.328062174232339	0.750552079481642	1	0.750552079481642	1	NA	"abundance"	10	10
+"Arcellinida_metagenome"	"treatment_tag"	"3,727"	"treatment_tag3,727"	-1.5109100251088	0.256192249408236	0.309673536869564	0.271053901003474	1	0.271053901003474	1	NA	"abundance"	10	10
+"Arcellinida_metagenome"	"treatment_tag"	"4"	"treatment_tag4"	-6.55065316480387	5.44516385065324	5.96981158892409	0.499619640859698	1	0.499619640859698	1	NA	"abundance"	10	10
+"Arcellinida_metagenome"	"treatment_tag"	"719"	"treatment_tag719"	0.380453410565938	1.24344031680309	0.370130961707342	0.447407653641047	1	0.447407653641047	1	NA	"abundance"	10	10
+"BOLA868_uncultured_Hartmannellidae"	"read_depth"	"read_depth"	"read_depth"	-8.73953966337292	-2.03156345764793	4.08460021345765	0.419161471338829	1	0.419161471338829	1	NA	"abundance"	10	7
+"BOLA868_uncultured_Hartmannellidae"	"treatment_tag"	"100,000"	"treatment_tag100,000"	16.5995747041675	2.78110641826802	6.6543030572189	0.402062110824056	1	0.402062110824056	1	NA	"abundance"	10	7
+"BOLA868_uncultured_Hartmannellidae"	"treatment_tag"	"138"	"treatment_tag138"	-0.325726596529761	1.16892717517268	0.583458617831343	0.305417562984649	1	0.305417562984649	1	NA	"abundance"	10	7
+"BOLA868_uncultured_Hartmannellidae"	"treatment_tag"	"4"	"treatment_tag4"	23.5885753371647	5.44516385065324	11.8967692759121	0.450208229959759	1	0.450208229959759	1	NA	"abundance"	10	7
+"BOLA868_uncultured_Hartmannellidae"	"treatment_tag"	"719"	"treatment_tag719"	1.77628716754329	1.24344031680309	0.73760496252065	0.668168763621277	1	0.668168763621277	1	NA	"abundance"	10	7
+"Cercomonas_uncultured_Cercozoa"	"read_depth"	"read_depth"	"read_depth"	-2.03283123824073	-2.03156345764793	40.3131035436111	0.999980051811064	1	0.999980051811064	1	NA	"abundance"	10	8
+"Cercomonas_uncultured_Cercozoa"	"treatment_tag"	"100,000"	"treatment_tag100,000"	-1.43430693102449	2.78110641826802	65.6748749295962	0.959430534407973	1	0.959430534407973	1	NA	"abundance"	10	8
+"Cercomonas_uncultured_Cercozoa"	"treatment_tag"	"26"	"treatment_tag26"	-4.32149598764366	-1.00221866179473	6.45239953857577	0.693448103869508	1	0.693448103869508	1	NA	"abundance"	10	8
+"Cercomonas_uncultured_Cercozoa"	"treatment_tag"	"3,727"	"treatment_tag3,727"	-3.81614415410652	0.256192249408236	6.09072774415981	0.620460002812168	1	0.620460002812168	1	NA	"abundance"	10	8
+"Cercomonas_uncultured_Cercozoa"	"treatment_tag"	"719"	"treatment_tag719"	-0.364463462978322	1.24344031680309	7.2798177727179	0.862036790655362	1	0.862036790655362	1	NA	"abundance"	10	8
+"Diptera_Ablabesmyia_rhamphe"	"read_depth"	"read_depth"	"read_depth"	24.8335593460147	-2.03156345764793	7.41392147012917	0.186592254714477	1	0.186592254714477	1	NA	"abundance"	10	8
+"Diptera_Ablabesmyia_rhamphe"	"treatment_tag"	"100,000"	"treatment_tag100,000"	-39.9246085244618	2.78110641826802	12.0781662161495	0.20853671702735	1	0.20853671702735	1	NA	"abundance"	10	8
+"Diptera_Ablabesmyia_rhamphe"	"treatment_tag"	"138"	"treatment_tag138"	-2.87057017709939	1.16892717517268	1.05903054096203	0.183729899301626	1	0.183729899301626	1	NA	"abundance"	10	8
+"Diptera_Ablabesmyia_rhamphe"	"treatment_tag"	"26"	"treatment_tag26"	1.4980949718826	-1.00221866179473	1.18665097121951	0.31710690375008	1	0.31710690375008	1	NA	"abundance"	10	8
+"Diptera_Ablabesmyia_rhamphe"	"treatment_tag"	"3,727"	"treatment_tag3,727"	2.25294806247125	0.256192249408236	1.12013646238592	0.368622274195259	1	0.368622274195259	1	NA	"abundance"	10	8
+"Flamella_uncultured_eukaryote"	"read_depth"	"read_depth"	"read_depth"	0.921472340469374	-2.03156345764793	1.93815749614407	0.566769706540225	1	0.566769706540225	1	NA	"abundance"	10	9
+"Flamella_uncultured_eukaryote"	"treatment_tag"	"138"	"treatment_tag138"	1.26759122215515	1.16892717517268	0.276853213226077	0.898074863040101	1	0.898074863040101	1	NA	"abundance"	10	9
+"Flamella_uncultured_eukaryote"	"treatment_tag"	"26"	"treatment_tag26"	0.628454983094266	-1.00221866179473	0.310215920743445	0.283876585509811	1	0.283876585509811	1	NA	"abundance"	10	9
+"Flamella_uncultured_eukaryote"	"treatment_tag"	"3,727"	"treatment_tag3,727"	0.256192249408236	0.256192249408236	0.292827606823807	1	1	1	1	NA	"abundance"	10	9
+"Flamella_uncultured_eukaryote"	"treatment_tag"	"4"	"treatment_tag4"	5.44516385065324	5.44516385065324	5.6450598215307	1	1	1	1	NA	"abundance"	10	9
+"Flamella_uncultured_eukaryote"	"treatment_tag"	"719"	"treatment_tag719"	0.710593466062898	1.24344031680309	0.349996208341843	0.58909660868557	1	0.58909660868557	1	NA	"abundance"	10	9
+"H15-6_Choanocystis_symna"	"read_depth"	"read_depth"	"read_depth"	-16.5868944087204	-2.03156345764793	14.4628079935028	0.499127241246548	1	0.499127241246548	1	NA	"abundance"	10	4
+"H15-6_Choanocystis_symna"	"treatment_tag"	"138"	"treatment_tag138"	-0.314966853251296	1.16892717517268	2.06591821007276	0.596345468857345	1	0.596345468857345	1	NA	"abundance"	10	4
+"Ischnamoeba_Lobosea_sp."	"read_depth"	"read_depth"	"read_depth"	-2.59804148808273	-2.03156345764793	2.44519504128302	0.908031139232557	1	0.908031139232557	1	NA	"abundance"	10	10
+"Ischnamoeba_Lobosea_sp."	"treatment_tag"	"100,000"	"treatment_tag100,000"	1.07264907184798	2.78110641826802	3.98351564128536	0.875657595731588	1	0.875657595731588	1	NA	"abundance"	10	10
+"Ischnamoeba_Lobosea_sp."	"treatment_tag"	"138"	"treatment_tag138"	0.304529946583079	1.16892717517268	0.34928023418658	0.400176879129878	1	0.400176879129878	1	NA	"abundance"	10	10
+"Ischnamoeba_Lobosea_sp."	"treatment_tag"	"26"	"treatment_tag26"	-0.968938306322169	-1.00221866179473	0.39137089356155	0.972827679644715	1	0.972827679644715	1	NA	"abundance"	10	10
+"Ischnamoeba_Lobosea_sp."	"treatment_tag"	"3,727"	"treatment_tag3,727"	0.125434031936433	0.256192249408236	0.36943365726514	0.894663226642033	1	0.894663226642033	1	NA	"abundance"	10	10
+"Ischnamoeba_Lobosea_sp."	"treatment_tag"	"4"	"treatment_tag4"	2.42291597787583	5.44516385065324	7.12185274458564	0.843396230681301	1	0.843396230681301	1	NA	"abundance"	10	10
+"Ischnamoeba_Lobosea_sp."	"treatment_tag"	"719"	"treatment_tag719"	-0.398410173752236	1.24344031680309	0.441558023436153	0.285561234005816	1	0.285561234005816	1	NA	"abundance"	10	10
+"Ischnamoeba_uncultured_eukaryote"	"read_depth"	"read_depth"	"read_depth"	-5.49357048856288	-2.03156345764793	9.66998731702685	0.781303445062234	1	0.781303445062234	1	NA	"abundance"	10	7
+"Ischnamoeba_uncultured_eukaryote"	"treatment_tag"	"138"	"treatment_tag138"	1.07026312819021	1.16892717517268	1.38129489780912	0.953876958066077	1	0.953876958066077	1	NA	"abundance"	10	7
+"Ischnamoeba_uncultured_eukaryote"	"treatment_tag"	"26"	"treatment_tag26"	4.06881458459781	-1.00221866179473	1.54775038927277	0.20553567749403	1	0.20553567749403	1	NA	"abundance"	10	7
+"Ischnamoeba_uncultured_eukaryote"	"treatment_tag"	"719"	"treatment_tag719"	2.76692998327495	1.24344031680309	1.74622490814417	0.550486662977196	1	0.550486662977196	1	NA	"abundance"	10	7
+"Legeriomycetaceae_Legeriosimilis_sp."	"read_depth"	"read_depth"	"read_depth"	12.4479960870759	-2.03156345764793	5.85741281307767	0.273713538407469	1	0.273713538407469	1	NA	"abundance"	10	6
+"Legeriomycetaceae_Legeriosimilis_sp."	"treatment_tag"	"26"	"treatment_tag26"	-3.11327473238821	-1.00221866179473	0.93752066723079	0.325037453737364	1	0.325037453737364	1	NA	"abundance"	10	6
+"Legeriomycetaceae_Legeriosimilis_sp."	"treatment_tag"	"3,727"	"treatment_tag3,727"	-0.718747334466912	0.256192249408236	0.884970483381782	0.534256846985519	1	0.534256846985519	1	NA	"abundance"	10	6
+"Mycamoeba_metagenome"	"read_depth"	"read_depth"	"read_depth"	-2.20711150133549	-2.03156345764793	20.200774203717	0.994366272771737	1	0.994366272771737	1	NA	"abundance"	10	6
+"Mycamoeba_metagenome"	"treatment_tag"	"100,000"	"treatment_tag100,000"	2.78110641826802	2.78110641826802	32.9094811039519	1	1	1	1	NA	"abundance"	10	6
+"Mycamoeba_metagenome"	"treatment_tag"	"138"	"treatment_tag138"	2.75978482520101	1.16892717517268	2.88554942468813	0.673441847504481	1	0.673441847504481	1	NA	"abundance"	10	6
+"Mycamoeba_metagenome"	"treatment_tag"	"4"	"treatment_tag4"	5.12439731133965	5.44516385065324	58.8365904463834	0.996411646466701	1	0.996411646466701	1	NA	"abundance"	10	6
+"Reclinomonas_Reclinomonas_americana"	"read_depth"	"read_depth"	"read_depth"	21.5820040804036	-2.03156345764793	0.491046252695511	0.0891693272899965	1	0.0891693272899965	1	NA	"abundance"	10	8
+"Reclinomonas_Reclinomonas_americana"	"treatment_tag"	"100,000"	"treatment_tag100,000"	-38.8323813763094	2.78110641826802	0.799973169903351	0.123592451373024	1	0.123592451373024	1	NA	"abundance"	10	8
+"Reclinomonas_Reclinomonas_americana"	"treatment_tag"	"138"	"treatment_tag138"	1.52988806564501	1.16892717517268	0.0701427686717115	0.64100428400731	1	0.64100428400731	1	NA	"abundance"	10	8
+"Reclinomonas_Reclinomonas_americana"	"treatment_tag"	"26"	"treatment_tag26"	-1.54152112352571	-1.00221866179473	0.0785954524906337	0.593034001391087	1	0.593034001391087	1	NA	"abundance"	10	8
+"Reclinomonas_Reclinomonas_americana"	"treatment_tag"	"3,727"	"treatment_tag3,727"	1.72270517140779	0.256192249408236	0.0741899970991507	0.298002675384051	1	0.298002675384051	1	NA	"abundance"	10	8
+"Reclinomonas_Reclinomonas_americana"	"treatment_tag"	"4"	"treatment_tag4"	-63.8570130728325	5.44516385065324	1.43021683073716	0.100330148066825	1	0.100330148066825	1	NA	"abundance"	10	8
+"Sorodiplophrys_uncultured_Eimeriidae"	"read_depth"	"read_depth"	"read_depth"	3.75640388301214	-2.03156345764793	6.79873620526261	0.563484264598275	1	0.563484264598275	1	NA	"abundance"	10	5
+"Sorodiplophrys_uncultured_Eimeriidae"	"treatment_tag"	"26"	"treatment_tag26"	-1.73599957890997	-1.00221866179473	1.08818618507697	0.65351497697166	1	0.65351497697166	1	NA	"abundance"	10	5
+"Sorodiplophrys_uncultured_Eimeriidae"	"treatment_tag"	"719"	"treatment_tag719"	0.120904163195368	1.24344031680309	1.22772886006032	0.542415678568213	1	0.542415678568213	1	NA	"abundance"	10	5
+"Sorodiplophrys_uncultured_eukaryote"	"read_depth"	"read_depth"	"read_depth"	4.63979128480675	-2.03156345764793	6.80466802839948	0.52056515978546	1	0.52056515978546	1	NA	"abundance"	10	9
+"Sorodiplophrys_uncultured_eukaryote"	"treatment_tag"	"138"	"treatment_tag138"	-2.74069664726004	1.16892717517268	0.972002642895187	0.178102824377686	1	0.178102824377686	1	NA	"abundance"	10	9
+"Sorodiplophrys_uncultured_eukaryote"	"treatment_tag"	"26"	"treatment_tag26"	-1.00221866179473	-1.00221866179473	1.08913561564685	1	1	1	1	NA	"abundance"	10	9
+"Sorodiplophrys_uncultured_eukaryote"	"treatment_tag"	"3,727"	"treatment_tag3,727"	-0.0110171962375105	0.256192249408236	1.02808706617028	0.868262448641316	1	0.868262448641316	1	NA	"abundance"	10	9
+"Sorodiplophrys_uncultured_eukaryote"	"treatment_tag"	"4"	"treatment_tag4"	-17.7552627163022	5.44516385065324	19.8192139505659	0.469486025566239	1	0.469486025566239	1	NA	"abundance"	10	9
+"Sorodiplophrys_uncultured_eukaryote"	"treatment_tag"	"719"	"treatment_tag719"	0.0991850654628614	1.24344031680309	1.22880004009114	0.536448817381154	1	0.536448817381154	1	NA	"abundance"	10	9
+"Telaepolella_Telaepolella_tubasferens"	"read_depth"	"read_depth"	"read_depth"	-1.85601541396037	-2.03156345764793	14.1533140060598	0.991971940961642	1	0.991971940961642	1	NA	"abundance"	10	10
+"Telaepolella_Telaepolella_tubasferens"	"treatment_tag"	"100,000"	"treatment_tag100,000"	1.61058461095623	2.78110641826802	23.0574439941524	0.969336043158566	1	0.969336043158566	1	NA	"abundance"	10	10
+"Telaepolella_Telaepolella_tubasferens"	"treatment_tag"	"138"	"treatment_tag138"	0.842849155300298	1.16892717517268	2.02170900361342	0.894286698962831	1	0.894286698962831	1	NA	"abundance"	10	10
+"Telaepolella_Telaepolella_tubasferens"	"treatment_tag"	"26"	"treatment_tag26"	-2.10515325706542	-1.00221866179473	2.2653387790703	0.708902414102989	1	0.708902414102989	1	NA	"abundance"	10	10
+"Telaepolella_Telaepolella_tubasferens"	"treatment_tag"	"3,727"	"treatment_tag3,727"	-0.483624543285953	0.256192249408236	2.13836134435192	0.784858041173711	1	0.784858041173711	1	NA	"abundance"	10	10
+"Telaepolella_Telaepolella_tubasferens"	"treatment_tag"	"4"	"treatment_tag4"	-1.09164347746516	5.44516385065324	41.222813107845	0.903148150287107	1	0.903148150287107	1	NA	"abundance"	10	10
+"Telaepolella_Telaepolella_tubasferens"	"treatment_tag"	"719"	"treatment_tag719"	-1.01973633409099	1.24344031680309	2.55583266450099	0.532789704471262	1	0.532789704471262	1	NA	"abundance"	10	10
+"uncultured_metagenome"	"read_depth"	"read_depth"	"read_depth"	-7.11286211107606	-2.03156345764793	30.3286646451113	0.892765944255189	1	0.892765944255189	1	NA	"abundance"	10	10
+"uncultured_metagenome"	"treatment_tag"	"100,000"	"treatment_tag100,000"	9.27361876429951	2.78110641826802	49.4090278907594	0.913778160142876	1	0.913778160142876	1	NA	"abundance"	10	10
+"uncultured_metagenome"	"treatment_tag"	"138"	"treatment_tag138"	2.27455584587112	1.16892717517268	4.33225281049661	0.837434138838652	1	0.837434138838652	1	NA	"abundance"	10	10
+"uncultured_metagenome"	"treatment_tag"	"26"	"treatment_tag26"	1.23613370004381	-1.00221866179473	4.85431893255338	0.720807294952609	1	0.720807294952609	1	NA	"abundance"	10	10
+"uncultured_metagenome"	"treatment_tag"	"3,727"	"treatment_tag3,727"	-3.00872053191177	0.256192249408236	4.582223221724	0.601318693071607	1	0.601318693071607	1	NA	"abundance"	10	10
+"uncultured_metagenome"	"treatment_tag"	"4"	"treatment_tag4"	18.2109705509582	5.44516385065324	88.3349916451114	0.90654365513638	1	0.90654365513638	1	NA	"abundance"	10	10
+"uncultured_metagenome"	"treatment_tag"	"719"	"treatment_tag719"	1.85014395926557	1.24344031680309	5.4768085932018	0.928205829022563	1	0.928205829022563	1	NA	"abundance"	10	10
+"uncultured_uncultured_Eimeriidae"	"read_depth"	"read_depth"	"read_depth"	-10.8852987257577	-2.03156345764793	25.9970288088526	0.787761886693354	1	0.787761886693354	1	NA	"abundance"	10	10
+"uncultured_uncultured_Eimeriidae"	"treatment_tag"	"100,000"	"treatment_tag100,000"	17.6187985912681	2.78110641826802	42.3522742106788	0.777523812794238	1	0.777523812794238	1	NA	"abundance"	10	10
+"uncultured_uncultured_Eimeriidae"	"treatment_tag"	"138"	"treatment_tag138"	1.93896532398282	1.16892717517268	3.7135067580322	0.866494223625774	1	0.866494223625774	1	NA	"abundance"	10	10
+"uncultured_uncultured_Eimeriidae"	"treatment_tag"	"26"	"treatment_tag26"	1.86050495405378	-1.00221866179473	4.16100974486163	0.611834114476906	1	0.611834114476906	1	NA	"abundance"	10	10
+"uncultured_uncultured_Eimeriidae"	"treatment_tag"	"3,727"	"treatment_tag3,727"	2.03038745725809	0.256192249408236	3.92777560428971	0.724340289893739	1	0.724340289893739	1	NA	"abundance"	10	10
+"uncultured_uncultured_Eimeriidae"	"treatment_tag"	"4"	"treatment_tag4"	30.5976062462717	5.44516385065324	75.7187086704749	0.791581772220404	1	0.791581772220404	1	NA	"abundance"	10	10
+"uncultured_uncultured_Eimeriidae"	"treatment_tag"	"719"	"treatment_tag719"	4.57021594723926	1.24344031680309	4.69459346278831	0.603577136786675	1	0.603577136786675	1	NA	"abundance"	10	10
+"uncultured_uncultured_Eimeriidae.1"	"read_depth"	"read_depth"	"read_depth"	-10.8852987257577	-2.03156345764793	25.9970288088526	0.788204854592213	1	0.788204854592213	1	NA	"abundance"	10	10
+"uncultured_uncultured_Eimeriidae.1"	"treatment_tag"	"100,000"	"treatment_tag100,000"	17.6187985912681	2.78110641826802	42.3522742106788	0.779009491960369	1	0.779009491960369	1	NA	"abundance"	10	10
+"uncultured_uncultured_Eimeriidae.1"	"treatment_tag"	"138"	"treatment_tag138"	1.93896532398282	1.16892717517268	3.7135067580322	0.866293781583139	1	0.866293781583139	1	NA	"abundance"	10	10
+"uncultured_uncultured_Eimeriidae.1"	"treatment_tag"	"26"	"treatment_tag26"	1.86050495405378	-1.00221866179473	4.16100974486163	0.611614871464292	1	0.611614871464292	1	NA	"abundance"	10	10
+"uncultured_uncultured_Eimeriidae.1"	"treatment_tag"	"3,727"	"treatment_tag3,727"	2.03038745725809	0.256192249408236	3.92777560428971	0.724503682209486	1	0.724503682209486	1	NA	"abundance"	10	10
+"uncultured_uncultured_Eimeriidae.1"	"treatment_tag"	"4"	"treatment_tag4"	30.5976062462717	5.44516385065324	75.7187086704749	0.791102052823055	1	0.791102052823055	1	NA	"abundance"	10	10
+"uncultured_uncultured_Eimeriidae.1"	"treatment_tag"	"719"	"treatment_tag719"	4.57021594723926	1.24344031680309	4.69459346278831	0.603086160491346	1	0.603086160491346	1	NA	"abundance"	10	10
+"Woronina_uncultured_Plasmodiophoridae"	"read_depth"	"read_depth"	"read_depth"	-1.66633823609499	-2.03156345764793	14.5495622797272	0.983722877735223	1	0.983722877735223	1	NA	"abundance"	10	10
+"Woronina_uncultured_Plasmodiophoridae"	"treatment_tag"	"100,000"	"treatment_tag100,000"	2.34070393135018	2.78110641826802	23.7029799000154	0.987591235300644	1	0.987591235300644	1	NA	"abundance"	10	10
+"Woronina_uncultured_Plasmodiophoridae"	"treatment_tag"	"138"	"treatment_tag138"	1.57749274257754	1.16892717517268	2.07831049653562	0.872785573415929	1	0.872785573415929	1	NA	"abundance"	10	10
+"Woronina_uncultured_Plasmodiophoridae"	"treatment_tag"	"26"	"treatment_tag26"	-0.152325343087494	-1.00221866179473	2.32876113938068	0.786646725614975	1	0.786646725614975	1	NA	"abundance"	10	10
+"Woronina_uncultured_Plasmodiophoridae"	"treatment_tag"	"3,727"	"treatment_tag3,727"	1.02887056302059	0.256192249408236	2.19822873589101	0.780695709908557	1	0.780695709908557	1	NA	"abundance"	10	10
+"Woronina_uncultured_Plasmodiophoridae"	"treatment_tag"	"4"	"treatment_tag4"	1.9411651574855	5.44516385065324	42.3769222106815	0.949134959006736	1	0.949134959006736	1	NA	"abundance"	10	10
+"Woronina_uncultured_Plasmodiophoridae"	"treatment_tag"	"719"	"treatment_tag719"	2.43407082898812	1.24344031680309	2.62738793987025	0.723848675408316	1	0.723848675408316	1	NA	"abundance"	10	10
+"Acanthamoeba_Acanthamoeba_castellanii"	"treatment_tag"	"719"	"treatment_tag719"	NA	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	9
+"Acanthamoeba_Acanthamoeba_hatchetti"	"read_depth"	"read_depth"	"read_depth"	9.65542014325205	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	7
+"Acanthamoeba_Acanthamoeba_hatchetti"	"treatment_tag"	"100,000"	"treatment_tag100,000"	-17.4191054296055	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	7
+"Acanthamoeba_Acanthamoeba_hatchetti"	"treatment_tag"	"138"	"treatment_tag138"	-4.88614865385983	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	7
+"Acanthamoeba_Acanthamoeba_hatchetti"	"treatment_tag"	"26"	"treatment_tag26"	NA	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	7
+"Acanthamoeba_Acanthamoeba_hatchetti"	"treatment_tag"	"3,727"	"treatment_tag3,727"	1.41808286784038	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	7
+"Acanthamoeba_Acanthamoeba_hatchetti"	"treatment_tag"	"4"	"treatment_tag4"	-31.9179567507768	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	7
+"Acanthamoeba_Acanthamoeba_hatchetti"	"treatment_tag"	"719"	"treatment_tag719"	NA	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	7
+"Acanthocystidae_uncultured_eukaryote"	"read_depth"	"read_depth"	"read_depth"	1.95081111822572	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	5
+"Acanthocystidae_uncultured_eukaryote"	"treatment_tag"	"100,000"	"treatment_tag100,000"	NA	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	5
+"Acanthocystidae_uncultured_eukaryote"	"treatment_tag"	"138"	"treatment_tag138"	1.63808028756584	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	5
+"Acanthocystidae_uncultured_eukaryote"	"treatment_tag"	"26"	"treatment_tag26"	NA	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	5
+"Acanthocystidae_uncultured_eukaryote"	"treatment_tag"	"3,727"	"treatment_tag3,727"	NA	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	5
+"Acanthocystidae_uncultured_eukaryote"	"treatment_tag"	"4"	"treatment_tag4"	-9.80821154847895	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	5
+"Acanthocystidae_uncultured_eukaryote"	"treatment_tag"	"719"	"treatment_tag719"	NA	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	5
+"Amoebozoa_metagenome"	"read_depth"	"read_depth"	"read_depth"	49.553434004861	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	7
+"Amoebozoa_metagenome"	"treatment_tag"	"100,000"	"treatment_tag100,000"	NA	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	7
+"Amoebozoa_metagenome"	"treatment_tag"	"138"	"treatment_tag138"	5.38760527842696	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	7
+"Amoebozoa_metagenome"	"treatment_tag"	"26"	"treatment_tag26"	-0.960262980042791	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	7
+"Amoebozoa_metagenome"	"treatment_tag"	"3,727"	"treatment_tag3,727"	NA	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	7
+"Amoebozoa_metagenome"	"treatment_tag"	"4"	"treatment_tag4"	-142.788901161228	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	7
+"Amoebozoa_metagenome"	"treatment_tag"	"719"	"treatment_tag719"	-2.26329368496205	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	7
+"BOLA868_uncultured_Hartmannellidae"	"treatment_tag"	"26"	"treatment_tag26"	NA	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	7
+"BOLA868_uncultured_Hartmannellidae"	"treatment_tag"	"3,727"	"treatment_tag3,727"	NA	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	7
+"Centramoebida_uncultured_eukaryote"	"read_depth"	"read_depth"	"read_depth"	2.63691251338846	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	4
+"Centramoebida_uncultured_eukaryote"	"treatment_tag"	"100,000"	"treatment_tag100,000"	NA	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	4
+"Centramoebida_uncultured_eukaryote"	"treatment_tag"	"138"	"treatment_tag138"	NA	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	4
+"Centramoebida_uncultured_eukaryote"	"treatment_tag"	"26"	"treatment_tag26"	-0.0228176960878037	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	4
+"Centramoebida_uncultured_eukaryote"	"treatment_tag"	"3,727"	"treatment_tag3,727"	NA	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	4
+"Centramoebida_uncultured_eukaryote"	"treatment_tag"	"4"	"treatment_tag4"	-5.71653746871282	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	4
+"Centramoebida_uncultured_eukaryote"	"treatment_tag"	"719"	"treatment_tag719"	NA	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	4
+"Cercomonas_uncultured_Cercozoa"	"treatment_tag"	"138"	"treatment_tag138"	NA	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	8
+"Cercomonas_uncultured_Cercozoa"	"treatment_tag"	"4"	"treatment_tag4"	NA	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	8
+"Cercozoa_Athalamea_environmental"	"read_depth"	"read_depth"	"read_depth"	2.63691251338846	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	6
+"Cercozoa_Athalamea_environmental"	"treatment_tag"	"100,000"	"treatment_tag100,000"	-8.85197929164201	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	6
+"Cercozoa_Athalamea_environmental"	"treatment_tag"	"138"	"treatment_tag138"	0.201879469723393	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	6
+"Cercozoa_Athalamea_environmental"	"treatment_tag"	"26"	"treatment_tag26"	NA	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	6
+"Cercozoa_Athalamea_environmental"	"treatment_tag"	"3,727"	"treatment_tag3,727"	2.09175111030075	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	6
+"Cercozoa_Athalamea_environmental"	"treatment_tag"	"4"	"treatment_tag4"	-12.4169771868539	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	6
+"Cercozoa_Athalamea_environmental"	"treatment_tag"	"719"	"treatment_tag719"	NA	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	6
+"Cercozoa_uncultured_eukaryote"	"read_depth"	"read_depth"	"read_depth"	NA	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	2
+"Cercozoa_uncultured_eukaryote"	"treatment_tag"	"100,000"	"treatment_tag100,000"	NA	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	2
+"Cercozoa_uncultured_eukaryote"	"treatment_tag"	"138"	"treatment_tag138"	NA	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	2
+"Cercozoa_uncultured_eukaryote"	"treatment_tag"	"26"	"treatment_tag26"	0.58667515269957	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	2
+"Cercozoa_uncultured_eukaryote"	"treatment_tag"	"3,727"	"treatment_tag3,727"	NA	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	2
+"Cercozoa_uncultured_eukaryote"	"treatment_tag"	"4"	"treatment_tag4"	NA	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	2
+"Cercozoa_uncultured_eukaryote"	"treatment_tag"	"719"	"treatment_tag719"	NA	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	2
+"Codosiga_Codosiga_hollandica"	"read_depth"	"read_depth"	"read_depth"	NA	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	4
+"Codosiga_Codosiga_hollandica"	"treatment_tag"	"100,000"	"treatment_tag100,000"	NA	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	4
+"Codosiga_Codosiga_hollandica"	"treatment_tag"	"138"	"treatment_tag138"	1.11699367754698	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	4
+"Codosiga_Codosiga_hollandica"	"treatment_tag"	"26"	"treatment_tag26"	NA	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	4
+"Codosiga_Codosiga_hollandica"	"treatment_tag"	"3,727"	"treatment_tag3,727"	NA	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	4
+"Codosiga_Codosiga_hollandica"	"treatment_tag"	"4"	"treatment_tag4"	NA	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	4
+"Codosiga_Codosiga_hollandica"	"treatment_tag"	"719"	"treatment_tag719"	-3.80614807307429	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	4
+"CV1-B1-93_uncultured_centroheliozoan"	"read_depth"	"read_depth"	"read_depth"	-47.7383974713015	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	5
+"CV1-B1-93_uncultured_centroheliozoan"	"treatment_tag"	"100,000"	"treatment_tag100,000"	70.3925890513909	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	5
+"CV1-B1-93_uncultured_centroheliozoan"	"treatment_tag"	"138"	"treatment_tag138"	-5.0810376618203	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	5
+"CV1-B1-93_uncultured_centroheliozoan"	"treatment_tag"	"26"	"treatment_tag26"	4.76071940135592	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	5
+"CV1-B1-93_uncultured_centroheliozoan"	"treatment_tag"	"3,727"	"treatment_tag3,727"	NA	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	5
+"CV1-B1-93_uncultured_centroheliozoan"	"treatment_tag"	"4"	"treatment_tag4"	NA	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	5
+"CV1-B1-93_uncultured_centroheliozoan"	"treatment_tag"	"719"	"treatment_tag719"	NA	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	5
+"Diplostraca_Acroperus_harpae"	"read_depth"	"read_depth"	"read_depth"	NA	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	6
+"Diplostraca_Acroperus_harpae"	"treatment_tag"	"100,000"	"treatment_tag100,000"	-0.867498786026717	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	6
+"Diplostraca_Acroperus_harpae"	"treatment_tag"	"138"	"treatment_tag138"	4.1666338592993	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	6
+"Diplostraca_Acroperus_harpae"	"treatment_tag"	"26"	"treatment_tag26"	NA	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	6
+"Diplostraca_Acroperus_harpae"	"treatment_tag"	"3,727"	"treatment_tag3,727"	NA	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	6
+"Diplostraca_Acroperus_harpae"	"treatment_tag"	"4"	"treatment_tag4"	-2.62595310964861	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	6
+"Diplostraca_Acroperus_harpae"	"treatment_tag"	"719"	"treatment_tag719"	-0.493473485488174	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	6
+"Diplostraca_Bosmina_longirostris"	"read_depth"	"read_depth"	"read_depth"	NA	NA	NA	NA	NA	NA	NA	"No data points have the baseline factor level"	"abundance"	10	2
+"Diplostraca_Bosmina_longirostris"	"treatment_tag"	"100,000"	"treatment_tag100,000"	NA	NA	NA	NA	NA	NA	NA	"No data points have the baseline factor level"	"abundance"	10	2
+"Diplostraca_Bosmina_longirostris"	"treatment_tag"	"138"	"treatment_tag138"	NA	NA	NA	NA	NA	NA	NA	"No data points have the baseline factor level"	"abundance"	10	2
+"Diplostraca_Bosmina_longirostris"	"treatment_tag"	"26"	"treatment_tag26"	NA	NA	NA	NA	NA	NA	NA	"No data points have the baseline factor level"	"abundance"	10	2
+"Diplostraca_Bosmina_longirostris"	"treatment_tag"	"3,727"	"treatment_tag3,727"	NA	NA	NA	NA	NA	NA	NA	"No data points have the baseline factor level"	"abundance"	10	2
+"Diplostraca_Bosmina_longirostris"	"treatment_tag"	"4"	"treatment_tag4"	NA	NA	NA	NA	NA	NA	NA	"No data points have the baseline factor level"	"abundance"	10	2
+"Diplostraca_Bosmina_longirostris"	"treatment_tag"	"719"	"treatment_tag719"	NA	NA	NA	NA	NA	NA	NA	"No data points have the baseline factor level"	"abundance"	10	2
+"Diplostraca_Chydorus_sphaericus"	"read_depth"	"read_depth"	"read_depth"	NA	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	3
+"Diplostraca_Chydorus_sphaericus"	"treatment_tag"	"100,000"	"treatment_tag100,000"	-2.44320777944663	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	3
+"Diplostraca_Chydorus_sphaericus"	"treatment_tag"	"138"	"treatment_tag138"	NA	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	3
+"Diplostraca_Chydorus_sphaericus"	"treatment_tag"	"26"	"treatment_tag26"	NA	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	3
+"Diplostraca_Chydorus_sphaericus"	"treatment_tag"	"3,727"	"treatment_tag3,727"	NA	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	3
+"Diplostraca_Chydorus_sphaericus"	"treatment_tag"	"4"	"treatment_tag4"	NA	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	3
+"Diplostraca_Chydorus_sphaericus"	"treatment_tag"	"719"	"treatment_tag719"	-3.39111057379545	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	3
+"Diplostraca_Diaphanosoma_sp."	"read_depth"	"read_depth"	"read_depth"	NA	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	2
+"Diplostraca_Diaphanosoma_sp."	"treatment_tag"	"100,000"	"treatment_tag100,000"	-1.82946598682335	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	2
+"Diplostraca_Diaphanosoma_sp."	"treatment_tag"	"138"	"treatment_tag138"	NA	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	2
+"Diplostraca_Diaphanosoma_sp."	"treatment_tag"	"26"	"treatment_tag26"	NA	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	2
+"Diplostraca_Diaphanosoma_sp."	"treatment_tag"	"3,727"	"treatment_tag3,727"	NA	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	2
+"Diplostraca_Diaphanosoma_sp."	"treatment_tag"	"4"	"treatment_tag4"	NA	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	2
+"Diplostraca_Diaphanosoma_sp."	"treatment_tag"	"719"	"treatment_tag719"	NA	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	2
+"Diplostraca_Pleuroxus_aduncus"	"read_depth"	"read_depth"	"read_depth"	NA	NA	NA	NA	NA	NA	NA	"No data points have the baseline factor level"	"abundance"	10	4
+"Diplostraca_Pleuroxus_aduncus"	"treatment_tag"	"100,000"	"treatment_tag100,000"	NA	NA	NA	NA	NA	NA	NA	"No data points have the baseline factor level"	"abundance"	10	4
+"Diplostraca_Pleuroxus_aduncus"	"treatment_tag"	"138"	"treatment_tag138"	NA	NA	NA	NA	NA	NA	NA	"No data points have the baseline factor level"	"abundance"	10	4
+"Diplostraca_Pleuroxus_aduncus"	"treatment_tag"	"26"	"treatment_tag26"	NA	NA	NA	NA	NA	NA	NA	"No data points have the baseline factor level"	"abundance"	10	4
+"Diplostraca_Pleuroxus_aduncus"	"treatment_tag"	"3,727"	"treatment_tag3,727"	NA	NA	NA	NA	NA	NA	NA	"No data points have the baseline factor level"	"abundance"	10	4
+"Diplostraca_Pleuroxus_aduncus"	"treatment_tag"	"4"	"treatment_tag4"	NA	NA	NA	NA	NA	NA	NA	"No data points have the baseline factor level"	"abundance"	10	4
+"Diplostraca_Pleuroxus_aduncus"	"treatment_tag"	"719"	"treatment_tag719"	NA	NA	NA	NA	NA	NA	NA	"No data points have the baseline factor level"	"abundance"	10	4
+"Diptera_Ablabesmyia_rhamphe"	"treatment_tag"	"4"	"treatment_tag4"	NA	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	8
+"Diptera_Ablabesmyia_rhamphe"	"treatment_tag"	"719"	"treatment_tag719"	NA	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	8
+"Diptera_Belgica_antarctica"	"read_depth"	"read_depth"	"read_depth"	NA	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	5
+"Diptera_Belgica_antarctica"	"treatment_tag"	"100,000"	"treatment_tag100,000"	NA	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	5
+"Diptera_Belgica_antarctica"	"treatment_tag"	"138"	"treatment_tag138"	0.390885467285628	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	5
+"Diptera_Belgica_antarctica"	"treatment_tag"	"26"	"treatment_tag26"	NA	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	5
+"Diptera_Belgica_antarctica"	"treatment_tag"	"3,727"	"treatment_tag3,727"	3.1988666949927	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	5
+"Diptera_Belgica_antarctica"	"treatment_tag"	"4"	"treatment_tag4"	4.67260723977797	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	5
+"Diptera_Belgica_antarctica"	"treatment_tag"	"719"	"treatment_tag719"	NA	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	5
+"Euamoebida_Copromyxa_microcystidis"	"read_depth"	"read_depth"	"read_depth"	NA	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	2
+"Euamoebida_Copromyxa_microcystidis"	"treatment_tag"	"100,000"	"treatment_tag100,000"	-1.72074175497553	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	2
+"Euamoebida_Copromyxa_microcystidis"	"treatment_tag"	"138"	"treatment_tag138"	NA	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	2
+"Euamoebida_Copromyxa_microcystidis"	"treatment_tag"	"26"	"treatment_tag26"	NA	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	2
+"Euamoebida_Copromyxa_microcystidis"	"treatment_tag"	"3,727"	"treatment_tag3,727"	NA	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	2
+"Euamoebida_Copromyxa_microcystidis"	"treatment_tag"	"4"	"treatment_tag4"	NA	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	2
+"Euamoebida_Copromyxa_microcystidis"	"treatment_tag"	"719"	"treatment_tag719"	NA	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	2
+"Euamoebida_Copromyxa_sp."	"read_depth"	"read_depth"	"read_depth"	NA	NA	NA	NA	NA	NA	NA	"No data points have the baseline factor level"	"abundance"	10	3
+"Euamoebida_Copromyxa_sp."	"treatment_tag"	"100,000"	"treatment_tag100,000"	NA	NA	NA	NA	NA	NA	NA	"No data points have the baseline factor level"	"abundance"	10	3
+"Euamoebida_Copromyxa_sp."	"treatment_tag"	"138"	"treatment_tag138"	NA	NA	NA	NA	NA	NA	NA	"No data points have the baseline factor level"	"abundance"	10	3
+"Euamoebida_Copromyxa_sp."	"treatment_tag"	"26"	"treatment_tag26"	NA	NA	NA	NA	NA	NA	NA	"No data points have the baseline factor level"	"abundance"	10	3
+"Euamoebida_Copromyxa_sp."	"treatment_tag"	"3,727"	"treatment_tag3,727"	NA	NA	NA	NA	NA	NA	NA	"No data points have the baseline factor level"	"abundance"	10	3
+"Euamoebida_Copromyxa_sp."	"treatment_tag"	"4"	"treatment_tag4"	NA	NA	NA	NA	NA	NA	NA	"No data points have the baseline factor level"	"abundance"	10	3
+"Euamoebida_Copromyxa_sp."	"treatment_tag"	"719"	"treatment_tag719"	NA	NA	NA	NA	NA	NA	NA	"No data points have the baseline factor level"	"abundance"	10	3
+"Flamella_uncultured_eukaryote"	"treatment_tag"	"100,000"	"treatment_tag100,000"	NA	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	9
+"Goniomonas_Goniomonas_sp."	"read_depth"	"read_depth"	"read_depth"	NA	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	2
+"Goniomonas_Goniomonas_sp."	"treatment_tag"	"100,000"	"treatment_tag100,000"	NA	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	2
+"Goniomonas_Goniomonas_sp."	"treatment_tag"	"138"	"treatment_tag138"	NA	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	2
+"Goniomonas_Goniomonas_sp."	"treatment_tag"	"26"	"treatment_tag26"	2.54378795651937	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	2
+"Goniomonas_Goniomonas_sp."	"treatment_tag"	"3,727"	"treatment_tag3,727"	NA	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	2
+"Goniomonas_Goniomonas_sp."	"treatment_tag"	"4"	"treatment_tag4"	NA	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	2
+"Goniomonas_Goniomonas_sp."	"treatment_tag"	"719"	"treatment_tag719"	NA	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	2
+"Gymnophrys_metagenome"	"read_depth"	"read_depth"	"read_depth"	NA	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	4
+"Gymnophrys_metagenome"	"treatment_tag"	"100,000"	"treatment_tag100,000"	-3.59521087289167	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	4
+"Gymnophrys_metagenome"	"treatment_tag"	"138"	"treatment_tag138"	NA	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	4
+"Gymnophrys_metagenome"	"treatment_tag"	"26"	"treatment_tag26"	NA	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	4
+"Gymnophrys_metagenome"	"treatment_tag"	"3,727"	"treatment_tag3,727"	NA	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	4
+"Gymnophrys_metagenome"	"treatment_tag"	"4"	"treatment_tag4"	NA	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	4
+"Gymnophrys_metagenome"	"treatment_tag"	"719"	"treatment_tag719"	3.36377692836802	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	4
+"H1-10_uncultured_eukaryote"	"read_depth"	"read_depth"	"read_depth"	6.11243432478765	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	6
+"H1-10_uncultured_eukaryote"	"treatment_tag"	"100,000"	"treatment_tag100,000"	NA	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	6
+"H1-10_uncultured_eukaryote"	"treatment_tag"	"138"	"treatment_tag138"	-3.78420112680924	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	6
+"H1-10_uncultured_eukaryote"	"treatment_tag"	"26"	"treatment_tag26"	NA	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	6
+"H1-10_uncultured_eukaryote"	"treatment_tag"	"3,727"	"treatment_tag3,727"	-4.95632071488873	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	6
+"H1-10_uncultured_eukaryote"	"treatment_tag"	"4"	"treatment_tag4"	NA	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	6
+"H1-10_uncultured_eukaryote"	"treatment_tag"	"719"	"treatment_tag719"	-4.14889598449663	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	6
+"H15-6_Choanocystis_symna"	"treatment_tag"	"100,000"	"treatment_tag100,000"	NA	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	4
+"H15-6_Choanocystis_symna"	"treatment_tag"	"26"	"treatment_tag26"	NA	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	4
+"H15-6_Choanocystis_symna"	"treatment_tag"	"3,727"	"treatment_tag3,727"	NA	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	4
+"H15-6_Choanocystis_symna"	"treatment_tag"	"4"	"treatment_tag4"	NA	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	4
+"H15-6_Choanocystis_symna"	"treatment_tag"	"719"	"treatment_tag719"	NA	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	4
+"Haptophyta_Spironema_cf."	"read_depth"	"read_depth"	"read_depth"	NA	NA	NA	NA	NA	NA	NA	"No data points have the baseline factor level"	"abundance"	10	3
+"Haptophyta_Spironema_cf."	"treatment_tag"	"100,000"	"treatment_tag100,000"	NA	NA	NA	NA	NA	NA	NA	"No data points have the baseline factor level"	"abundance"	10	3
+"Haptophyta_Spironema_cf."	"treatment_tag"	"138"	"treatment_tag138"	NA	NA	NA	NA	NA	NA	NA	"No data points have the baseline factor level"	"abundance"	10	3
+"Haptophyta_Spironema_cf."	"treatment_tag"	"26"	"treatment_tag26"	NA	NA	NA	NA	NA	NA	NA	"No data points have the baseline factor level"	"abundance"	10	3
+"Haptophyta_Spironema_cf."	"treatment_tag"	"3,727"	"treatment_tag3,727"	NA	NA	NA	NA	NA	NA	NA	"No data points have the baseline factor level"	"abundance"	10	3
+"Haptophyta_Spironema_cf."	"treatment_tag"	"4"	"treatment_tag4"	NA	NA	NA	NA	NA	NA	NA	"No data points have the baseline factor level"	"abundance"	10	3
+"Haptophyta_Spironema_cf."	"treatment_tag"	"719"	"treatment_tag719"	NA	NA	NA	NA	NA	NA	NA	"No data points have the baseline factor level"	"abundance"	10	3
+"Incertae_Sedis_metagenome"	"read_depth"	"read_depth"	"read_depth"	NA	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	4
+"Incertae_Sedis_metagenome"	"treatment_tag"	"100,000"	"treatment_tag100,000"	NA	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	4
+"Incertae_Sedis_metagenome"	"treatment_tag"	"138"	"treatment_tag138"	1.53203117682583	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	4
+"Incertae_Sedis_metagenome"	"treatment_tag"	"26"	"treatment_tag26"	0.569456448639627	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	4
+"Incertae_Sedis_metagenome"	"treatment_tag"	"3,727"	"treatment_tag3,727"	NA	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	4
+"Incertae_Sedis_metagenome"	"treatment_tag"	"4"	"treatment_tag4"	-0.768702695792412	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	4
+"Incertae_Sedis_metagenome"	"treatment_tag"	"719"	"treatment_tag719"	NA	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	4
+"Ischnamoeba_Ischnamoeba_sp."	"read_depth"	"read_depth"	"read_depth"	NA	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	5
+"Ischnamoeba_Ischnamoeba_sp."	"treatment_tag"	"100,000"	"treatment_tag100,000"	-3.18017337361283	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	5
+"Ischnamoeba_Ischnamoeba_sp."	"treatment_tag"	"138"	"treatment_tag138"	NA	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	5
+"Ischnamoeba_Ischnamoeba_sp."	"treatment_tag"	"26"	"treatment_tag26"	NA	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	5
+"Ischnamoeba_Ischnamoeba_sp."	"treatment_tag"	"3,727"	"treatment_tag3,727"	NA	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	5
+"Ischnamoeba_Ischnamoeba_sp."	"treatment_tag"	"4"	"treatment_tag4"	-2.61669960234736	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	5
+"Ischnamoeba_Ischnamoeba_sp."	"treatment_tag"	"719"	"treatment_tag719"	2.94873942908918	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	5
+"Ischnamoeba_uncultured_eukaryote"	"treatment_tag"	"100,000"	"treatment_tag100,000"	NA	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	7
+"Ischnamoeba_uncultured_eukaryote"	"treatment_tag"	"3,727"	"treatment_tag3,727"	NA	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	7
+"Ischnamoeba_uncultured_eukaryote"	"treatment_tag"	"4"	"treatment_tag4"	NA	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	7
+"Jakobida_metagenome"	"read_depth"	"read_depth"	"read_depth"	NA	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	2
+"Jakobida_metagenome"	"treatment_tag"	"100,000"	"treatment_tag100,000"	NA	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	2
+"Jakobida_metagenome"	"treatment_tag"	"138"	"treatment_tag138"	NA	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	2
+"Jakobida_metagenome"	"treatment_tag"	"26"	"treatment_tag26"	NA	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	2
+"Jakobida_metagenome"	"treatment_tag"	"3,727"	"treatment_tag3,727"	NA	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	2
+"Jakobida_metagenome"	"treatment_tag"	"4"	"treatment_tag4"	-1.76870269579241	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	2
+"Jakobida_metagenome"	"treatment_tag"	"719"	"treatment_tag719"	NA	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	2
+"Legeriomycetaceae_Legeriosimilis_sp."	"treatment_tag"	"100,000"	"treatment_tag100,000"	NA	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	6
+"Legeriomycetaceae_Legeriosimilis_sp."	"treatment_tag"	"138"	"treatment_tag138"	NA	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	6
+"Legeriomycetaceae_Legeriosimilis_sp."	"treatment_tag"	"4"	"treatment_tag4"	NA	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	6
+"Legeriomycetaceae_Legeriosimilis_sp."	"treatment_tag"	"719"	"treatment_tag719"	NA	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	6
+"Ligniera_Ligniera_junci"	"read_depth"	"read_depth"	"read_depth"	NA	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	3
+"Ligniera_Ligniera_junci"	"treatment_tag"	"100,000"	"treatment_tag100,000"	-1.59885305868194	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	3
+"Ligniera_Ligniera_junci"	"treatment_tag"	"138"	"treatment_tag138"	0.975847968006783	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	3
+"Ligniera_Ligniera_junci"	"treatment_tag"	"26"	"treatment_tag26"	NA	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	3
+"Ligniera_Ligniera_junci"	"treatment_tag"	"3,727"	"treatment_tag3,727"	NA	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	3
+"Ligniera_Ligniera_junci"	"treatment_tag"	"4"	"treatment_tag4"	NA	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	3
+"Ligniera_Ligniera_junci"	"treatment_tag"	"719"	"treatment_tag719"	NA	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	3
+"Magnoliophyta_Acanthamoeba_sp."	"read_depth"	"read_depth"	"read_depth"	3.66606728410046	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	8
+"Magnoliophyta_Acanthamoeba_sp."	"treatment_tag"	"100,000"	"treatment_tag100,000"	-6.74090580165538	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	8
+"Magnoliophyta_Acanthamoeba_sp."	"treatment_tag"	"138"	"treatment_tag138"	-3.49637812923293	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	8
+"Magnoliophyta_Acanthamoeba_sp."	"treatment_tag"	"26"	"treatment_tag26"	-6.99330348471234	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	8
+"Magnoliophyta_Acanthamoeba_sp."	"treatment_tag"	"3,727"	"treatment_tag3,727"	1.48434802907667	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	8
+"Magnoliophyta_Acanthamoeba_sp."	"treatment_tag"	"4"	"treatment_tag4"	-13.7641590522151	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	8
+"Magnoliophyta_Acanthamoeba_sp."	"treatment_tag"	"719"	"treatment_tag719"	NA	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	8
+"Mycamoeba_metagenome"	"treatment_tag"	"26"	"treatment_tag26"	NA	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	6
+"Mycamoeba_metagenome"	"treatment_tag"	"3,727"	"treatment_tag3,727"	NA	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	6
+"Mycamoeba_metagenome"	"treatment_tag"	"719"	"treatment_tag719"	NA	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	6
+"Mycamoeba_uncultured_freshwater"	"read_depth"	"read_depth"	"read_depth"	-58.1084689171501	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	6
+"Mycamoeba_uncultured_freshwater"	"treatment_tag"	"100,000"	"treatment_tag100,000"	89.5802180790431	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	6
+"Mycamoeba_uncultured_freshwater"	"treatment_tag"	"138"	"treatment_tag138"	-3.34615542141846	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	6
+"Mycamoeba_uncultured_freshwater"	"treatment_tag"	"26"	"treatment_tag26"	1.02008651468427	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	6
+"Mycamoeba_uncultured_freshwater"	"treatment_tag"	"3,727"	"treatment_tag3,727"	-9.24964741643604	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	6
+"Mycamoeba_uncultured_freshwater"	"treatment_tag"	"4"	"treatment_tag4"	NA	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	6
+"Mycamoeba_uncultured_freshwater"	"treatment_tag"	"719"	"treatment_tag719"	NA	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	6
+"Novel_Clade_10_uncultured_Rhizaria"	"read_depth"	"read_depth"	"read_depth"	23.7134556616402	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	5
+"Novel_Clade_10_uncultured_Rhizaria"	"treatment_tag"	"100,000"	"treatment_tag100,000"	NA	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	5
+"Novel_Clade_10_uncultured_Rhizaria"	"treatment_tag"	"138"	"treatment_tag138"	-0.983839129831955	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	5
+"Novel_Clade_10_uncultured_Rhizaria"	"treatment_tag"	"26"	"treatment_tag26"	0.0182768348008122	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	5
+"Novel_Clade_10_uncultured_Rhizaria"	"treatment_tag"	"3,727"	"treatment_tag3,727"	NA	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	5
+"Novel_Clade_10_uncultured_Rhizaria"	"treatment_tag"	"4"	"treatment_tag4"	NA	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	5
+"Novel_Clade_10_uncultured_Rhizaria"	"treatment_tag"	"719"	"treatment_tag719"	NA	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	5
+"Novel_Clade_Gran-3_uncultured_freshwater"	"read_depth"	"read_depth"	"read_depth"	7.18529417048337	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	7
+"Novel_Clade_Gran-3_uncultured_freshwater"	"treatment_tag"	"100,000"	"treatment_tag100,000"	NA	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	7
+"Novel_Clade_Gran-3_uncultured_freshwater"	"treatment_tag"	"138"	"treatment_tag138"	1.13889949016208	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	7
+"Novel_Clade_Gran-3_uncultured_freshwater"	"treatment_tag"	"26"	"treatment_tag26"	0.950356669628854	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	7
+"Novel_Clade_Gran-3_uncultured_freshwater"	"treatment_tag"	"3,727"	"treatment_tag3,727"	-1.67797389510273	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	7
+"Novel_Clade_Gran-3_uncultured_freshwater"	"treatment_tag"	"4"	"treatment_tag4"	NA	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	7
+"Novel_Clade_Gran-3_uncultured_freshwater"	"treatment_tag"	"719"	"treatment_tag719"	3.59856515155743	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	7
+"Novel_Clade_Gran-4_uncultured_Cercozoa"	"read_depth"	"read_depth"	"read_depth"	NA	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	2
+"Novel_Clade_Gran-4_uncultured_Cercozoa"	"treatment_tag"	"100,000"	"treatment_tag100,000"	-2.86749878602672	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	2
+"Novel_Clade_Gran-4_uncultured_Cercozoa"	"treatment_tag"	"138"	"treatment_tag138"	NA	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	2
+"Novel_Clade_Gran-4_uncultured_Cercozoa"	"treatment_tag"	"26"	"treatment_tag26"	NA	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	2
+"Novel_Clade_Gran-4_uncultured_Cercozoa"	"treatment_tag"	"3,727"	"treatment_tag3,727"	NA	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	2
+"Novel_Clade_Gran-4_uncultured_Cercozoa"	"treatment_tag"	"4"	"treatment_tag4"	NA	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	2
+"Novel_Clade_Gran-4_uncultured_Cercozoa"	"treatment_tag"	"719"	"treatment_tag719"	NA	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	2
+"Nuclearia_metagenome"	"read_depth"	"read_depth"	"read_depth"	NA	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	3
+"Nuclearia_metagenome"	"treatment_tag"	"100,000"	"treatment_tag100,000"	-2.73635658243187	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	3
+"Nuclearia_metagenome"	"treatment_tag"	"138"	"treatment_tag138"	3.09132518542672	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	3
+"Nuclearia_metagenome"	"treatment_tag"	"26"	"treatment_tag26"	NA	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	3
+"Nuclearia_metagenome"	"treatment_tag"	"3,727"	"treatment_tag3,727"	NA	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	3
+"Nuclearia_metagenome"	"treatment_tag"	"4"	"treatment_tag4"	NA	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	3
+"Nuclearia_metagenome"	"treatment_tag"	"719"	"treatment_tag719"	NA	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	3
+"Parvilucifera_uncultured_alveolate"	"read_depth"	"read_depth"	"read_depth"	-24.8696523274608	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	6
+"Parvilucifera_uncultured_alveolate"	"treatment_tag"	"100,000"	"treatment_tag100,000"	40.856142001678	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	6
+"Parvilucifera_uncultured_alveolate"	"treatment_tag"	"138"	"treatment_tag138"	NA	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	6
+"Parvilucifera_uncultured_alveolate"	"treatment_tag"	"26"	"treatment_tag26"	NA	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	6
+"Parvilucifera_uncultured_alveolate"	"treatment_tag"	"3,727"	"treatment_tag3,727"	1.57950202306004	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	6
+"Parvilucifera_uncultured_alveolate"	"treatment_tag"	"4"	"treatment_tag4"	72.7008494725258	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	6
+"Parvilucifera_uncultured_alveolate"	"treatment_tag"	"719"	"treatment_tag719"	6.72256800380543	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	6
+"Phytomyxea_uncultured_Plasmodiophoridae"	"read_depth"	"read_depth"	"read_depth"	NA	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	3
+"Phytomyxea_uncultured_Plasmodiophoridae"	"treatment_tag"	"100,000"	"treatment_tag100,000"	NA	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	3
+"Phytomyxea_uncultured_Plasmodiophoridae"	"treatment_tag"	"138"	"treatment_tag138"	-2.05293132389533	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	3
+"Phytomyxea_uncultured_Plasmodiophoridae"	"treatment_tag"	"26"	"treatment_tag26"	NA	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	3
+"Phytomyxea_uncultured_Plasmodiophoridae"	"treatment_tag"	"3,727"	"treatment_tag3,727"	NA	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	3
+"Phytomyxea_uncultured_Plasmodiophoridae"	"treatment_tag"	"4"	"treatment_tag4"	NA	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	3
+"Phytomyxea_uncultured_Plasmodiophoridae"	"treatment_tag"	"719"	"treatment_tag719"	1.10074252253423	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	3
+"Polymyxa_uncultured_Plasmodiophoridae"	"read_depth"	"read_depth"	"read_depth"	NA	NA	NA	NA	NA	NA	NA	"No data points have the baseline factor level"	"abundance"	10	2
+"Polymyxa_uncultured_Plasmodiophoridae"	"treatment_tag"	"100,000"	"treatment_tag100,000"	NA	NA	NA	NA	NA	NA	NA	"No data points have the baseline factor level"	"abundance"	10	2
+"Polymyxa_uncultured_Plasmodiophoridae"	"treatment_tag"	"138"	"treatment_tag138"	NA	NA	NA	NA	NA	NA	NA	"No data points have the baseline factor level"	"abundance"	10	2
+"Polymyxa_uncultured_Plasmodiophoridae"	"treatment_tag"	"26"	"treatment_tag26"	NA	NA	NA	NA	NA	NA	NA	"No data points have the baseline factor level"	"abundance"	10	2
+"Polymyxa_uncultured_Plasmodiophoridae"	"treatment_tag"	"3,727"	"treatment_tag3,727"	NA	NA	NA	NA	NA	NA	NA	"No data points have the baseline factor level"	"abundance"	10	2
+"Polymyxa_uncultured_Plasmodiophoridae"	"treatment_tag"	"4"	"treatment_tag4"	NA	NA	NA	NA	NA	NA	NA	"No data points have the baseline factor level"	"abundance"	10	2
+"Polymyxa_uncultured_Plasmodiophoridae"	"treatment_tag"	"719"	"treatment_tag719"	NA	NA	NA	NA	NA	NA	NA	"No data points have the baseline factor level"	"abundance"	10	2
+"Protosporangium_Endostelium_amerosporum"	"read_depth"	"read_depth"	"read_depth"	NA	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	6
+"Protosporangium_Endostelium_amerosporum"	"treatment_tag"	"100,000"	"treatment_tag100,000"	NA	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	6
+"Protosporangium_Endostelium_amerosporum"	"treatment_tag"	"138"	"treatment_tag138"	0.733674452023194	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	6
+"Protosporangium_Endostelium_amerosporum"	"treatment_tag"	"26"	"treatment_tag26"	-0.457718966658883	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	6
+"Protosporangium_Endostelium_amerosporum"	"treatment_tag"	"3,727"	"treatment_tag3,727"	NA	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	6
+"Protosporangium_Endostelium_amerosporum"	"treatment_tag"	"4"	"treatment_tag4"	-3.88898751548241	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	6
+"Protosporangium_Endostelium_amerosporum"	"treatment_tag"	"719"	"treatment_tag719"	0.622003731931763	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	6
+"Pterocystis_Pterocystis_sp."	"read_depth"	"read_depth"	"read_depth"	-35.3550204758201	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	3
+"Pterocystis_Pterocystis_sp."	"treatment_tag"	"100,000"	"treatment_tag100,000"	NA	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	3
+"Pterocystis_Pterocystis_sp."	"treatment_tag"	"138"	"treatment_tag138"	-2.93295346588979	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	3
+"Pterocystis_Pterocystis_sp."	"treatment_tag"	"26"	"treatment_tag26"	NA	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	3
+"Pterocystis_Pterocystis_sp."	"treatment_tag"	"3,727"	"treatment_tag3,727"	NA	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	3
+"Pterocystis_Pterocystis_sp."	"treatment_tag"	"4"	"treatment_tag4"	NA	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	3
+"Pterocystis_Pterocystis_sp."	"treatment_tag"	"719"	"treatment_tag719"	NA	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	3
+"Pterocystis_uncultured_eukaryote"	"read_depth"	"read_depth"	"read_depth"	NA	NA	NA	NA	NA	NA	NA	"No data points have the baseline factor level"	"abundance"	10	2
+"Pterocystis_uncultured_eukaryote"	"treatment_tag"	"100,000"	"treatment_tag100,000"	NA	NA	NA	NA	NA	NA	NA	"No data points have the baseline factor level"	"abundance"	10	2
+"Pterocystis_uncultured_eukaryote"	"treatment_tag"	"138"	"treatment_tag138"	NA	NA	NA	NA	NA	NA	NA	"No data points have the baseline factor level"	"abundance"	10	2
+"Pterocystis_uncultured_eukaryote"	"treatment_tag"	"26"	"treatment_tag26"	NA	NA	NA	NA	NA	NA	NA	"No data points have the baseline factor level"	"abundance"	10	2
+"Pterocystis_uncultured_eukaryote"	"treatment_tag"	"3,727"	"treatment_tag3,727"	NA	NA	NA	NA	NA	NA	NA	"No data points have the baseline factor level"	"abundance"	10	2
+"Pterocystis_uncultured_eukaryote"	"treatment_tag"	"4"	"treatment_tag4"	NA	NA	NA	NA	NA	NA	NA	"No data points have the baseline factor level"	"abundance"	10	2
+"Pterocystis_uncultured_eukaryote"	"treatment_tag"	"719"	"treatment_tag719"	NA	NA	NA	NA	NA	NA	NA	"No data points have the baseline factor level"	"abundance"	10	2
+"Reclinomonas_Reclinomonas_americana"	"treatment_tag"	"719"	"treatment_tag719"	NA	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	8
+"Rigifila_Rigifila_ramosa"	"read_depth"	"read_depth"	"read_depth"	NA	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	3
+"Rigifila_Rigifila_ramosa"	"treatment_tag"	"100,000"	"treatment_tag100,000"	-2.59521087289167	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	3
+"Rigifila_Rigifila_ramosa"	"treatment_tag"	"138"	"treatment_tag138"	NA	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	3
+"Rigifila_Rigifila_ramosa"	"treatment_tag"	"26"	"treatment_tag26"	4.15441894936078	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	3
+"Rigifila_Rigifila_ramosa"	"treatment_tag"	"3,727"	"treatment_tag3,727"	NA	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	3
+"Rigifila_Rigifila_ramosa"	"treatment_tag"	"4"	"treatment_tag4"	NA	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	3
+"Rigifila_Rigifila_ramosa"	"treatment_tag"	"719"	"treatment_tag719"	NA	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	3
+"Saccamoeba_Saccamoeba_limax"	"read_depth"	"read_depth"	"read_depth"	NA	NA	NA	NA	NA	NA	NA	"No data points have the baseline factor level"	"abundance"	10	2
+"Saccamoeba_Saccamoeba_limax"	"treatment_tag"	"100,000"	"treatment_tag100,000"	NA	NA	NA	NA	NA	NA	NA	"No data points have the baseline factor level"	"abundance"	10	2
+"Saccamoeba_Saccamoeba_limax"	"treatment_tag"	"138"	"treatment_tag138"	NA	NA	NA	NA	NA	NA	NA	"No data points have the baseline factor level"	"abundance"	10	2
+"Saccamoeba_Saccamoeba_limax"	"treatment_tag"	"26"	"treatment_tag26"	NA	NA	NA	NA	NA	NA	NA	"No data points have the baseline factor level"	"abundance"	10	2
+"Saccamoeba_Saccamoeba_limax"	"treatment_tag"	"3,727"	"treatment_tag3,727"	NA	NA	NA	NA	NA	NA	NA	"No data points have the baseline factor level"	"abundance"	10	2
+"Saccamoeba_Saccamoeba_limax"	"treatment_tag"	"4"	"treatment_tag4"	NA	NA	NA	NA	NA	NA	NA	"No data points have the baseline factor level"	"abundance"	10	2
+"Saccamoeba_Saccamoeba_limax"	"treatment_tag"	"719"	"treatment_tag719"	NA	NA	NA	NA	NA	NA	NA	"No data points have the baseline factor level"	"abundance"	10	2
+"Salpingoeca_metagenome"	"read_depth"	"read_depth"	"read_depth"	NA	NA	NA	NA	NA	NA	NA	"No data points have the baseline factor level"	"abundance"	10	2
+"Salpingoeca_metagenome"	"treatment_tag"	"100,000"	"treatment_tag100,000"	NA	NA	NA	NA	NA	NA	NA	"No data points have the baseline factor level"	"abundance"	10	2
+"Salpingoeca_metagenome"	"treatment_tag"	"138"	"treatment_tag138"	NA	NA	NA	NA	NA	NA	NA	"No data points have the baseline factor level"	"abundance"	10	2
+"Salpingoeca_metagenome"	"treatment_tag"	"26"	"treatment_tag26"	NA	NA	NA	NA	NA	NA	NA	"No data points have the baseline factor level"	"abundance"	10	2
+"Salpingoeca_metagenome"	"treatment_tag"	"3,727"	"treatment_tag3,727"	NA	NA	NA	NA	NA	NA	NA	"No data points have the baseline factor level"	"abundance"	10	2
+"Salpingoeca_metagenome"	"treatment_tag"	"4"	"treatment_tag4"	NA	NA	NA	NA	NA	NA	NA	"No data points have the baseline factor level"	"abundance"	10	2
+"Salpingoeca_metagenome"	"treatment_tag"	"719"	"treatment_tag719"	NA	NA	NA	NA	NA	NA	NA	"No data points have the baseline factor level"	"abundance"	10	2
+"Smittium_Smittium_cf."	"read_depth"	"read_depth"	"read_depth"	NA	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	4
+"Smittium_Smittium_cf."	"treatment_tag"	"100,000"	"treatment_tag100,000"	-2.54557069113936	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	4
+"Smittium_Smittium_cf."	"treatment_tag"	"138"	"treatment_tag138"	NA	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	4
+"Smittium_Smittium_cf."	"treatment_tag"	"26"	"treatment_tag26"	NA	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	4
+"Smittium_Smittium_cf."	"treatment_tag"	"3,727"	"treatment_tag3,727"	0.2901169127343	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	4
+"Smittium_Smittium_cf."	"treatment_tag"	"4"	"treatment_tag4"	NA	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	4
+"Smittium_Smittium_cf."	"treatment_tag"	"719"	"treatment_tag719"	0.67645151595414	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	4
+"Sorodiplophrys_uncultured_Eimeriidae"	"treatment_tag"	"100,000"	"treatment_tag100,000"	NA	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	5
+"Sorodiplophrys_uncultured_Eimeriidae"	"treatment_tag"	"138"	"treatment_tag138"	NA	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	5
+"Sorodiplophrys_uncultured_Eimeriidae"	"treatment_tag"	"3,727"	"treatment_tag3,727"	NA	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	5
+"Sorodiplophrys_uncultured_Eimeriidae"	"treatment_tag"	"4"	"treatment_tag4"	NA	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	5
+"Sorodiplophrys_uncultured_eukaryote"	"treatment_tag"	"100,000"	"treatment_tag100,000"	NA	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	9
+"Telaepolella_Telaepolella_sp."	"read_depth"	"read_depth"	"read_depth"	-54.2393104882279	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	3
+"Telaepolella_Telaepolella_sp."	"treatment_tag"	"100,000"	"treatment_tag100,000"	NA	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	3
+"Telaepolella_Telaepolella_sp."	"treatment_tag"	"138"	"treatment_tag138"	NA	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	3
+"Telaepolella_Telaepolella_sp."	"treatment_tag"	"26"	"treatment_tag26"	-0.0350360262249684	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	3
+"Telaepolella_Telaepolella_sp."	"treatment_tag"	"3,727"	"treatment_tag3,727"	NA	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	3
+"Telaepolella_Telaepolella_sp."	"treatment_tag"	"4"	"treatment_tag4"	NA	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	3
+"Telaepolella_Telaepolella_sp."	"treatment_tag"	"719"	"treatment_tag719"	NA	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	3
+"Tetramitus_Tetramitus_thorntoni"	"read_depth"	"read_depth"	"read_depth"	NA	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	4
+"Tetramitus_Tetramitus_thorntoni"	"treatment_tag"	"100,000"	"treatment_tag100,000"	-6.4282137405012	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	4
+"Tetramitus_Tetramitus_thorntoni"	"treatment_tag"	"138"	"treatment_tag138"	NA	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	4
+"Tetramitus_Tetramitus_thorntoni"	"treatment_tag"	"26"	"treatment_tag26"	NA	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	4
+"Tetramitus_Tetramitus_thorntoni"	"treatment_tag"	"3,727"	"treatment_tag3,727"	NA	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	4
+"Tetramitus_Tetramitus_thorntoni"	"treatment_tag"	"4"	"treatment_tag4"	-8.50859615901046	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	4
+"Tetramitus_Tetramitus_thorntoni"	"treatment_tag"	"719"	"treatment_tag719"	NA	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	4
+"uncultured_Dimorpha-like_sp."	"read_depth"	"read_depth"	"read_depth"	NA	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	4
+"uncultured_Dimorpha-like_sp."	"treatment_tag"	"100,000"	"treatment_tag100,000"	NA	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	4
+"uncultured_Dimorpha-like_sp."	"treatment_tag"	"138"	"treatment_tag138"	0.390885467285628	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	4
+"uncultured_Dimorpha-like_sp."	"treatment_tag"	"26"	"treatment_tag26"	2.75023883398679	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	4
+"uncultured_Dimorpha-like_sp."	"treatment_tag"	"3,727"	"treatment_tag3,727"	NA	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	4
+"uncultured_Dimorpha-like_sp."	"treatment_tag"	"4"	"treatment_tag4"	NA	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	4
+"uncultured_Dimorpha-like_sp."	"treatment_tag"	"719"	"treatment_tag719"	2.72513155935701	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	4
+"uncultured_Spongospora_sp."	"read_depth"	"read_depth"	"read_depth"	NA	NA	NA	NA	NA	NA	NA	"No data points have the baseline factor level"	"abundance"	10	3
+"uncultured_Spongospora_sp."	"treatment_tag"	"100,000"	"treatment_tag100,000"	NA	NA	NA	NA	NA	NA	NA	"No data points have the baseline factor level"	"abundance"	10	3
+"uncultured_Spongospora_sp."	"treatment_tag"	"138"	"treatment_tag138"	NA	NA	NA	NA	NA	NA	NA	"No data points have the baseline factor level"	"abundance"	10	3
+"uncultured_Spongospora_sp."	"treatment_tag"	"26"	"treatment_tag26"	NA	NA	NA	NA	NA	NA	NA	"No data points have the baseline factor level"	"abundance"	10	3
+"uncultured_Spongospora_sp."	"treatment_tag"	"3,727"	"treatment_tag3,727"	NA	NA	NA	NA	NA	NA	NA	"No data points have the baseline factor level"	"abundance"	10	3
+"uncultured_Spongospora_sp."	"treatment_tag"	"4"	"treatment_tag4"	NA	NA	NA	NA	NA	NA	NA	"No data points have the baseline factor level"	"abundance"	10	3
+"uncultured_Spongospora_sp."	"treatment_tag"	"719"	"treatment_tag719"	NA	NA	NA	NA	NA	NA	NA	"No data points have the baseline factor level"	"abundance"	10	3
+"uncultured_uncultured_fungus"	"read_depth"	"read_depth"	"read_depth"	NA	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	2
+"uncultured_uncultured_fungus"	"treatment_tag"	"100,000"	"treatment_tag100,000"	NA	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	2
+"uncultured_uncultured_fungus"	"treatment_tag"	"138"	"treatment_tag138"	-0.467968823174174	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	2
+"uncultured_uncultured_fungus"	"treatment_tag"	"26"	"treatment_tag26"	NA	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	2
+"uncultured_uncultured_fungus"	"treatment_tag"	"3,727"	"treatment_tag3,727"	NA	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	2
+"uncultured_uncultured_fungus"	"treatment_tag"	"4"	"treatment_tag4"	NA	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	2
+"uncultured_uncultured_fungus"	"treatment_tag"	"719"	"treatment_tag719"	NA	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	2
+"Vahlkampfia_Vahlkampfia_avara"	"read_depth"	"read_depth"	"read_depth"	-6.13927040878055	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	4
+"Vahlkampfia_Vahlkampfia_avara"	"treatment_tag"	"100,000"	"treatment_tag100,000"	12.3373908201656	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	4
+"Vahlkampfia_Vahlkampfia_avara"	"treatment_tag"	"138"	"treatment_tag138"	NA	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	4
+"Vahlkampfia_Vahlkampfia_avara"	"treatment_tag"	"26"	"treatment_tag26"	NA	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	4
+"Vahlkampfia_Vahlkampfia_avara"	"treatment_tag"	"3,727"	"treatment_tag3,727"	NA	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	4
+"Vahlkampfia_Vahlkampfia_avara"	"treatment_tag"	"4"	"treatment_tag4"	NA	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	4
+"Vahlkampfia_Vahlkampfia_avara"	"treatment_tag"	"719"	"treatment_tag719"	NA	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	4
+"Viridiraptor_uncultured_eukaryote"	"read_depth"	"read_depth"	"read_depth"	1.07410837894096	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	5
+"Viridiraptor_uncultured_eukaryote"	"treatment_tag"	"100,000"	"treatment_tag100,000"	NA	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	5
+"Viridiraptor_uncultured_eukaryote"	"treatment_tag"	"138"	"treatment_tag138"	0.0508621872965758	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	5
+"Viridiraptor_uncultured_eukaryote"	"treatment_tag"	"26"	"treatment_tag26"	NA	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	5
+"Viridiraptor_uncultured_eukaryote"	"treatment_tag"	"3,727"	"treatment_tag3,727"	NA	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	5
+"Viridiraptor_uncultured_eukaryote"	"treatment_tag"	"4"	"treatment_tag4"	NA	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	5
+"Viridiraptor_uncultured_eukaryote"	"treatment_tag"	"719"	"treatment_tag719"	0.999110328872233	NA	NA	NA	NA	NA	NA	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	10	5
+"Zoopagales_metagenome"	"read_depth"	"read_depth"	"read_depth"	NA	NA	NA	NA	NA	NA	NA	"No data points have the baseline factor level"	"abundance"	10	2
+"Zoopagales_metagenome"	"treatment_tag"	"100,000"	"treatment_tag100,000"	NA	NA	NA	NA	NA	NA	NA	"No data points have the baseline factor level"	"abundance"	10	2
+"Zoopagales_metagenome"	"treatment_tag"	"138"	"treatment_tag138"	NA	NA	NA	NA	NA	NA	NA	"No data points have the baseline factor level"	"abundance"	10	2
+"Zoopagales_metagenome"	"treatment_tag"	"26"	"treatment_tag26"	NA	NA	NA	NA	NA	NA	NA	"No data points have the baseline factor level"	"abundance"	10	2
+"Zoopagales_metagenome"	"treatment_tag"	"3,727"	"treatment_tag3,727"	NA	NA	NA	NA	NA	NA	NA	"No data points have the baseline factor level"	"abundance"	10	2
+"Zoopagales_metagenome"	"treatment_tag"	"4"	"treatment_tag4"	NA	NA	NA	NA	NA	NA	NA	"No data points have the baseline factor level"	"abundance"	10	2
+"Zoopagales_metagenome"	"treatment_tag"	"719"	"treatment_tag719"	NA	NA	NA	NA	NA	NA	NA	"No data points have the baseline factor level"	"abundance"	10	2
+"Acanthamoeba_Acanthamoeba_castellanii"	"read_depth"	"read_depth"	"read_depth"	-9.83701983202805e-14	0	15.5445609999852	0.999999999999995	NA	0.745143570365407	1	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	9
+"Acanthamoeba_Acanthamoeba_castellanii"	"treatment_tag"	"100,000"	"treatment_tag100,000"	1.59899488336307e-13	0	25.323952009924	0.999999999999995	NA	0.70045545702187	1	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	9
+"Acanthamoeba_Acanthamoeba_castellanii"	"treatment_tag"	"138"	"treatment_tag138"	-2.1608805738839e-15	0	2.22043960286846	0.999999999999999	NA	0.501678535608626	1	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	9
+"Acanthamoeba_Acanthamoeba_castellanii"	"treatment_tag"	"26"	"treatment_tag26"	7.79591498267813e-15	0	2.48801777603558	0.999999999999997	NA	0.886793481745387	1	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	9
+"Acanthamoeba_Acanthamoeba_castellanii"	"treatment_tag"	"3,727"	"treatment_tag3,727"	-4.71490386214874e-15	0	2.34855867276433	0.999999999999998	NA	0.576257527077506	1	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	9
+"Acanthamoeba_Acanthamoeba_castellanii"	"treatment_tag"	"4"	"treatment_tag4"	2.85714774768363e-13	0	45.2749463957012	0.999999999999995	NA	0.727510594612505	1	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	9
+"Acanthamoeba_Acanthamoeba_castellanii"	"treatment_tag"	"719"	"treatment_tag719"	-2.69985343389801	0	2.80706672247078	0.336147096159377	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	9
+"Acanthamoeba_Acanthamoeba_hatchetti"	"read_depth"	"read_depth"	"read_depth"	-14.2266895701956	0	16.4006977687365	0.385698692444518	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	7
+"Acanthamoeba_Acanthamoeba_hatchetti"	"treatment_tag"	"100,000"	"treatment_tag100,000"	23.915064773319	0	26.38592396597	0.364746967092409	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	7
+"Acanthamoeba_Acanthamoeba_hatchetti"	"treatment_tag"	"138"	"treatment_tag138"	0.490940398174116	0	2.25410902458304	0.827586516466737	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	7
+"Acanthamoeba_Acanthamoeba_hatchetti"	"treatment_tag"	"26"	"treatment_tag26"	-0.794708153863097	0	2.33262865375572	0.733335386776065	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	7
+"Acanthamoeba_Acanthamoeba_hatchetti"	"treatment_tag"	"3,727"	"treatment_tag3,727"	0.0491246470767405	0	2.46135686536002	0.984076589632055	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	7
+"Acanthamoeba_Acanthamoeba_hatchetti"	"treatment_tag"	"4"	"treatment_tag4"	42.2129430006867	0	47.4412623185672	0.37357659451739	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	7
+"Acanthamoeba_Acanthamoeba_hatchetti"	"treatment_tag"	"719"	"treatment_tag719"	-0.268079557688974	0	2.63317567136744	0.918908711137104	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	7
+"Acanthocystidae_uncultured_eukaryote"	"read_depth"	"read_depth"	"read_depth"	-3.68820521869736	0	13.1395120233239	0.778943766625082	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	5
+"Acanthocystidae_uncultured_eukaryote"	"treatment_tag"	"100,000"	"treatment_tag100,000"	4.23160327006538	0	21.3762714136425	0.843077948921897	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	5
+"Acanthocystidae_uncultured_eukaryote"	"treatment_tag"	"138"	"treatment_tag138"	0.858857921403621	0	2.13477030739995	0.687449526316198	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	5
+"Acanthocystidae_uncultured_eukaryote"	"treatment_tag"	"26"	"treatment_tag26"	-1.47436926400203	0	2.30620875006383	0.522624965351255	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	5
+"Acanthocystidae_uncultured_eukaryote"	"treatment_tag"	"3,727"	"treatment_tag3,727"	-1.95553425679327	0	2.24028267502814	0.382719652155973	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	5
+"Acanthocystidae_uncultured_eukaryote"	"treatment_tag"	"4"	"treatment_tag4"	11.6750992524483	0	38.2300067633112	0.760068390367098	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	5
+"Acanthocystidae_uncultured_eukaryote"	"treatment_tag"	"719"	"treatment_tag719"	-1.33784317146722	0	2.54439957144666	0.599027754390408	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	5
+"Amoebozoa_metagenome"	"read_depth"	"read_depth"	"read_depth"	17.6569550828356	0	15.8007098893851	0.263789746849119	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	7
+"Amoebozoa_metagenome"	"treatment_tag"	"100,000"	"treatment_tag100,000"	-30.4944490827601	0	25.8417077712497	0.237981224461698	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	7
+"Amoebozoa_metagenome"	"treatment_tag"	"138"	"treatment_tag138"	1.27743195854162	0	2.19605380525166	0.560772618491441	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	7
+"Amoebozoa_metagenome"	"treatment_tag"	"26"	"treatment_tag26"	-0.477758660733257	0	2.54040227689163	0.850826343446126	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	7
+"Amoebozoa_metagenome"	"treatment_tag"	"3,727"	"treatment_tag3,727"	-0.874077404620591	0	2.30751338998292	0.704839176910118	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	7
+"Amoebozoa_metagenome"	"treatment_tag"	"4"	"treatment_tag4"	-50.5043632569695	0	46.1234723854032	0.273524605815154	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	7
+"Amoebozoa_metagenome"	"treatment_tag"	"719"	"treatment_tag719"	-1.13136520933354	0	2.8847490602307	0.694918991145982	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	7
+"Arcellinida_metagenome"	"read_depth"	"read_depth"	"read_depth"	NA	0	NA	NA	NA	0.601716527478165	1	"All logistic values are the same"	"prevalence"	10	10
+"Arcellinida_metagenome"	"treatment_tag"	"100,000"	"treatment_tag100,000"	NA	0	NA	NA	NA	0.736501331691491	1	"All logistic values are the same"	"prevalence"	10	10
+"Arcellinida_metagenome"	"treatment_tag"	"138"	"treatment_tag138"	NA	0	NA	NA	NA	0.562701895240785	1	"All logistic values are the same"	"prevalence"	10	10
+"Arcellinida_metagenome"	"treatment_tag"	"26"	"treatment_tag26"	NA	0	NA	NA	NA	0.750552079481642	1	"All logistic values are the same"	"prevalence"	10	10
+"Arcellinida_metagenome"	"treatment_tag"	"3,727"	"treatment_tag3,727"	NA	0	NA	NA	NA	0.271053901003474	1	"All logistic values are the same"	"prevalence"	10	10
+"Arcellinida_metagenome"	"treatment_tag"	"4"	"treatment_tag4"	NA	0	NA	NA	NA	0.499619640859698	1	"All logistic values are the same"	"prevalence"	10	10
+"Arcellinida_metagenome"	"treatment_tag"	"719"	"treatment_tag719"	NA	0	NA	NA	NA	0.447407653641047	1	"All logistic values are the same"	"prevalence"	10	10
+"BOLA868_uncultured_Hartmannellidae"	"read_depth"	"read_depth"	"read_depth"	9.40557159378121e-14	0	15.5445609999852	0.999999999999995	NA	0.419161471338829	1	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	7
+"BOLA868_uncultured_Hartmannellidae"	"treatment_tag"	"100,000"	"treatment_tag100,000"	-1.52653851907107e-13	0	25.323952009924	0.999999999999995	NA	0.402062110824056	1	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	7
+"BOLA868_uncultured_Hartmannellidae"	"treatment_tag"	"138"	"treatment_tag138"	3.21470174144251e-15	0	2.22043960286846	0.999999999999999	NA	0.305417562984649	1	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	7
+"BOLA868_uncultured_Hartmannellidae"	"treatment_tag"	"26"	"treatment_tag26"	-2.69985343389803	0	2.48801777603558	0.277858616846509	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	7
+"BOLA868_uncultured_Hartmannellidae"	"treatment_tag"	"3,727"	"treatment_tag3,727"	-2.69985343389801	0	2.34855867276433	0.250317363626724	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	7
+"BOLA868_uncultured_Hartmannellidae"	"treatment_tag"	"4"	"treatment_tag4"	-2.71776174517864e-13	0	45.2749463957013	0.999999999999995	NA	0.450208229959759	1	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	7
+"BOLA868_uncultured_Hartmannellidae"	"treatment_tag"	"719"	"treatment_tag719"	-1.14190398118004e-14	0	2.80706672247077	0.999999999999997	NA	0.668168763621277	1	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	7
+"Centramoebida_uncultured_eukaryote"	"read_depth"	"read_depth"	"read_depth"	-3.68820521869743	0	13.1395120233239	0.778943766625079	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	4
+"Centramoebida_uncultured_eukaryote"	"treatment_tag"	"100,000"	"treatment_tag100,000"	4.23160327006548	0	21.3762714136425	0.843077948921893	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	4
+"Centramoebida_uncultured_eukaryote"	"treatment_tag"	"138"	"treatment_tag138"	-1.8409955124944	0	2.13477030739995	0.388475274378304	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	4
+"Centramoebida_uncultured_eukaryote"	"treatment_tag"	"26"	"treatment_tag26"	1.22548416989599	0	2.30620875006383	0.595152184128981	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	4
+"Centramoebida_uncultured_eukaryote"	"treatment_tag"	"3,727"	"treatment_tag3,727"	-1.95553425679327	0	2.24028267502814	0.382719652155973	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	4
+"Centramoebida_uncultured_eukaryote"	"treatment_tag"	"4"	"treatment_tag4"	11.6750992524485	0	38.2300067633112	0.760068390367094	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	4
+"Centramoebida_uncultured_eukaryote"	"treatment_tag"	"719"	"treatment_tag719"	-1.33784317146721	0	2.54439957144666	0.599027754390411	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	4
+"Cercomonas_uncultured_Cercozoa"	"read_depth"	"read_depth"	"read_depth"	2.15724119123422e-13	0	15.5445609999851	0.999999999999989	NA	0.999980051811064	1	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	8
+"Cercomonas_uncultured_Cercozoa"	"treatment_tag"	"100,000"	"treatment_tag100,000"	-3.5012351354841e-13	0	25.3239520099239	0.999999999999989	NA	0.959430534407973	1	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	8
+"Cercomonas_uncultured_Cercozoa"	"treatment_tag"	"138"	"treatment_tag138"	-2.69985343389801	0	2.22043960286846	0.224019428524635	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	8
+"Cercomonas_uncultured_Cercozoa"	"treatment_tag"	"26"	"treatment_tag26"	-1.84042235545737e-14	0	2.48801777603558	0.999999999999994	NA	0.693448103869508	1	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	8
+"Cercomonas_uncultured_Cercozoa"	"treatment_tag"	"3,727"	"treatment_tag3,727"	1.19992756563781e-14	0	2.34855867276433	0.999999999999996	NA	0.620460002812168	1	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	8
+"Cercomonas_uncultured_Cercozoa"	"treatment_tag"	"4"	"treatment_tag4"	-2.69985343389865	0	45.2749463957011	0.952448417726853	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	8
+"Cercomonas_uncultured_Cercozoa"	"treatment_tag"	"719"	"treatment_tag719"	-2.54714367731242e-14	0	2.80706672247079	0.999999999999993	NA	0.862036790655362	1	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	8
+"Cercozoa_Athalamea_environmental"	"read_depth"	"read_depth"	"read_depth"	-3.68820521869744	0	13.1395120233239	0.778943766625077	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	6
+"Cercozoa_Athalamea_environmental"	"treatment_tag"	"100,000"	"treatment_tag100,000"	6.93145670396354	0	21.3762714136425	0.745741663018352	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	6
+"Cercozoa_Athalamea_environmental"	"treatment_tag"	"138"	"treatment_tag138"	0.858857921403618	0	2.13477030739995	0.687449526316199	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	6
+"Cercozoa_Athalamea_environmental"	"treatment_tag"	"26"	"treatment_tag26"	-1.47436926400202	0	2.30620875006383	0.522624965351256	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	6
+"Cercozoa_Athalamea_environmental"	"treatment_tag"	"3,727"	"treatment_tag3,727"	0.744319177104743	0	2.24028267502814	0.739705459881281	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	6
+"Cercozoa_Athalamea_environmental"	"treatment_tag"	"4"	"treatment_tag4"	11.6750992524486	0	38.2300067633112	0.760068390367093	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	6
+"Cercozoa_Athalamea_environmental"	"treatment_tag"	"719"	"treatment_tag719"	-1.3378431714672	0	2.54439957144666	0.599027754390413	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	6
+"Cercozoa_uncultured_eukaryote"	"read_depth"	"read_depth"	"read_depth"	3.68820521869737	0	13.1395120233239	0.778943766625082	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	2
+"Cercozoa_uncultured_eukaryote"	"treatment_tag"	"100,000"	"treatment_tag100,000"	-6.93145670396341	0	21.3762714136425	0.745741663018356	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	2
+"Cercozoa_uncultured_eukaryote"	"treatment_tag"	"138"	"treatment_tag138"	-0.85885792140362	0	2.13477030739995	0.687449526316198	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	2
+"Cercozoa_uncultured_eukaryote"	"treatment_tag"	"26"	"treatment_tag26"	1.47436926400203	0	2.30620875006383	0.522624965351255	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	2
+"Cercozoa_uncultured_eukaryote"	"treatment_tag"	"3,727"	"treatment_tag3,727"	-0.74431917710475	0	2.24028267502814	0.739705459881278	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	2
+"Cercozoa_uncultured_eukaryote"	"treatment_tag"	"4"	"treatment_tag4"	-11.6750992524483	0	38.2300067633112	0.760068390367097	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	2
+"Cercozoa_uncultured_eukaryote"	"treatment_tag"	"719"	"treatment_tag719"	-1.36201026243081	0	2.54439957144667	0.592444281761721	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	2
+"Codosiga_Codosiga_hollandica"	"read_depth"	"read_depth"	"read_depth"	14.2266895701952	0	16.4006977687364	0.385698692444527	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	4
+"Codosiga_Codosiga_hollandica"	"treatment_tag"	"100,000"	"treatment_tag100,000"	-23.9150647733185	0	26.3859239659698	0.364746967092417	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	4
+"Codosiga_Codosiga_hollandica"	"treatment_tag"	"138"	"treatment_tag138"	2.20891303572389	0	2.25410902458304	0.327111041744561	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	4
+"Codosiga_Codosiga_hollandica"	"treatment_tag"	"26"	"treatment_tag26"	-1.9051452800349	0	2.33262865375572	0.414078459813817	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	4
+"Codosiga_Codosiga_hollandica"	"treatment_tag"	"3,727"	"treatment_tag3,727"	-0.049124647076761	0	2.46135686536002	0.984076589632048	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	4
+"Codosiga_Codosiga_hollandica"	"treatment_tag"	"4"	"treatment_tag4"	-42.2129430006858	0	47.441262318567	0.373576594517398	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	4
+"Codosiga_Codosiga_hollandica"	"treatment_tag"	"719"	"treatment_tag719"	0.26807955768904	0	2.63317567136741	0.918908711137083	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	4
+"CV1-B1-93_uncultured_centroheliozoan"	"read_depth"	"read_depth"	"read_depth"	17.6569550828355	0	15.8007098893851	0.263789746849121	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	5
+"CV1-B1-93_uncultured_centroheliozoan"	"treatment_tag"	"100,000"	"treatment_tag100,000"	-27.7945956488619	0	25.8417077712497	0.282119090546387	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	5
+"CV1-B1-93_uncultured_centroheliozoan"	"treatment_tag"	"138"	"treatment_tag138"	1.27743195854162	0	2.19605380525166	0.560772618491439	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	5
+"CV1-B1-93_uncultured_centroheliozoan"	"treatment_tag"	"26"	"treatment_tag26"	-0.477758660733249	0	2.54040227689162	0.850826343446127	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	5
+"CV1-B1-93_uncultured_centroheliozoan"	"treatment_tag"	"3,727"	"treatment_tag3,727"	-0.874077404620597	0	2.30751338998292	0.704839176910117	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	5
+"CV1-B1-93_uncultured_centroheliozoan"	"treatment_tag"	"4"	"treatment_tag4"	-53.2042166908672	0	46.1234723854032	0.248698179977523	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	5
+"CV1-B1-93_uncultured_centroheliozoan"	"treatment_tag"	"719"	"treatment_tag719"	-3.83121864323153	0	2.88474906023069	0.1841469723596	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	5
+"Diplostraca_Acroperus_harpae"	"read_depth"	"read_depth"	"read_depth"	3.68820521869733	0	13.1395120233239	0.778943766625084	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	6
+"Diplostraca_Acroperus_harpae"	"treatment_tag"	"100,000"	"treatment_tag100,000"	-4.23160327006533	0	21.3762714136425	0.843077948921898	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	6
+"Diplostraca_Acroperus_harpae"	"treatment_tag"	"138"	"treatment_tag138"	1.8409955124944	0	2.13477030739995	0.388475274378305	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	6
+"Diplostraca_Acroperus_harpae"	"treatment_tag"	"26"	"treatment_tag26"	-1.22548416989599	0	2.30620875006383	0.595152184128983	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	6
+"Diplostraca_Acroperus_harpae"	"treatment_tag"	"3,727"	"treatment_tag3,727"	-0.744319177104751	0	2.24028267502814	0.739705459881278	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	6
+"Diplostraca_Acroperus_harpae"	"treatment_tag"	"4"	"treatment_tag4"	-8.97524581855023	0	38.2300067633112	0.814387514836975	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	6
+"Diplostraca_Acroperus_harpae"	"treatment_tag"	"719"	"treatment_tag719"	1.33784317146722	0	2.54439957144665	0.599027754390407	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	6
+"Diplostraca_Bosmina_longirostris"	"read_depth"	"read_depth"	"read_depth"	-2.07095154358485e-14	0	15.5445609999852	0.999999999999999	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	2
+"Diplostraca_Bosmina_longirostris"	"treatment_tag"	"100,000"	"treatment_tag100,000"	2.69985343389805	0	25.323952009924	0.915096288752017	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	2
+"Diplostraca_Bosmina_longirostris"	"treatment_tag"	"138"	"treatment_tag138"	7.25975983182064e-18	0	2.22043960286846	1	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	2
+"Diplostraca_Bosmina_longirostris"	"treatment_tag"	"26"	"treatment_tag26"	2.13439564011901e-15	0	2.48801777603558	0.999999999999999	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	2
+"Diplostraca_Bosmina_longirostris"	"treatment_tag"	"3,727"	"treatment_tag3,727"	2.69985343389802	0	2.34855867276433	0.250317363626723	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	2
+"Diplostraca_Bosmina_longirostris"	"treatment_tag"	"4"	"treatment_tag4"	6.08531534847439e-14	0	45.2749463957013	0.999999999999999	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	2
+"Diplostraca_Bosmina_longirostris"	"treatment_tag"	"719"	"treatment_tag719"	3.11428358503647e-15	0	2.80706672247077	0.999999999999999	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	2
+"Diplostraca_Chydorus_sphaericus"	"read_depth"	"read_depth"	"read_depth"	14.2266895701954	0	16.4006977687364	0.385698692444522	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	3
+"Diplostraca_Chydorus_sphaericus"	"treatment_tag"	"100,000"	"treatment_tag100,000"	-21.2152113394207	0	26.3859239659699	0.421376653199043	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	3
+"Diplostraca_Chydorus_sphaericus"	"treatment_tag"	"138"	"treatment_tag138"	-0.490940398174125	0	2.25410902458304	0.827586516466734	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	3
+"Diplostraca_Chydorus_sphaericus"	"treatment_tag"	"26"	"treatment_tag26"	-1.90514528003491	0	2.33262865375572	0.414078459813814	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	3
+"Diplostraca_Chydorus_sphaericus"	"treatment_tag"	"3,727"	"treatment_tag3,727"	-0.0491246470767479	0	2.46135686536002	0.984076589632052	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	3
+"Diplostraca_Chydorus_sphaericus"	"treatment_tag"	"4"	"treatment_tag4"	-42.2129430006863	0	47.441262318567	0.373576594517394	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	3
+"Diplostraca_Chydorus_sphaericus"	"treatment_tag"	"719"	"treatment_tag719"	0.268079557689011	0	2.63317567136743	0.918908711137092	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	3
+"Diplostraca_Diaphanosoma_sp."	"read_depth"	"read_depth"	"read_depth"	-17.6569550828354	0	15.8007098893851	0.263789746849122	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	2
+"Diplostraca_Diaphanosoma_sp."	"treatment_tag"	"100,000"	"treatment_tag100,000"	30.4944490827598	0	25.8417077712497	0.237981224461702	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	2
+"Diplostraca_Diaphanosoma_sp."	"treatment_tag"	"138"	"treatment_tag138"	-1.27743195854162	0	2.19605380525166	0.560772618491439	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	2
+"Diplostraca_Diaphanosoma_sp."	"treatment_tag"	"26"	"treatment_tag26"	0.477758660733242	0	2.54040227689162	0.85082634344613	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	2
+"Diplostraca_Diaphanosoma_sp."	"treatment_tag"	"3,727"	"treatment_tag3,727"	-1.82577602927742	0	2.30751338998292	0.428809229384318	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	2
+"Diplostraca_Diaphanosoma_sp."	"treatment_tag"	"4"	"treatment_tag4"	50.504363256969	0	46.1234723854032	0.273524605815158	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	2
+"Diplostraca_Diaphanosoma_sp."	"treatment_tag"	"719"	"treatment_tag719"	1.13136520933349	0	2.88474906023068	0.694918991145993	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	2
+"Diplostraca_Pleuroxus_aduncus"	"read_depth"	"read_depth"	"read_depth"	8.62896476493689e-15	0	15.5445609999852	1	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	4
+"Diplostraca_Pleuroxus_aduncus"	"treatment_tag"	"100,000"	"treatment_tag100,000"	2.699853433898	0	25.323952009924	0.915096288752019	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	4
+"Diplostraca_Pleuroxus_aduncus"	"treatment_tag"	"138"	"treatment_tag138"	2.69985343389802	0	2.22043960286846	0.224019428524633	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	4
+"Diplostraca_Pleuroxus_aduncus"	"treatment_tag"	"26"	"treatment_tag26"	2.69985343389802	0	2.48801777603558	0.27785861684651	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	4
+"Diplostraca_Pleuroxus_aduncus"	"treatment_tag"	"3,727"	"treatment_tag3,727"	2.35444620298298e-16	0	2.34855867276433	1	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	4
+"Diplostraca_Pleuroxus_aduncus"	"treatment_tag"	"4"	"treatment_tag4"	-2.51841082201678e-14	0	45.2749463957013	1	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	4
+"Diplostraca_Pleuroxus_aduncus"	"treatment_tag"	"719"	"treatment_tag719"	2.69985343389802	0	2.80706672247078	0.336147096159375	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	4
+"Diptera_Ablabesmyia_rhamphe"	"read_depth"	"read_depth"	"read_depth"	-8.28380617433939e-14	0	15.5445609999851	0.999999999999996	NA	0.186592254714477	1	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	8
+"Diptera_Ablabesmyia_rhamphe"	"treatment_tag"	"100,000"	"treatment_tag100,000"	1.33717930727894e-13	0	25.323952009924	0.999999999999996	NA	0.20853671702735	1	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	8
+"Diptera_Ablabesmyia_rhamphe"	"treatment_tag"	"138"	"treatment_tag138"	-2.1040152956238e-15	0	2.22043960286846	0.999999999999999	NA	0.183729899301626	1	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	8
+"Diptera_Ablabesmyia_rhamphe"	"treatment_tag"	"26"	"treatment_tag26"	7.07237221401272e-15	0	2.48801777603558	0.999999999999998	NA	0.31710690375008	1	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	8
+"Diptera_Ablabesmyia_rhamphe"	"treatment_tag"	"3,727"	"treatment_tag3,727"	-4.69968573652852e-15	0	2.34855867276433	0.999999999999998	NA	0.368622274195259	1	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	8
+"Diptera_Ablabesmyia_rhamphe"	"treatment_tag"	"4"	"treatment_tag4"	-2.69985343389778	0	45.2749463957012	0.952448417726868	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	8
+"Diptera_Ablabesmyia_rhamphe"	"treatment_tag"	"719"	"treatment_tag719"	-2.69985343389801	0	2.80706672247078	0.336147096159376	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	8
+"Diptera_Belgica_antarctica"	"read_depth"	"read_depth"	"read_depth"	-17.6569550828354	0	15.8007098893851	0.263789746849123	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	5
+"Diptera_Belgica_antarctica"	"treatment_tag"	"100,000"	"treatment_tag100,000"	27.7945956488617	0	25.8417077712496	0.282119090546389	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	5
+"Diptera_Belgica_antarctica"	"treatment_tag"	"138"	"treatment_tag138"	1.4224214753564	0	2.19605380525166	0.517167979518675	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	5
+"Diptera_Belgica_antarctica"	"treatment_tag"	"26"	"treatment_tag26"	0.477758660733239	0	2.54040227689162	0.850826343446131	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	5
+"Diptera_Belgica_antarctica"	"treatment_tag"	"3,727"	"treatment_tag3,727"	0.874077404620597	0	2.30751338998292	0.704839176910117	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	5
+"Diptera_Belgica_antarctica"	"treatment_tag"	"4"	"treatment_tag4"	53.2042166908669	0	46.1234723854032	0.248698179977524	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	5
+"Diptera_Belgica_antarctica"	"treatment_tag"	"719"	"treatment_tag719"	1.13136520933348	0	2.88474906023067	0.694918991145995	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	5
+"Euamoebida_Copromyxa_microcystidis"	"read_depth"	"read_depth"	"read_depth"	14.2266895701954	0	16.4006977687365	0.385698692444522	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	2
+"Euamoebida_Copromyxa_microcystidis"	"treatment_tag"	"100,000"	"treatment_tag100,000"	-21.2152113394207	0	26.3859239659699	0.421376653199044	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	2
+"Euamoebida_Copromyxa_microcystidis"	"treatment_tag"	"138"	"treatment_tag138"	-0.490940398174123	0	2.25410902458304	0.827586516466734	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	2
+"Euamoebida_Copromyxa_microcystidis"	"treatment_tag"	"26"	"treatment_tag26"	-1.90514528003491	0	2.33262865375572	0.414078459813814	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	2
+"Euamoebida_Copromyxa_microcystidis"	"treatment_tag"	"3,727"	"treatment_tag3,727"	-0.0491246470767526	0	2.46135686536002	0.984076589632051	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	2
+"Euamoebida_Copromyxa_microcystidis"	"treatment_tag"	"4"	"treatment_tag4"	-42.2129430006863	0	47.4412623185671	0.373576594517394	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	2
+"Euamoebida_Copromyxa_microcystidis"	"treatment_tag"	"719"	"treatment_tag719"	-2.43177387620901	0	2.63317567136742	0.355739550555867	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	2
+"Euamoebida_Copromyxa_sp."	"read_depth"	"read_depth"	"read_depth"	3.27900661067601e-14	0	15.5445609999851	0.999999999999998	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	3
+"Euamoebida_Copromyxa_sp."	"treatment_tag"	"100,000"	"treatment_tag100,000"	-5.30971909802425e-14	0	25.323952009924	0.999999999999998	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	3
+"Euamoebida_Copromyxa_sp."	"treatment_tag"	"138"	"treatment_tag138"	2.69985343389802	0	2.22043960286846	0.224019428524633	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	3
+"Euamoebida_Copromyxa_sp."	"treatment_tag"	"26"	"treatment_tag26"	-1.06935855515872e-15	0	2.48801777603558	1	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	3
+"Euamoebida_Copromyxa_sp."	"treatment_tag"	"3,727"	"treatment_tag3,727"	2.69985343389802	0	2.34855867276433	0.250317363626722	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	3
+"Euamoebida_Copromyxa_sp."	"treatment_tag"	"4"	"treatment_tag4"	-9.71846234483339e-14	0	45.2749463957012	0.999999999999998	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	3
+"Euamoebida_Copromyxa_sp."	"treatment_tag"	"719"	"treatment_tag719"	2.69985343389802	0	2.80706672247078	0.336147096159375	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	3
+"Flamella_uncultured_eukaryote"	"read_depth"	"read_depth"	"read_depth"	1.43240815097952e-13	0	15.5445609999851	0.999999999999993	NA	0.566769706540225	1	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	9
+"Flamella_uncultured_eukaryote"	"treatment_tag"	"100,000"	"treatment_tag100,000"	-2.69985343389825	0	25.323952009924	0.915096288752011	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	9
+"Flamella_uncultured_eukaryote"	"treatment_tag"	"138"	"treatment_tag138"	3.09044889839395e-15	0	2.22043960286846	0.999999999999999	NA	0.898074863040101	1	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	9
+"Flamella_uncultured_eukaryote"	"treatment_tag"	"26"	"treatment_tag26"	-1.11572374821482e-14	0	2.48801777603558	0.999999999999996	NA	0.283876585509811	1	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	9
+"Flamella_uncultured_eukaryote"	"treatment_tag"	"3,727"	"treatment_tag3,727"	7.41650553939639e-15	0	2.34855867276433	0.999999999999997	NA	1	1	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	9
+"Flamella_uncultured_eukaryote"	"treatment_tag"	"4"	"treatment_tag4"	-4.14918753747444e-13	0	45.2749463957012	0.999999999999993	NA	1	1	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	9
+"Flamella_uncultured_eukaryote"	"treatment_tag"	"719"	"treatment_tag719"	-1.65103373834425e-14	0	2.80706672247078	0.999999999999995	NA	0.58909660868557	1	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	9
+"Goniomonas_Goniomonas_sp."	"read_depth"	"read_depth"	"read_depth"	-17.6569550828356	0	15.8007098893851	0.263789746849118	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	2
+"Goniomonas_Goniomonas_sp."	"treatment_tag"	"100,000"	"treatment_tag100,000"	27.7945956488621	0	25.8417077712497	0.282119090546383	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	2
+"Goniomonas_Goniomonas_sp."	"treatment_tag"	"138"	"treatment_tag138"	-1.27743195854162	0	2.19605380525166	0.560772618491439	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	2
+"Goniomonas_Goniomonas_sp."	"treatment_tag"	"26"	"treatment_tag26"	3.17761209463128	0	2.54040227689163	0.210996404462608	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	2
+"Goniomonas_Goniomonas_sp."	"treatment_tag"	"3,727"	"treatment_tag3,727"	-1.82577602927743	0	2.30751338998292	0.428809229384316	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	2
+"Goniomonas_Goniomonas_sp."	"treatment_tag"	"4"	"treatment_tag4"	50.5043632569696	0	46.1234723854033	0.273524605815154	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	2
+"Goniomonas_Goniomonas_sp."	"treatment_tag"	"719"	"treatment_tag719"	1.13136520933356	0	2.8847490602307	0.694918991145979	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	2
+"Gymnophrys_metagenome"	"read_depth"	"read_depth"	"read_depth"	14.2266895701954	0	16.4006977687364	0.385698692444522	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	4
+"Gymnophrys_metagenome"	"treatment_tag"	"100,000"	"treatment_tag100,000"	-21.2152113394207	0	26.3859239659699	0.421376653199043	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	4
+"Gymnophrys_metagenome"	"treatment_tag"	"138"	"treatment_tag138"	-0.490940398174125	0	2.25410902458304	0.827586516466734	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	4
+"Gymnophrys_metagenome"	"treatment_tag"	"26"	"treatment_tag26"	-1.90514528003491	0	2.33262865375572	0.414078459813814	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	4
+"Gymnophrys_metagenome"	"treatment_tag"	"3,727"	"treatment_tag3,727"	-0.0491246470767479	0	2.46135686536002	0.984076589632052	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	4
+"Gymnophrys_metagenome"	"treatment_tag"	"4"	"treatment_tag4"	-42.2129430006863	0	47.441262318567	0.373576594517394	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	4
+"Gymnophrys_metagenome"	"treatment_tag"	"719"	"treatment_tag719"	0.268079557689011	0	2.63317567136743	0.918908711137092	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	4
+"H1-10_uncultured_eukaryote"	"read_depth"	"read_depth"	"read_depth"	-3.68820521869739	0	13.1395120233239	0.77894376662508	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	6
+"H1-10_uncultured_eukaryote"	"treatment_tag"	"100,000"	"treatment_tag100,000"	4.23160327006542	0	21.3762714136425	0.843077948921895	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	6
+"H1-10_uncultured_eukaryote"	"treatment_tag"	"138"	"treatment_tag138"	0.858857921403619	0	2.13477030739995	0.687449526316199	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	6
+"H1-10_uncultured_eukaryote"	"treatment_tag"	"26"	"treatment_tag26"	-1.47436926400203	0	2.30620875006383	0.522624965351255	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	6
+"H1-10_uncultured_eukaryote"	"treatment_tag"	"3,727"	"treatment_tag3,727"	0.744319177104749	0	2.24028267502814	0.739705459881278	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	6
+"H1-10_uncultured_eukaryote"	"treatment_tag"	"4"	"treatment_tag4"	8.97524581855039	0	38.2300067633112	0.814387514836971	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	6
+"H1-10_uncultured_eukaryote"	"treatment_tag"	"719"	"treatment_tag719"	1.36201026243081	0	2.54439957144666	0.59244428176172	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	6
+"H15-6_Choanocystis_symna"	"read_depth"	"read_depth"	"read_depth"	-4.1419030871697e-14	0	15.5445609999851	0.999999999999998	NA	0.499127241246548	1	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	4
+"H15-6_Choanocystis_symna"	"treatment_tag"	"100,000"	"treatment_tag100,000"	-2.69985343389795	0	25.323952009924	0.91509628875202	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	4
+"H15-6_Choanocystis_symna"	"treatment_tag"	"138"	"treatment_tag138"	-2.1040152956238e-15	0	2.22043960286846	0.999999999999999	NA	0.596345468857345	1	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	4
+"H15-6_Choanocystis_symna"	"treatment_tag"	"26"	"treatment_tag26"	-2.69985343389801	0	2.48801777603558	0.277858616846512	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	4
+"H15-6_Choanocystis_symna"	"treatment_tag"	"3,727"	"treatment_tag3,727"	-2.69985343389802	0	2.34855867276433	0.250317363626722	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	4
+"H15-6_Choanocystis_symna"	"treatment_tag"	"4"	"treatment_tag4"	-2.6998534338979	0	45.2749463957012	0.952448417726866	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	4
+"H15-6_Choanocystis_symna"	"treatment_tag"	"719"	"treatment_tag719"	-2.69985343389801	0	2.80706672247078	0.336147096159376	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	4
+"Haptophyta_Spironema_cf."	"read_depth"	"read_depth"	"read_depth"	-1.3806343623899e-14	0	15.5445609999852	0.999999999999999	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	3
+"Haptophyta_Spironema_cf."	"treatment_tag"	"100,000"	"treatment_tag100,000"	2.69985343389804	0	25.323952009924	0.915096288752018	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	3
+"Haptophyta_Spironema_cf."	"treatment_tag"	"138"	"treatment_tag138"	2.69985343389802	0	2.22043960286846	0.224019428524633	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	3
+"Haptophyta_Spironema_cf."	"treatment_tag"	"26"	"treatment_tag26"	7.87948409064317e-16	0	2.48801777603558	1	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	3
+"Haptophyta_Spironema_cf."	"treatment_tag"	"3,727"	"treatment_tag3,727"	-1.05950079134234e-15	0	2.34855867276433	1	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	3
+"Haptophyta_Spironema_cf."	"treatment_tag"	"4"	"treatment_tag4"	2.69985343389806	0	45.2749463957013	0.952448417726863	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	3
+"Haptophyta_Spironema_cf."	"treatment_tag"	"719"	"treatment_tag719"	2.5563519173195e-15	0	2.80706672247078	0.999999999999999	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	3
+"Incertae_Sedis_metagenome"	"read_depth"	"read_depth"	"read_depth"	14.2266895701953	0	16.4006977687365	0.385698692444527	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	4
+"Incertae_Sedis_metagenome"	"treatment_tag"	"100,000"	"treatment_tag100,000"	-23.9150647733185	0	26.3859239659699	0.364746967092417	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	4
+"Incertae_Sedis_metagenome"	"treatment_tag"	"138"	"treatment_tag138"	2.20891303572389	0	2.25410902458304	0.32711104174456	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	4
+"Incertae_Sedis_metagenome"	"treatment_tag"	"26"	"treatment_tag26"	0.794708153863118	0	2.33262865375572	0.733335386776058	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	4
+"Incertae_Sedis_metagenome"	"treatment_tag"	"3,727"	"treatment_tag3,727"	-0.0491246470767591	0	2.46135686536002	0.984076589632049	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	4
+"Incertae_Sedis_metagenome"	"treatment_tag"	"4"	"treatment_tag4"	-39.5130895667878	0	47.4412623185671	0.404909901614967	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	4
+"Incertae_Sedis_metagenome"	"treatment_tag"	"719"	"treatment_tag719"	-2.431773876209	0	2.63317567136743	0.35573955055587	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	4
+"Ischnamoeba_Ischnamoeba_sp."	"read_depth"	"read_depth"	"read_depth"	14.2266895701952	0	16.4006977687366	0.385698692444532	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	5
+"Ischnamoeba_Ischnamoeba_sp."	"treatment_tag"	"100,000"	"treatment_tag100,000"	-21.2152113394204	0	26.3859239659701	0.421376653199054	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	5
+"Ischnamoeba_Ischnamoeba_sp."	"treatment_tag"	"138"	"treatment_tag138"	-0.490940398174129	0	2.25410902458304	0.827586516466733	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	5
+"Ischnamoeba_Ischnamoeba_sp."	"treatment_tag"	"26"	"treatment_tag26"	-1.9051452800349	0	2.33262865375572	0.414078459813818	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	5
+"Ischnamoeba_Ischnamoeba_sp."	"treatment_tag"	"3,727"	"treatment_tag3,727"	-0.0491246470767666	0	2.46135686536002	0.984076589632046	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	5
+"Ischnamoeba_Ischnamoeba_sp."	"treatment_tag"	"4"	"treatment_tag4"	-39.5130895667877	0	47.4412623185674	0.404909901614972	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	5
+"Ischnamoeba_Ischnamoeba_sp."	"treatment_tag"	"719"	"treatment_tag719"	0.26807955768904	0	2.63317567136742	0.918908711137083	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	5
+"Ischnamoeba_Lobosea_sp."	"read_depth"	"read_depth"	"read_depth"	NA	0	NA	NA	NA	0.908031139232557	1	"All logistic values are the same"	"prevalence"	10	10
+"Ischnamoeba_Lobosea_sp."	"treatment_tag"	"100,000"	"treatment_tag100,000"	NA	0	NA	NA	NA	0.875657595731588	1	"All logistic values are the same"	"prevalence"	10	10
+"Ischnamoeba_Lobosea_sp."	"treatment_tag"	"138"	"treatment_tag138"	NA	0	NA	NA	NA	0.400176879129878	1	"All logistic values are the same"	"prevalence"	10	10
+"Ischnamoeba_Lobosea_sp."	"treatment_tag"	"26"	"treatment_tag26"	NA	0	NA	NA	NA	0.972827679644715	1	"All logistic values are the same"	"prevalence"	10	10
+"Ischnamoeba_Lobosea_sp."	"treatment_tag"	"3,727"	"treatment_tag3,727"	NA	0	NA	NA	NA	0.894663226642033	1	"All logistic values are the same"	"prevalence"	10	10
+"Ischnamoeba_Lobosea_sp."	"treatment_tag"	"4"	"treatment_tag4"	NA	0	NA	NA	NA	0.843396230681301	1	"All logistic values are the same"	"prevalence"	10	10
+"Ischnamoeba_Lobosea_sp."	"treatment_tag"	"719"	"treatment_tag719"	NA	0	NA	NA	NA	0.285561234005816	1	"All logistic values are the same"	"prevalence"	10	10
+"Ischnamoeba_uncultured_eukaryote"	"read_depth"	"read_depth"	"read_depth"	8.45638546963814e-14	0	15.5445609999851	0.999999999999996	NA	0.781303445062234	1	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	7
+"Ischnamoeba_uncultured_eukaryote"	"treatment_tag"	"100,000"	"treatment_tag100,000"	-2.69985343389816	0	25.323952009924	0.915096288752014	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	7
+"Ischnamoeba_uncultured_eukaryote"	"treatment_tag"	"138"	"treatment_tag138"	2.29289307636555e-15	0	2.22043960286846	0.999999999999999	NA	0.953876958066077	1	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	7
+"Ischnamoeba_uncultured_eukaryote"	"treatment_tag"	"26"	"treatment_tag26"	-5.8281338551016e-15	0	2.48801777603558	0.999999999999998	NA	0.20553567749403	1	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	7
+"Ischnamoeba_uncultured_eukaryote"	"treatment_tag"	"3,727"	"treatment_tag3,727"	-2.69985343389801	0	2.34855867276433	0.250317363626723	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	7
+"Ischnamoeba_uncultured_eukaryote"	"treatment_tag"	"4"	"treatment_tag4"	-2.69985343389826	0	45.2749463957012	0.952448417726859	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	7
+"Ischnamoeba_uncultured_eukaryote"	"treatment_tag"	"719"	"treatment_tag719"	-8.42010006324675e-15	0	2.80706672247078	0.999999999999998	NA	0.550486662977196	1	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	7
+"Jakobida_metagenome"	"read_depth"	"read_depth"	"read_depth"	14.2266895701952	0	16.4006977687365	0.385698692444533	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	2
+"Jakobida_metagenome"	"treatment_tag"	"100,000"	"treatment_tag100,000"	-23.9150647733184	0	26.38592396597	0.364746967092423	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	2
+"Jakobida_metagenome"	"treatment_tag"	"138"	"treatment_tag138"	-0.490940398174134	0	2.25410902458304	0.827586516466731	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	2
+"Jakobida_metagenome"	"treatment_tag"	"26"	"treatment_tag26"	-1.9051452800349	0	2.33262865375572	0.414078459813818	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	2
+"Jakobida_metagenome"	"treatment_tag"	"3,727"	"treatment_tag3,727"	-0.0491246470767656	0	2.46135686536002	0.984076589632047	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	2
+"Jakobida_metagenome"	"treatment_tag"	"4"	"treatment_tag4"	-39.5130895667875	0	47.4412623185673	0.404909901614973	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	2
+"Jakobida_metagenome"	"treatment_tag"	"719"	"treatment_tag719"	-2.43177387620899	0	2.63317567136743	0.355739550555872	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	2
+"Legeriomycetaceae_Legeriosimilis_sp."	"read_depth"	"read_depth"	"read_depth"	-5.34995815426087e-14	0	15.5445609999852	0.999999999999997	NA	0.273713538407469	1	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	6
+"Legeriomycetaceae_Legeriosimilis_sp."	"treatment_tag"	"100,000"	"treatment_tag100,000"	-2.69985343389793	0	25.323952009924	0.915096288752021	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	6
+"Legeriomycetaceae_Legeriosimilis_sp."	"treatment_tag"	"138"	"treatment_tag138"	-2.69985343389802	0	2.22043960286846	0.224019428524633	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	6
+"Legeriomycetaceae_Legeriosimilis_sp."	"treatment_tag"	"26"	"treatment_tag26"	4.55884436672927e-15	0	2.48801777603558	0.999999999999999	NA	0.325037453737364	1	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	6
+"Legeriomycetaceae_Legeriosimilis_sp."	"treatment_tag"	"3,727"	"treatment_tag3,727"	-3.29622468417617e-15	0	2.34855867276433	0.999999999999999	NA	0.534256846985519	1	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	6
+"Legeriomycetaceae_Legeriosimilis_sp."	"treatment_tag"	"4"	"treatment_tag4"	-2.69985343389786	0	45.2749463957012	0.952448417726866	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	6
+"Legeriomycetaceae_Legeriosimilis_sp."	"treatment_tag"	"719"	"treatment_tag719"	-2.69985343389801	0	2.80706672247079	0.336147096159377	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	6
+"Ligniera_Ligniera_junci"	"read_depth"	"read_depth"	"read_depth"	-17.6569550828354	0	15.8007098893851	0.263789746849123	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	3
+"Ligniera_Ligniera_junci"	"treatment_tag"	"100,000"	"treatment_tag100,000"	30.4944490827598	0	25.8417077712497	0.237981224461702	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	3
+"Ligniera_Ligniera_junci"	"treatment_tag"	"138"	"treatment_tag138"	1.4224214753564	0	2.19605380525166	0.517167979518675	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	3
+"Ligniera_Ligniera_junci"	"treatment_tag"	"26"	"treatment_tag26"	0.477758660733241	0	2.54040227689162	0.85082634344613	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	3
+"Ligniera_Ligniera_junci"	"treatment_tag"	"3,727"	"treatment_tag3,727"	-1.82577602927742	0	2.30751338998292	0.428809229384318	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	3
+"Ligniera_Ligniera_junci"	"treatment_tag"	"4"	"treatment_tag4"	50.504363256969	0	46.1234723854032	0.273524605815159	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	3
+"Ligniera_Ligniera_junci"	"treatment_tag"	"719"	"treatment_tag719"	1.13136520933349	0	2.88474906023067	0.694918991145993	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	3
+"Magnoliophyta_Acanthamoeba_sp."	"read_depth"	"read_depth"	"read_depth"	-14.2266895701953	0	16.4006977687365	0.385698692444526	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	8
+"Magnoliophyta_Acanthamoeba_sp."	"treatment_tag"	"100,000"	"treatment_tag100,000"	23.9150647733186	0	26.38592396597	0.364746967092416	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	8
+"Magnoliophyta_Acanthamoeba_sp."	"treatment_tag"	"138"	"treatment_tag138"	0.490940398174126	0	2.25410902458304	0.827586516466733	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	8
+"Magnoliophyta_Acanthamoeba_sp."	"treatment_tag"	"26"	"treatment_tag26"	1.9051452800349	0	2.33262865375572	0.414078459813816	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	8
+"Magnoliophyta_Acanthamoeba_sp."	"treatment_tag"	"3,727"	"treatment_tag3,727"	0.0491246470767554	0	2.46135686536002	0.98407658963205	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	8
+"Magnoliophyta_Acanthamoeba_sp."	"treatment_tag"	"4"	"treatment_tag4"	42.2129430006861	0	47.4412623185672	0.373576594517398	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	8
+"Magnoliophyta_Acanthamoeba_sp."	"treatment_tag"	"719"	"treatment_tag719"	-0.268079557689025	0	2.63317567136742	0.918908711137087	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	8
+"Mycamoeba_metagenome"	"read_depth"	"read_depth"	"read_depth"	5.43624780191024e-14	0	15.5445609999852	0.999999999999997	NA	0.994366272771737	1	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	6
+"Mycamoeba_metagenome"	"treatment_tag"	"100,000"	"treatment_tag100,000"	-8.87174577306633e-14	0	25.323952009924	0.999999999999997	NA	1	1	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	6
+"Mycamoeba_metagenome"	"treatment_tag"	"138"	"treatment_tag138"	1.42163195650257e-15	0	2.22043960286846	0.999999999999999	NA	0.673441847504481	1	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	6
+"Mycamoeba_metagenome"	"treatment_tag"	"26"	"treatment_tag26"	-2.69985343389802	0	2.48801777603558	0.27785861684651	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	6
+"Mycamoeba_metagenome"	"treatment_tag"	"3,727"	"treatment_tag3,727"	-2.69985343389802	0	2.34855867276433	0.250317363626723	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	6
+"Mycamoeba_metagenome"	"treatment_tag"	"4"	"treatment_tag4"	-1.58084723661408e-13	0	45.2749463957013	0.999999999999997	NA	0.996411646466701	1	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	6
+"Mycamoeba_metagenome"	"treatment_tag"	"719"	"treatment_tag719"	-2.69985343389803	0	2.80706672247078	0.336147096159374	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	6
+"Mycamoeba_uncultured_freshwater"	"read_depth"	"read_depth"	"read_depth"	17.6569550828355	0	15.8007098893851	0.263789746849121	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	6
+"Mycamoeba_uncultured_freshwater"	"treatment_tag"	"100,000"	"treatment_tag100,000"	-27.7945956488619	0	25.8417077712497	0.282119090546387	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	6
+"Mycamoeba_uncultured_freshwater"	"treatment_tag"	"138"	"treatment_tag138"	1.27743195854162	0	2.19605380525166	0.56077261849144	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	6
+"Mycamoeba_uncultured_freshwater"	"treatment_tag"	"26"	"treatment_tag26"	-0.47775866073325	0	2.54040227689162	0.850826343446127	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	6
+"Mycamoeba_uncultured_freshwater"	"treatment_tag"	"3,727"	"treatment_tag3,727"	1.82577602927742	0	2.30751338998292	0.428809229384318	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	6
+"Mycamoeba_uncultured_freshwater"	"treatment_tag"	"4"	"treatment_tag4"	-53.2042166908673	0	46.1234723854033	0.248698179977523	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	6
+"Mycamoeba_uncultured_freshwater"	"treatment_tag"	"719"	"treatment_tag719"	-3.83121864323154	0	2.88474906023069	0.1841469723596	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	6
+"Novel_Clade_10_uncultured_Rhizaria"	"read_depth"	"read_depth"	"read_depth"	17.6569550828355	0	15.8007098893851	0.263789746849121	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	5
+"Novel_Clade_10_uncultured_Rhizaria"	"treatment_tag"	"100,000"	"treatment_tag100,000"	-30.4944490827599	0	25.8417077712497	0.237981224461701	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	5
+"Novel_Clade_10_uncultured_Rhizaria"	"treatment_tag"	"138"	"treatment_tag138"	1.27743195854162	0	2.19605380525166	0.560772618491439	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	5
+"Novel_Clade_10_uncultured_Rhizaria"	"treatment_tag"	"26"	"treatment_tag26"	-0.477758660733248	0	2.54040227689162	0.850826343446128	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	5
+"Novel_Clade_10_uncultured_Rhizaria"	"treatment_tag"	"3,727"	"treatment_tag3,727"	-0.874077404620593	0	2.30751338998292	0.704839176910118	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	5
+"Novel_Clade_10_uncultured_Rhizaria"	"treatment_tag"	"4"	"treatment_tag4"	-53.2042166908673	0	46.1234723854033	0.248698179977523	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	5
+"Novel_Clade_10_uncultured_Rhizaria"	"treatment_tag"	"719"	"treatment_tag719"	-3.83121864323153	0	2.88474906023068	0.1841469723596	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	5
+"Novel_Clade_Gran-3_uncultured_freshwater"	"read_depth"	"read_depth"	"read_depth"	-3.68820521869738	0	13.1395120233239	0.77894376662508	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	7
+"Novel_Clade_Gran-3_uncultured_freshwater"	"treatment_tag"	"100,000"	"treatment_tag100,000"	4.23160327006542	0	21.3762714136424	0.843077948921895	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	7
+"Novel_Clade_Gran-3_uncultured_freshwater"	"treatment_tag"	"138"	"treatment_tag138"	0.858857921403621	0	2.13477030739995	0.687449526316198	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	7
+"Novel_Clade_Gran-3_uncultured_freshwater"	"treatment_tag"	"26"	"treatment_tag26"	1.22548416989599	0	2.30620875006383	0.595152184128982	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	7
+"Novel_Clade_Gran-3_uncultured_freshwater"	"treatment_tag"	"3,727"	"treatment_tag3,727"	0.744319177104749	0	2.24028267502814	0.739705459881278	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	7
+"Novel_Clade_Gran-3_uncultured_freshwater"	"treatment_tag"	"4"	"treatment_tag4"	8.97524581855038	0	38.2300067633112	0.814387514836971	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	7
+"Novel_Clade_Gran-3_uncultured_freshwater"	"treatment_tag"	"719"	"treatment_tag719"	1.3620102624308	0	2.54439957144665	0.59244428176172	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	7
+"Novel_Clade_Gran-4_uncultured_Cercozoa"	"read_depth"	"read_depth"	"read_depth"	3.6882052186973	0	13.1395120233239	0.778943766625086	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	2
+"Novel_Clade_Gran-4_uncultured_Cercozoa"	"treatment_tag"	"100,000"	"treatment_tag100,000"	-4.23160327006528	0	21.3762714136425	0.8430779489219	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	2
+"Novel_Clade_Gran-4_uncultured_Cercozoa"	"treatment_tag"	"138"	"treatment_tag138"	-0.858857921403622	0	2.13477030739995	0.687449526316198	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	2
+"Novel_Clade_Gran-4_uncultured_Cercozoa"	"treatment_tag"	"26"	"treatment_tag26"	-1.22548416989598	0	2.30620875006383	0.595152184128984	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	2
+"Novel_Clade_Gran-4_uncultured_Cercozoa"	"treatment_tag"	"3,727"	"treatment_tag3,727"	-0.744319177104755	0	2.24028267502814	0.739705459881277	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	2
+"Novel_Clade_Gran-4_uncultured_Cercozoa"	"treatment_tag"	"4"	"treatment_tag4"	-11.6750992524482	0	38.2300067633112	0.760068390367101	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	2
+"Novel_Clade_Gran-4_uncultured_Cercozoa"	"treatment_tag"	"719"	"treatment_tag719"	-1.3620102624308	0	2.54439957144667	0.592444281761723	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	2
+"Nuclearia_metagenome"	"read_depth"	"read_depth"	"read_depth"	-17.6569550828354	0	15.8007098893851	0.263789746849123	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	3
+"Nuclearia_metagenome"	"treatment_tag"	"100,000"	"treatment_tag100,000"	30.4944490827598	0	25.8417077712497	0.237981224461702	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	3
+"Nuclearia_metagenome"	"treatment_tag"	"138"	"treatment_tag138"	1.4224214753564	0	2.19605380525166	0.517167979518675	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	3
+"Nuclearia_metagenome"	"treatment_tag"	"26"	"treatment_tag26"	0.477758660733241	0	2.54040227689162	0.85082634344613	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	3
+"Nuclearia_metagenome"	"treatment_tag"	"3,727"	"treatment_tag3,727"	-1.82577602927742	0	2.30751338998292	0.428809229384318	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	3
+"Nuclearia_metagenome"	"treatment_tag"	"4"	"treatment_tag4"	50.504363256969	0	46.1234723854032	0.273524605815159	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	3
+"Nuclearia_metagenome"	"treatment_tag"	"719"	"treatment_tag719"	1.13136520933349	0	2.88474906023067	0.694918991145993	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	3
+"Parvilucifera_uncultured_alveolate"	"read_depth"	"read_depth"	"read_depth"	17.6569550828353	0	15.8007098893852	0.263789746849126	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	6
+"Parvilucifera_uncultured_alveolate"	"treatment_tag"	"100,000"	"treatment_tag100,000"	-27.7945956488617	0	25.8417077712497	0.282119090546392	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	6
+"Parvilucifera_uncultured_alveolate"	"treatment_tag"	"138"	"treatment_tag138"	-1.4224214753564	0	2.19605380525166	0.517167979518674	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	6
+"Parvilucifera_uncultured_alveolate"	"treatment_tag"	"26"	"treatment_tag26"	-3.17761209463125	0	2.54040227689162	0.210996404462611	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	6
+"Parvilucifera_uncultured_alveolate"	"treatment_tag"	"3,727"	"treatment_tag3,727"	1.82577602927742	0	2.30751338998292	0.42880922938432	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	6
+"Parvilucifera_uncultured_alveolate"	"treatment_tag"	"4"	"treatment_tag4"	-50.5043632569688	0	46.1234723854034	0.273524605815162	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	6
+"Parvilucifera_uncultured_alveolate"	"treatment_tag"	"719"	"treatment_tag719"	-1.13136520933349	0	2.88474906023068	0.694918991145995	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	6
+"Phytomyxea_uncultured_Plasmodiophoridae"	"read_depth"	"read_depth"	"read_depth"	14.2266895701952	0	16.4006977687364	0.385698692444527	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	3
+"Phytomyxea_uncultured_Plasmodiophoridae"	"treatment_tag"	"100,000"	"treatment_tag100,000"	-23.9150647733185	0	26.3859239659698	0.364746967092417	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	3
+"Phytomyxea_uncultured_Plasmodiophoridae"	"treatment_tag"	"138"	"treatment_tag138"	2.20891303572389	0	2.25410902458304	0.327111041744561	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	3
+"Phytomyxea_uncultured_Plasmodiophoridae"	"treatment_tag"	"26"	"treatment_tag26"	-1.9051452800349	0	2.33262865375572	0.414078459813817	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	3
+"Phytomyxea_uncultured_Plasmodiophoridae"	"treatment_tag"	"3,727"	"treatment_tag3,727"	-0.049124647076761	0	2.46135686536002	0.984076589632048	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	3
+"Phytomyxea_uncultured_Plasmodiophoridae"	"treatment_tag"	"4"	"treatment_tag4"	-42.2129430006858	0	47.441262318567	0.373576594517398	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	3
+"Phytomyxea_uncultured_Plasmodiophoridae"	"treatment_tag"	"719"	"treatment_tag719"	0.26807955768904	0	2.63317567136741	0.918908711137083	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	3
+"Polymyxa_uncultured_Plasmodiophoridae"	"read_depth"	"read_depth"	"read_depth"	4.18504791099439e-14	0	15.5445609999852	0.999999999999998	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	2
+"Polymyxa_uncultured_Plasmodiophoridae"	"treatment_tag"	"100,000"	"treatment_tag100,000"	-6.768079547016e-14	0	25.323952009924	0.999999999999998	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	2
+"Polymyxa_uncultured_Plasmodiophoridae"	"treatment_tag"	"138"	"treatment_tag138"	2.11436622857649e-15	0	2.22043960286846	0.999999999999999	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	2
+"Polymyxa_uncultured_Plasmodiophoridae"	"treatment_tag"	"26"	"treatment_tag26"	-2.53279698924181e-15	0	2.48801777603558	0.999999999999999	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	2
+"Polymyxa_uncultured_Plasmodiophoridae"	"treatment_tag"	"3,727"	"treatment_tag3,727"	2.69985343389802	0	2.34855867276433	0.250317363626723	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	2
+"Polymyxa_uncultured_Plasmodiophoridae"	"treatment_tag"	"4"	"treatment_tag4"	-1.21241044982595e-13	0	45.2749463957013	0.999999999999998	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	2
+"Polymyxa_uncultured_Plasmodiophoridae"	"treatment_tag"	"719"	"treatment_tag719"	-3.69100276745063e-15	0	2.80706672247078	0.999999999999999	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	2
+"Protosporangium_Endostelium_amerosporum"	"read_depth"	"read_depth"	"read_depth"	3.68820521869743	0	13.1395120233239	0.778943766625078	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	6
+"Protosporangium_Endostelium_amerosporum"	"treatment_tag"	"100,000"	"treatment_tag100,000"	-6.93145670396351	0	21.3762714136425	0.745741663018352	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	6
+"Protosporangium_Endostelium_amerosporum"	"treatment_tag"	"138"	"treatment_tag138"	1.8409955124944	0	2.13477030739995	0.388475274378304	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	6
+"Protosporangium_Endostelium_amerosporum"	"treatment_tag"	"26"	"treatment_tag26"	1.47436926400202	0	2.30620875006383	0.522624965351256	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	6
+"Protosporangium_Endostelium_amerosporum"	"treatment_tag"	"3,727"	"treatment_tag3,727"	-0.744319177104746	0	2.24028267502814	0.73970545988128	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	6
+"Protosporangium_Endostelium_amerosporum"	"treatment_tag"	"4"	"treatment_tag4"	-8.97524581855052	0	38.2300067633112	0.814387514836968	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	6
+"Protosporangium_Endostelium_amerosporum"	"treatment_tag"	"719"	"treatment_tag719"	1.33784317146721	0	2.54439957144665	0.599027754390411	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	6
+"Pterocystis_Pterocystis_sp."	"read_depth"	"read_depth"	"read_depth"	-14.2266895701952	0	16.4006977687365	0.38569869244453	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	3
+"Pterocystis_Pterocystis_sp."	"treatment_tag"	"100,000"	"treatment_tag100,000"	21.2152113394204	0	26.3859239659699	0.421376653199052	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	3
+"Pterocystis_Pterocystis_sp."	"treatment_tag"	"138"	"treatment_tag138"	0.490940398174133	0	2.25410902458303	0.827586516466731	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	3
+"Pterocystis_Pterocystis_sp."	"treatment_tag"	"26"	"treatment_tag26"	-0.794708153863123	0	2.33262865375572	0.733335386776056	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	3
+"Pterocystis_Pterocystis_sp."	"treatment_tag"	"3,727"	"treatment_tag3,727"	-2.65072878682125	0	2.46135686536002	0.281507956601825	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	3
+"Pterocystis_Pterocystis_sp."	"treatment_tag"	"4"	"treatment_tag4"	39.5130895667876	0	47.4412623185672	0.404909901614971	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	3
+"Pterocystis_Pterocystis_sp."	"treatment_tag"	"719"	"treatment_tag719"	-0.268079557689052	0	2.63317567136741	0.918908711137079	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	3
+"Pterocystis_uncultured_eukaryote"	"read_depth"	"read_depth"	"read_depth"	-3.45158590597475e-14	0	15.5445609999851	0.999999999999998	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	2
+"Pterocystis_uncultured_eukaryote"	"treatment_tag"	"100,000"	"treatment_tag100,000"	5.57765960095139e-14	0	25.323952009924	0.999999999999998	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	2
+"Pterocystis_uncultured_eukaryote"	"treatment_tag"	"138"	"treatment_tag138"	2.69985343389802	0	2.22043960286846	0.224019428524633	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	2
+"Pterocystis_uncultured_eukaryote"	"treatment_tag"	"26"	"treatment_tag26"	3.93974204532159e-15	0	2.48801777603558	0.999999999999999	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	2
+"Pterocystis_uncultured_eukaryote"	"treatment_tag"	"3,727"	"treatment_tag3,727"	-2.53161605607645e-15	0	2.34855867276433	0.999999999999999	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	2
+"Pterocystis_uncultured_eukaryote"	"treatment_tag"	"4"	"treatment_tag4"	2.69985343389812	0	45.2749463957012	0.952448417726862	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	2
+"Pterocystis_uncultured_eukaryote"	"treatment_tag"	"719"	"treatment_tag719"	4.18127546940112e-15	0	2.80706672247079	0.999999999999999	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	2
+"Reclinomonas_Reclinomonas_americana"	"read_depth"	"read_depth"	"read_depth"	-9.83701983202805e-14	0	15.5445609999852	0.999999999999995	NA	0.0891693272899965	1	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	8
+"Reclinomonas_Reclinomonas_americana"	"treatment_tag"	"100,000"	"treatment_tag100,000"	1.59899488336307e-13	0	25.323952009924	0.999999999999995	NA	0.123592451373024	1	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	8
+"Reclinomonas_Reclinomonas_americana"	"treatment_tag"	"138"	"treatment_tag138"	-2.1608805738839e-15	0	2.22043960286846	0.999999999999999	NA	0.64100428400731	1	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	8
+"Reclinomonas_Reclinomonas_americana"	"treatment_tag"	"26"	"treatment_tag26"	7.79591498267813e-15	0	2.48801777603558	0.999999999999997	NA	0.593034001391087	1	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	8
+"Reclinomonas_Reclinomonas_americana"	"treatment_tag"	"3,727"	"treatment_tag3,727"	-4.71490386214874e-15	0	2.34855867276433	0.999999999999998	NA	0.298002675384051	1	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	8
+"Reclinomonas_Reclinomonas_americana"	"treatment_tag"	"4"	"treatment_tag4"	2.85714774768363e-13	0	45.2749463957012	0.999999999999995	NA	0.100330148066825	1	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	8
+"Reclinomonas_Reclinomonas_americana"	"treatment_tag"	"719"	"treatment_tag719"	-2.69985343389801	0	2.80706672247078	0.336147096159377	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	8
+"Rigifila_Rigifila_ramosa"	"read_depth"	"read_depth"	"read_depth"	14.2266895701954	0	16.4006977687366	0.385698692444525	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	3
+"Rigifila_Rigifila_ramosa"	"treatment_tag"	"100,000"	"treatment_tag100,000"	-21.2152113394208	0	26.3859239659701	0.421376653199047	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	3
+"Rigifila_Rigifila_ramosa"	"treatment_tag"	"138"	"treatment_tag138"	-0.490940398174122	0	2.25410902458304	0.827586516466735	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	3
+"Rigifila_Rigifila_ramosa"	"treatment_tag"	"26"	"treatment_tag26"	0.794708153863111	0	2.33262865375572	0.73333538677606	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	3
+"Rigifila_Rigifila_ramosa"	"treatment_tag"	"3,727"	"treatment_tag3,727"	-0.0491246470767442	0	2.46135686536002	0.984076589632054	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	3
+"Rigifila_Rigifila_ramosa"	"treatment_tag"	"4"	"treatment_tag4"	-42.2129430006863	0	47.4412623185674	0.373576594517397	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	3
+"Rigifila_Rigifila_ramosa"	"treatment_tag"	"719"	"treatment_tag719"	-2.43177387620901	0	2.63317567136742	0.355739550555868	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	3
+"Saccamoeba_Saccamoeba_limax"	"read_depth"	"read_depth"	"read_depth"	6.55801322135203e-14	0	15.5445609999852	0.999999999999997	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	2
+"Saccamoeba_Saccamoeba_limax"	"treatment_tag"	"100,000"	"treatment_tag100,000"	2.69985343389791	0	25.323952009924	0.915096288752022	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	2
+"Saccamoeba_Saccamoeba_limax"	"treatment_tag"	"138"	"treatment_tag138"	9.74814741945262e-16	0	2.22043960286846	1	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	2
+"Saccamoeba_Saccamoeba_limax"	"treatment_tag"	"26"	"treatment_tag26"	-4.98999760796776e-15	0	2.48801777603558	0.999999999999998	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	2
+"Saccamoeba_Saccamoeba_limax"	"treatment_tag"	"3,727"	"treatment_tag3,727"	3.64939161462362e-15	0	2.34855867276433	0.999999999999999	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	2
+"Saccamoeba_Saccamoeba_limax"	"treatment_tag"	"4"	"treatment_tag4"	-1.91857567731855e-13	0	45.2749463957013	0.999999999999997	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	2
+"Saccamoeba_Saccamoeba_limax"	"treatment_tag"	"719"	"treatment_tag719"	-8.03625324977052e-15	0	2.80706672247077	0.999999999999998	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	2
+"Salpingoeca_metagenome"	"read_depth"	"read_depth"	"read_depth"	-2.07095154358485e-14	0	15.5445609999851	0.999999999999999	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	2
+"Salpingoeca_metagenome"	"treatment_tag"	"100,000"	"treatment_tag100,000"	3.31255249841838e-14	0	25.323952009924	0.999999999999999	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	2
+"Salpingoeca_metagenome"	"treatment_tag"	"138"	"treatment_tag138"	2.69985343389802	0	2.22043960286846	0.224019428524633	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	2
+"Salpingoeca_metagenome"	"treatment_tag"	"26"	"treatment_tag26"	3.88346001610271e-15	0	2.48801777603558	0.999999999999999	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	2
+"Salpingoeca_metagenome"	"treatment_tag"	"3,727"	"treatment_tag3,727"	2.69985343389802	0	2.34855867276433	0.250317363626722	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	2
+"Salpingoeca_metagenome"	"treatment_tag"	"4"	"treatment_tag4"	6.09049559925262e-14	0	45.2749463957012	0.999999999999999	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	2
+"Salpingoeca_metagenome"	"treatment_tag"	"719"	"treatment_tag719"	2.53756440262231e-15	0	2.80706672247077	0.999999999999999	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	2
+"Smittium_Smittium_cf."	"read_depth"	"read_depth"	"read_depth"	3.6882052186974	0	13.1395120233239	0.77894376662508	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	4
+"Smittium_Smittium_cf."	"treatment_tag"	"100,000"	"treatment_tag100,000"	-4.23160327006545	0	21.3762714136425	0.843077948921894	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	4
+"Smittium_Smittium_cf."	"treatment_tag"	"138"	"treatment_tag138"	-0.858857921403617	0	2.13477030739995	0.687449526316199	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	4
+"Smittium_Smittium_cf."	"treatment_tag"	"26"	"treatment_tag26"	-1.22548416989599	0	2.30620875006383	0.595152184128981	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	4
+"Smittium_Smittium_cf."	"treatment_tag"	"3,727"	"treatment_tag3,727"	1.95553425679327	0	2.24028267502814	0.382719652155973	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	4
+"Smittium_Smittium_cf."	"treatment_tag"	"4"	"treatment_tag4"	-11.6750992524485	0	38.2300067633112	0.760068390367095	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	4
+"Smittium_Smittium_cf."	"treatment_tag"	"719"	"treatment_tag719"	1.33784317146721	0	2.54439957144666	0.599027754390412	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	4
+"Sorodiplophrys_uncultured_Eimeriidae"	"read_depth"	"read_depth"	"read_depth"	-4.65964097306592e-14	0	15.5445609999851	0.999999999999998	NA	0.563484264598275	1	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	5
+"Sorodiplophrys_uncultured_Eimeriidae"	"treatment_tag"	"100,000"	"treatment_tag100,000"	-2.69985343389794	0	25.323952009924	0.915096288752021	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	5
+"Sorodiplophrys_uncultured_Eimeriidae"	"treatment_tag"	"138"	"treatment_tag138"	-2.69985343389802	0	2.22043960286846	0.224019428524633	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	5
+"Sorodiplophrys_uncultured_Eimeriidae"	"treatment_tag"	"26"	"treatment_tag26"	1.407050730472e-15	0	2.48801777603558	1	NA	0.65351497697166	1	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	5
+"Sorodiplophrys_uncultured_Eimeriidae"	"treatment_tag"	"3,727"	"treatment_tag3,727"	-2.69985343389802	0	2.34855867276433	0.250317363626722	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	5
+"Sorodiplophrys_uncultured_Eimeriidae"	"treatment_tag"	"4"	"treatment_tag4"	-2.69985343389788	0	45.2749463957013	0.952448417726866	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	5
+"Sorodiplophrys_uncultured_Eimeriidae"	"treatment_tag"	"719"	"treatment_tag719"	3.9216904404163e-15	0	2.80706672247077	0.999999999999999	NA	0.542415678568213	1	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	5
+"Sorodiplophrys_uncultured_eukaryote"	"read_depth"	"read_depth"	"read_depth"	1.43240815097952e-13	0	15.5445609999851	0.999999999999993	NA	0.52056515978546	1	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	9
+"Sorodiplophrys_uncultured_eukaryote"	"treatment_tag"	"100,000"	"treatment_tag100,000"	-2.69985343389825	0	25.323952009924	0.915096288752011	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	9
+"Sorodiplophrys_uncultured_eukaryote"	"treatment_tag"	"138"	"treatment_tag138"	3.09044889839395e-15	0	2.22043960286846	0.999999999999999	NA	0.178102824377686	1	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	9
+"Sorodiplophrys_uncultured_eukaryote"	"treatment_tag"	"26"	"treatment_tag26"	-1.11572374821482e-14	0	2.48801777603558	0.999999999999996	NA	1	1	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	9
+"Sorodiplophrys_uncultured_eukaryote"	"treatment_tag"	"3,727"	"treatment_tag3,727"	7.41650553939639e-15	0	2.34855867276433	0.999999999999997	NA	0.868262448641316	1	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	9
+"Sorodiplophrys_uncultured_eukaryote"	"treatment_tag"	"4"	"treatment_tag4"	-4.14918753747444e-13	0	45.2749463957012	0.999999999999993	NA	0.469486025566239	1	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	9
+"Sorodiplophrys_uncultured_eukaryote"	"treatment_tag"	"719"	"treatment_tag719"	-1.65103373834425e-14	0	2.80706672247078	0.999999999999995	NA	0.536448817381154	1	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	9
+"Telaepolella_Telaepolella_sp."	"read_depth"	"read_depth"	"read_depth"	17.6569550828355	0	15.8007098893851	0.263789746849122	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	3
+"Telaepolella_Telaepolella_sp."	"treatment_tag"	"100,000"	"treatment_tag100,000"	-30.4944490827599	0	25.8417077712497	0.237981224461701	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	3
+"Telaepolella_Telaepolella_sp."	"treatment_tag"	"138"	"treatment_tag138"	-1.4224214753564	0	2.19605380525166	0.517167979518675	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	3
+"Telaepolella_Telaepolella_sp."	"treatment_tag"	"26"	"treatment_tag26"	-0.477758660733244	0	2.54040227689162	0.850826343446129	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	3
+"Telaepolella_Telaepolella_sp."	"treatment_tag"	"3,727"	"treatment_tag3,727"	-0.874077404620599	0	2.30751338998292	0.704839176910116	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	3
+"Telaepolella_Telaepolella_sp."	"treatment_tag"	"4"	"treatment_tag4"	-53.2042166908672	0	46.1234723854032	0.248698179977523	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	3
+"Telaepolella_Telaepolella_sp."	"treatment_tag"	"719"	"treatment_tag719"	-3.83121864323154	0	2.88474906023069	0.1841469723596	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	3
+"Telaepolella_Telaepolella_tubasferens"	"read_depth"	"read_depth"	"read_depth"	NA	0	NA	NA	NA	0.991971940961642	1	"All logistic values are the same"	"prevalence"	10	10
+"Telaepolella_Telaepolella_tubasferens"	"treatment_tag"	"100,000"	"treatment_tag100,000"	NA	0	NA	NA	NA	0.969336043158566	1	"All logistic values are the same"	"prevalence"	10	10
+"Telaepolella_Telaepolella_tubasferens"	"treatment_tag"	"138"	"treatment_tag138"	NA	0	NA	NA	NA	0.894286698962831	1	"All logistic values are the same"	"prevalence"	10	10
+"Telaepolella_Telaepolella_tubasferens"	"treatment_tag"	"26"	"treatment_tag26"	NA	0	NA	NA	NA	0.708902414102989	1	"All logistic values are the same"	"prevalence"	10	10
+"Telaepolella_Telaepolella_tubasferens"	"treatment_tag"	"3,727"	"treatment_tag3,727"	NA	0	NA	NA	NA	0.784858041173711	1	"All logistic values are the same"	"prevalence"	10	10
+"Telaepolella_Telaepolella_tubasferens"	"treatment_tag"	"4"	"treatment_tag4"	NA	0	NA	NA	NA	0.903148150287107	1	"All logistic values are the same"	"prevalence"	10	10
+"Telaepolella_Telaepolella_tubasferens"	"treatment_tag"	"719"	"treatment_tag719"	NA	0	NA	NA	NA	0.532789704471262	1	"All logistic values are the same"	"prevalence"	10	10
+"Tetramitus_Tetramitus_thorntoni"	"read_depth"	"read_depth"	"read_depth"	3.68820521869735	0	13.1395120233239	0.778943766625082	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	4
+"Tetramitus_Tetramitus_thorntoni"	"treatment_tag"	"100,000"	"treatment_tag100,000"	-4.23160327006536	0	21.3762714136425	0.843077948921897	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	4
+"Tetramitus_Tetramitus_thorntoni"	"treatment_tag"	"138"	"treatment_tag138"	-0.858857921403623	0	2.13477030739995	0.687449526316197	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	4
+"Tetramitus_Tetramitus_thorntoni"	"treatment_tag"	"26"	"treatment_tag26"	-1.22548416989599	0	2.30620875006383	0.595152184128982	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	4
+"Tetramitus_Tetramitus_thorntoni"	"treatment_tag"	"3,727"	"treatment_tag3,727"	-0.744319177104751	0	2.24028267502814	0.739705459881278	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	4
+"Tetramitus_Tetramitus_thorntoni"	"treatment_tag"	"4"	"treatment_tag4"	-8.97524581855028	0	38.2300067633112	0.814387514836973	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	4
+"Tetramitus_Tetramitus_thorntoni"	"treatment_tag"	"719"	"treatment_tag719"	-1.3620102624308	0	2.54439957144666	0.592444281761721	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	4
+"uncultured_Dimorpha-like_sp."	"read_depth"	"read_depth"	"read_depth"	-17.6569550828355	0	15.8007098893851	0.263789746849122	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	4
+"uncultured_Dimorpha-like_sp."	"treatment_tag"	"100,000"	"treatment_tag100,000"	27.7945956488619	0	25.8417077712497	0.282119090546388	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	4
+"uncultured_Dimorpha-like_sp."	"treatment_tag"	"138"	"treatment_tag138"	1.4224214753564	0	2.19605380525166	0.517167979518674	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	4
+"uncultured_Dimorpha-like_sp."	"treatment_tag"	"26"	"treatment_tag26"	3.17761209463127	0	2.54040227689163	0.21099640446261	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	4
+"uncultured_Dimorpha-like_sp."	"treatment_tag"	"3,727"	"treatment_tag3,727"	-1.82577602927742	0	2.30751338998292	0.428809229384319	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	4
+"uncultured_Dimorpha-like_sp."	"treatment_tag"	"4"	"treatment_tag4"	50.5043632569691	0	46.1234723854033	0.273524605815158	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	4
+"uncultured_Dimorpha-like_sp."	"treatment_tag"	"719"	"treatment_tag719"	3.83121864323153	0	2.88474906023069	0.184146972359601	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	4
+"uncultured_metagenome"	"read_depth"	"read_depth"	"read_depth"	NA	0	NA	NA	NA	0.892765944255189	1	"All logistic values are the same"	"prevalence"	10	10
+"uncultured_metagenome"	"treatment_tag"	"100,000"	"treatment_tag100,000"	NA	0	NA	NA	NA	0.913778160142876	1	"All logistic values are the same"	"prevalence"	10	10
+"uncultured_metagenome"	"treatment_tag"	"138"	"treatment_tag138"	NA	0	NA	NA	NA	0.837434138838652	1	"All logistic values are the same"	"prevalence"	10	10
+"uncultured_metagenome"	"treatment_tag"	"26"	"treatment_tag26"	NA	0	NA	NA	NA	0.720807294952609	1	"All logistic values are the same"	"prevalence"	10	10
+"uncultured_metagenome"	"treatment_tag"	"3,727"	"treatment_tag3,727"	NA	0	NA	NA	NA	0.601318693071607	1	"All logistic values are the same"	"prevalence"	10	10
+"uncultured_metagenome"	"treatment_tag"	"4"	"treatment_tag4"	NA	0	NA	NA	NA	0.90654365513638	1	"All logistic values are the same"	"prevalence"	10	10
+"uncultured_metagenome"	"treatment_tag"	"719"	"treatment_tag719"	NA	0	NA	NA	NA	0.928205829022563	1	"All logistic values are the same"	"prevalence"	10	10
+"uncultured_Spongospora_sp."	"read_depth"	"read_depth"	"read_depth"	-8.28380617433942e-14	0	15.5445609999852	0.999999999999996	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	3
+"uncultured_Spongospora_sp."	"treatment_tag"	"100,000"	"treatment_tag100,000"	2.69985343389815	0	25.323952009924	0.915096288752014	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	3
+"uncultured_Spongospora_sp."	"treatment_tag"	"138"	"treatment_tag138"	-2.97692557326187e-15	0	2.22043960286846	0.999999999999999	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	3
+"uncultured_Spongospora_sp."	"treatment_tag"	"26"	"treatment_tag26"	2.69985343389803	0	2.48801777603558	0.277858616846509	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	3
+"uncultured_Spongospora_sp."	"treatment_tag"	"3,727"	"treatment_tag3,727"	-4.47344778566766e-15	0	2.34855867276433	0.999999999999998	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	3
+"uncultured_Spongospora_sp."	"treatment_tag"	"4"	"treatment_tag4"	2.41733934556777e-13	0	45.2749463957013	0.999999999999996	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	3
+"uncultured_Spongospora_sp."	"treatment_tag"	"719"	"treatment_tag719"	8.44816119797588e-15	0	2.80706672247078	0.999999999999998	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	3
+"uncultured_uncultured_Eimeriidae"	"read_depth"	"read_depth"	"read_depth"	NA	0	NA	NA	NA	0.787761886693354	1	"All logistic values are the same"	"prevalence"	10	10
+"uncultured_uncultured_Eimeriidae"	"treatment_tag"	"100,000"	"treatment_tag100,000"	NA	0	NA	NA	NA	0.777523812794238	1	"All logistic values are the same"	"prevalence"	10	10
+"uncultured_uncultured_Eimeriidae"	"treatment_tag"	"138"	"treatment_tag138"	NA	0	NA	NA	NA	0.866494223625774	1	"All logistic values are the same"	"prevalence"	10	10
+"uncultured_uncultured_Eimeriidae"	"treatment_tag"	"26"	"treatment_tag26"	NA	0	NA	NA	NA	0.611834114476906	1	"All logistic values are the same"	"prevalence"	10	10
+"uncultured_uncultured_Eimeriidae"	"treatment_tag"	"3,727"	"treatment_tag3,727"	NA	0	NA	NA	NA	0.724340289893739	1	"All logistic values are the same"	"prevalence"	10	10
+"uncultured_uncultured_Eimeriidae"	"treatment_tag"	"4"	"treatment_tag4"	NA	0	NA	NA	NA	0.791581772220404	1	"All logistic values are the same"	"prevalence"	10	10
+"uncultured_uncultured_Eimeriidae"	"treatment_tag"	"719"	"treatment_tag719"	NA	0	NA	NA	NA	0.603577136786675	1	"All logistic values are the same"	"prevalence"	10	10
+"uncultured_uncultured_Eimeriidae.1"	"read_depth"	"read_depth"	"read_depth"	NA	0	NA	NA	NA	0.788204854592213	1	"All logistic values are the same"	"prevalence"	10	10
+"uncultured_uncultured_Eimeriidae.1"	"treatment_tag"	"100,000"	"treatment_tag100,000"	NA	0	NA	NA	NA	0.779009491960369	1	"All logistic values are the same"	"prevalence"	10	10
+"uncultured_uncultured_Eimeriidae.1"	"treatment_tag"	"138"	"treatment_tag138"	NA	0	NA	NA	NA	0.866293781583139	1	"All logistic values are the same"	"prevalence"	10	10
+"uncultured_uncultured_Eimeriidae.1"	"treatment_tag"	"26"	"treatment_tag26"	NA	0	NA	NA	NA	0.611614871464292	1	"All logistic values are the same"	"prevalence"	10	10
+"uncultured_uncultured_Eimeriidae.1"	"treatment_tag"	"3,727"	"treatment_tag3,727"	NA	0	NA	NA	NA	0.724503682209486	1	"All logistic values are the same"	"prevalence"	10	10
+"uncultured_uncultured_Eimeriidae.1"	"treatment_tag"	"4"	"treatment_tag4"	NA	0	NA	NA	NA	0.791102052823055	1	"All logistic values are the same"	"prevalence"	10	10
+"uncultured_uncultured_Eimeriidae.1"	"treatment_tag"	"719"	"treatment_tag719"	NA	0	NA	NA	NA	0.603086160491346	1	"All logistic values are the same"	"prevalence"	10	10
+"uncultured_uncultured_fungus"	"read_depth"	"read_depth"	"read_depth"	14.2266895701954	0	16.4006977687365	0.385698692444522	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	2
+"uncultured_uncultured_fungus"	"treatment_tag"	"100,000"	"treatment_tag100,000"	-23.9150647733188	0	26.3859239659699	0.364746967092412	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	2
+"uncultured_uncultured_fungus"	"treatment_tag"	"138"	"treatment_tag138"	2.2089130357239	0	2.25410902458304	0.327111041744558	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	2
+"uncultured_uncultured_fungus"	"treatment_tag"	"26"	"treatment_tag26"	-1.90514528003491	0	2.33262865375572	0.414078459813814	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	2
+"uncultured_uncultured_fungus"	"treatment_tag"	"3,727"	"treatment_tag3,727"	-0.0491246470767517	0	2.46135686536002	0.984076589632051	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	2
+"uncultured_uncultured_fungus"	"treatment_tag"	"4"	"treatment_tag4"	-42.2129430006863	0	47.4412623185671	0.373576594517394	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	2
+"uncultured_uncultured_fungus"	"treatment_tag"	"719"	"treatment_tag719"	-2.431773876209	0	2.63317567136742	0.355739550555869	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	2
+"Vahlkampfia_Vahlkampfia_avara"	"read_depth"	"read_depth"	"read_depth"	-14.2266895701954	0	16.4006977687365	0.385698692444524	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	4
+"Vahlkampfia_Vahlkampfia_avara"	"treatment_tag"	"100,000"	"treatment_tag100,000"	23.9150647733187	0	26.3859239659699	0.364746967092415	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	4
+"Vahlkampfia_Vahlkampfia_avara"	"treatment_tag"	"138"	"treatment_tag138"	-2.20891303572389	0	2.25410902458304	0.32711104174456	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	4
+"Vahlkampfia_Vahlkampfia_avara"	"treatment_tag"	"26"	"treatment_tag26"	-0.79470815386311	0	2.33262865375572	0.733335386776061	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	4
+"Vahlkampfia_Vahlkampfia_avara"	"treatment_tag"	"3,727"	"treatment_tag3,727"	-2.65072878682126	0	2.46135686536002	0.281507956601823	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	4
+"Vahlkampfia_Vahlkampfia_avara"	"treatment_tag"	"4"	"treatment_tag4"	39.5130895667881	0	47.4412623185672	0.404909901614964	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	4
+"Vahlkampfia_Vahlkampfia_avara"	"treatment_tag"	"719"	"treatment_tag719"	-0.268079557689006	0	2.63317567136743	0.918908711137094	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	4
+"Viridiraptor_uncultured_eukaryote"	"read_depth"	"read_depth"	"read_depth"	-3.68820521869737	0	13.1395120233239	0.778943766625081	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	5
+"Viridiraptor_uncultured_eukaryote"	"treatment_tag"	"100,000"	"treatment_tag100,000"	4.2316032700654	0	21.3762714136425	0.843077948921896	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	5
+"Viridiraptor_uncultured_eukaryote"	"treatment_tag"	"138"	"treatment_tag138"	0.858857921403621	0	2.13477030739995	0.687449526316198	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	5
+"Viridiraptor_uncultured_eukaryote"	"treatment_tag"	"26"	"treatment_tag26"	-1.47436926400203	0	2.30620875006383	0.522624965351255	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	5
+"Viridiraptor_uncultured_eukaryote"	"treatment_tag"	"3,727"	"treatment_tag3,727"	-1.95553425679327	0	2.24028267502814	0.382719652155973	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	5
+"Viridiraptor_uncultured_eukaryote"	"treatment_tag"	"4"	"treatment_tag4"	8.97524581855035	0	38.2300067633112	0.814387514836972	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	5
+"Viridiraptor_uncultured_eukaryote"	"treatment_tag"	"719"	"treatment_tag719"	1.36201026243081	0	2.54439957144666	0.592444281761721	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	5
+"Woronina_uncultured_Plasmodiophoridae"	"read_depth"	"read_depth"	"read_depth"	NA	0	NA	NA	NA	0.983722877735223	1	"All logistic values are the same"	"prevalence"	10	10
+"Woronina_uncultured_Plasmodiophoridae"	"treatment_tag"	"100,000"	"treatment_tag100,000"	NA	0	NA	NA	NA	0.987591235300644	1	"All logistic values are the same"	"prevalence"	10	10
+"Woronina_uncultured_Plasmodiophoridae"	"treatment_tag"	"138"	"treatment_tag138"	NA	0	NA	NA	NA	0.872785573415929	1	"All logistic values are the same"	"prevalence"	10	10
+"Woronina_uncultured_Plasmodiophoridae"	"treatment_tag"	"26"	"treatment_tag26"	NA	0	NA	NA	NA	0.786646725614975	1	"All logistic values are the same"	"prevalence"	10	10
+"Woronina_uncultured_Plasmodiophoridae"	"treatment_tag"	"3,727"	"treatment_tag3,727"	NA	0	NA	NA	NA	0.780695709908557	1	"All logistic values are the same"	"prevalence"	10	10
+"Woronina_uncultured_Plasmodiophoridae"	"treatment_tag"	"4"	"treatment_tag4"	NA	0	NA	NA	NA	0.949134959006736	1	"All logistic values are the same"	"prevalence"	10	10
+"Woronina_uncultured_Plasmodiophoridae"	"treatment_tag"	"719"	"treatment_tag719"	NA	0	NA	NA	NA	0.723848675408316	1	"All logistic values are the same"	"prevalence"	10	10
+"Zoopagales_metagenome"	"read_depth"	"read_depth"	"read_depth"	2.41611013418233e-14	0	15.5445609999851	0.999999999999999	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	2
+"Zoopagales_metagenome"	"treatment_tag"	"100,000"	"treatment_tag100,000"	-3.97001658338857e-14	0	25.323952009924	0.999999999999999	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	2
+"Zoopagales_metagenome"	"treatment_tag"	"138"	"treatment_tag138"	1.70595834780308e-16	0	2.22043960286846	1	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	2
+"Zoopagales_metagenome"	"treatment_tag"	"26"	"treatment_tag26"	-2.00178221833963e-15	0	2.48801777603558	0.999999999999999	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	2
+"Zoopagales_metagenome"	"treatment_tag"	"3,727"	"treatment_tag3,727"	9.60521376626719e-16	0	2.34855867276433	1	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	2
+"Zoopagales_metagenome"	"treatment_tag"	"4"	"treatment_tag4"	2.69985343389795	0	45.2749463957012	0.952448417726865	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	2
+"Zoopagales_metagenome"	"treatment_tag"	"719"	"treatment_tag719"	2.69985343389802	0	2.80706672247078	0.336147096159375	NA	NA	NA	"Nicht-ganzzahlige #Erfolge in einem binomial-GLM"	"prevalence"	10	2

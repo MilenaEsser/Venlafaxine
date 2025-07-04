@@ -1,0 +1,289 @@
+2025-07-04 18:21:39.254373 INFO::Writing function arguments to log file
+2025-07-04 18:21:39.264476 DEBUG::Function arguments
+2025-07-04 18:21:39.273389 DEBUG::Output folder: R_output/MaAsLin3/MaAsLin3_biofilm
+2025-07-04 18:21:39.274125 DEBUG::Formula:
+2025-07-04 18:21:39.27485 DEBUG::Fixed effects: treatment_tag,read_depth
+2025-07-04 18:21:39.275631 DEBUG::Reference: treatment_factor,control
+2025-07-04 18:21:39.276273 DEBUG::Random effects:
+2025-07-04 18:21:39.276867 DEBUG::Group effects:
+2025-07-04 18:21:39.277525 DEBUG::Ordered effects:
+2025-07-04 18:21:39.278136 DEBUG::Strata effects:
+2025-07-04 18:21:39.278781 DEBUG::Min Abundance: 0.000000
+2025-07-04 18:21:39.279358 DEBUG::Min Prevalence: 0.000000
+2025-07-04 18:21:39.280274 DEBUG::Zero Threshold: 0.000000
+2025-07-04 18:21:39.281324 DEBUG::Min variance: 0.000000
+2025-07-04 18:21:39.282063 DEBUG::Max significance: 0.100000
+2025-07-04 18:21:39.282772 DEBUG::Normalization: TSS
+2025-07-04 18:21:39.283666 DEBUG::Transform: LOG
+2025-07-04 18:21:39.284448 DEBUG::Correction method: BH
+2025-07-04 18:21:39.285279 DEBUG::Standardize: TRUE
+2025-07-04 18:21:39.285891 DEBUG::Abundance median comparison: TRUE
+2025-07-04 18:21:39.286473 DEBUG::Prevalence median comparison: TRUE
+2025-07-04 18:21:39.287119 DEBUG::Abundance median comparison threshold: 0
+2025-07-04 18:21:39.287727 DEBUG::Prevalence median comparison threshold: 0
+2025-07-04 18:21:39.288306 DEBUG::Subtract median: FALSE
+2025-07-04 18:21:39.288921 DEBUG::Warn prevalence: TRUE
+2025-07-04 18:21:39.289513 DEBUG::Small random effects: FALSE
+2025-07-04 18:21:39.290084 DEBUG::Augment: TRUE
+2025-07-04 18:21:39.29072 DEBUG::Evaluate only:
+2025-07-04 18:21:39.29147 DEBUG::Cores: 1
+2025-07-04 18:21:39.292218 DEBUG::Balanced Summary plot: FALSE
+2025-07-04 18:21:39.293081 INFO::Verifying options selected are valid
+2025-07-04 18:21:39.295399 INFO::Determining format of input files
+2025-07-04 18:21:39.297371 INFO::Input format is data samples as rows and metadata samples as rows
+2025-07-04 18:21:39.299333 DEBUG::A total of 15 samples were found in both the data and metadata
+2025-07-04 18:21:39.30022 DEBUG::Reordering data/metadata to use same sample ordering
+2025-07-04 18:21:39.301989 INFO::Formula for fixed effects: expr ~  treatment_tag + read_depth
+2025-07-04 18:21:39.303907 INFO::Running selected normalization method: TSS
+2025-07-04 18:21:39.306808 INFO::Creating output feature tables folder
+2025-07-04 18:21:39.308946 INFO::Writing normalized data to file R_output/MaAsLin3/MaAsLin3_biofilm/features/data_norm.tsv
+2025-07-04 18:21:39.313807 INFO::Filter data based on min abundance and min prevalence
+2025-07-04 18:21:39.315515 INFO::Total samples in data: 15
+2025-07-04 18:21:39.317136 INFO::Min samples required with min abundance for a feature not to be filtered: 0.000000
+2025-07-04 18:21:39.322849 INFO::Total filtered features: 0
+2025-07-04 18:21:39.324686 INFO::Filtered feature names from abundance and prevalence filtering:
+2025-07-04 18:21:39.327265 INFO::Total features filtered by non-zero variance filtering: 0
+2025-07-04 18:21:39.329567 INFO::Filtered feature names from variance filtering:
+2025-07-04 18:21:39.33139 INFO::Writing filtered data to file R_output/MaAsLin3/MaAsLin3_biofilm/features/filtered_data.tsv
+2025-07-04 18:21:39.335572 INFO::Running selected transform method: LOG
+2025-07-04 18:21:39.338762 INFO::Writing normalized, filtered, transformed data to file R_output/MaAsLin3/MaAsLin3_biofilm/features/data_transformed.tsv
+2025-07-04 18:21:39.343733 INFO::Factor detected for categorial metadata 'treatment_tag'. Using as-is.
+2025-07-04 18:21:39.345705 INFO::Applying z-score to standardize continuous metadata
+2025-07-04 18:21:39.364572 INFO::Running the linear model component
+2025-07-04 18:21:39.370907 DEBUG::Object: augment, Size: 56
+2025-07-04 18:21:39.371711 DEBUG::Object: cluster, Size: 0
+2025-07-04 18:21:39.37234 DEBUG::Object: cores, Size: 56
+2025-07-04 18:21:39.37303 DEBUG::Object: correction, Size: 112
+2025-07-04 18:21:39.373734 DEBUG::Object: extract_out, Size: 1416
+2025-07-04 18:21:39.374562 DEBUG::Object: feature_specific_covariate, Size: 0
+2025-07-04 18:21:39.375404 DEBUG::Object: feature_specific_covariate_name, Size: 0
+2025-07-04 18:21:39.376021 DEBUG::Object: feature_specific_covariate_record, Size: 0
+2025-07-04 18:21:39.376746 DEBUG::Object: features, Size: 11008
+2025-07-04 18:21:39.377405 DEBUG::Object: formula, Size: 1008
+2025-07-04 18:21:39.378097 DEBUG::Object: fun_list, Size: 58768
+2025-07-04 18:21:39.379013 DEBUG::Object: func_to_run, Size: 435336
+2025-07-04 18:21:39.379749 DEBUG::Object: groups, Size: 48
+2025-07-04 18:21:39.380476 DEBUG::Object: median_comparison, Size: 56
+2025-07-04 18:21:39.381095 DEBUG::Object: median_comparison_threshold, Size: 56
+2025-07-04 18:21:39.381735 DEBUG::Object: metadata, Size: 13952
+2025-07-04 18:21:39.382779 DEBUG::Object: model, Size: 112
+2025-07-04 18:21:39.383685 DEBUG::Object: model_function, Size: 8864
+2025-07-04 18:21:39.384613 DEBUG::Object: ordereds, Size: 48
+2025-07-04 18:21:39.385326 DEBUG::Object: random_effects_formula, Size: 0
+2025-07-04 18:21:39.386039 DEBUG::Object: ranef_function, Size: 0
+2025-07-04 18:21:39.386771 DEBUG::Object: save_models, Size: 56
+2025-07-04 18:21:39.387514 DEBUG::Object: small_random_effects, Size: 56
+2025-07-04 18:21:39.388349 DEBUG::Object: strata, Size: 48
+2025-07-04 18:21:39.389016 DEBUG::Object: subtract_median, Size: 56
+2025-07-04 18:21:39.389632 DEBUG::Object: summary_function, Size: 49424
+2025-07-04 18:21:39.390788 DEBUG::Object: func_to_run, Size: 435336
+2025-07-04 18:21:39.401791 INFO::Fitting model to feature number 1, Euamoebida_Copromyxa_microcystidis
+2025-07-04 18:21:39.413366 INFO::Fitting model to feature number 2, Euamoebida_Tubulinida_sp.
+2025-07-04 18:21:39.420051 INFO::Fitting model to feature number 3, Arcellinida_metagenome
+2025-07-04 18:21:39.42833 INFO::Fitting model to feature number 4, BOLA868_uncultured_Hartmannellidae
+2025-07-04 18:21:39.435299 INFO::Fitting model to feature number 5, Cercomonas_uncultured_Cercozoa
+2025-07-04 18:21:39.442574 INFO::Fitting model to feature number 6, Woronina_uncultured_Plasmodiophoridae
+2025-07-04 18:21:39.45054 INFO::Fitting model to feature number 7, Cercozoa_Athalamea_environmental
+2025-07-04 18:21:40.191251 INFO::Fitting model to feature number 8, Goniomonas_Goniomonas_truncata
+2025-07-04 18:21:40.198661 INFO::Fitting model to feature number 9, Nuclearia_metagenome
+2025-07-04 18:21:40.206699 INFO::Fitting model to feature number 10, Monosiga_uncultured_freshwater
+2025-07-04 18:21:40.214586 INFO::Fitting model to feature number 11, Saccamoeba_Saccamoeba_limax
+2025-07-04 18:21:40.221588 INFO::Fitting model to feature number 12, Mycamoeba_uncultured_freshwater
+2025-07-04 18:21:40.228411 INFO::Fitting model to feature number 13, Codosiga_Codosiga_hollandica
+2025-07-04 18:21:40.236083 INFO::Fitting model to feature number 14, Reclinomonas_Reclinomonas_americana
+2025-07-04 18:21:40.244888 INFO::Fitting model to feature number 15, Spirogyra_Spirogyra_pratensis
+2025-07-04 18:21:40.252097 INFO::Fitting model to feature number 16, Incertae_Sedis_metagenome
+2025-07-04 18:21:40.259068 INFO::Fitting model to feature number 17, Diplostraca_Diaphanosoma_sp.
+2025-07-04 18:21:40.265164 INFO::Fitting model to feature number 18, Diplostraca_Chydorus_sphaericus
+2025-07-04 18:21:40.271584 INFO::Fitting model to feature number 19, Diplostraca_Pleuroxus_aduncus
+2025-07-04 18:21:40.278035 INFO::Fitting model to feature number 20, Diplostraca_Bosmina_longirostris
+2025-07-04 18:21:40.28466 INFO::Fitting model to feature number 21, Diplostraca_Oxyurella_longicaudis
+2025-07-04 18:21:40.28909 WARNING::Fitting problem for feature 21 returning NA
+2025-07-04 18:21:40.29271 INFO::Fitting model to feature number 22, Diplostraca_Acroperus_harpae
+2025-07-04 18:21:40.298911 INFO::Fitting model to feature number 23, Diplostraca_Acantholeberis_curvirostris
+2025-07-04 18:21:40.306185 INFO::Fitting model to feature number 24, Zoophagus_Zoophagus_insidians
+2025-07-04 18:21:40.313133 INFO::Fitting model to feature number 25, Legeriomycetaceae_Legeriosimilis_sp.
+2025-07-04 18:21:40.320243 INFO::Fitting model to feature number 26, Discosea_metagenome
+2025-07-04 18:21:40.326696 INFO::Fitting model to feature number 27, Rigifila_Rigifila_ramosa
+2025-07-04 18:21:40.33326 INFO::Fitting model to feature number 28, H15-6_Choanocystis_symna
+2025-07-04 18:21:40.340854 INFO::Fitting model to feature number 29, CV1-B1-93_uncultured_centroheliozoan
+2025-07-04 18:21:41.468267 INFO::Fitting model to feature number 30, Pterocystis_Pterocystis_sp.
+2025-07-04 18:21:41.474969 INFO::Fitting model to feature number 31, Acanthocystidae_uncultured_eukaryote
+2025-07-04 18:21:41.48028 INFO::Fitting model to feature number 32, H1-10_uncultured_eukaryote
+2025-07-04 18:21:41.487092 INFO::Fitting model to feature number 33, Haptophyta_Spironema_cf.
+2025-07-04 18:21:41.492353 INFO::Fitting model to feature number 34, Parvilucifera_uncultured_alveolate
+2025-07-04 18:21:41.501908 INFO::Performing tests against medians
+2025-07-04 18:21:44.22866 INFO::Counting total values for each feature
+2025-07-04 18:21:44.234572 INFO::Running the logistic model component
+2025-07-04 18:21:44.239729 DEBUG::Object: augment, Size: 56
+2025-07-04 18:21:44.240557 DEBUG::Object: cluster, Size: 0
+2025-07-04 18:21:44.241227 DEBUG::Object: cores, Size: 56
+2025-07-04 18:21:44.241955 DEBUG::Object: correction, Size: 112
+2025-07-04 18:21:44.242578 DEBUG::Object: extract_out, Size: 1416
+2025-07-04 18:21:44.243156 DEBUG::Object: feature_specific_covariate, Size: 0
+2025-07-04 18:21:44.243706 DEBUG::Object: feature_specific_covariate_name, Size: 0
+2025-07-04 18:21:44.244259 DEBUG::Object: feature_specific_covariate_record, Size: 0
+2025-07-04 18:21:44.244952 DEBUG::Object: features, Size: 8720
+2025-07-04 18:21:44.245847 DEBUG::Object: formula, Size: 1008
+2025-07-04 18:21:44.246471 DEBUG::Object: fun_list, Size: 70920
+2025-07-04 18:21:44.247152 DEBUG::Object: func_to_run, Size: 435336
+2025-07-04 18:21:44.247738 DEBUG::Object: groups, Size: 48
+2025-07-04 18:21:44.248383 DEBUG::Object: median_comparison, Size: 56
+2025-07-04 18:21:44.249106 DEBUG::Object: median_comparison_threshold, Size: 56
+2025-07-04 18:21:44.249723 DEBUG::Object: metadata, Size: 13952
+2025-07-04 18:21:44.250329 DEBUG::Object: model, Size: 120
+2025-07-04 18:21:44.250905 DEBUG::Object: model_function, Size: 21016
+2025-07-04 18:21:44.251618 DEBUG::Object: ordereds, Size: 48
+2025-07-04 18:21:44.252187 DEBUG::Object: random_effects_formula, Size: 0
+2025-07-04 18:21:44.252829 DEBUG::Object: ranef_function, Size: 0
+2025-07-04 18:21:44.253389 DEBUG::Object: save_models, Size: 56
+2025-07-04 18:21:44.253934 DEBUG::Object: small_random_effects, Size: 56
+2025-07-04 18:21:44.254497 DEBUG::Object: strata, Size: 48
+2025-07-04 18:21:44.255056 DEBUG::Object: subtract_median, Size: 56
+2025-07-04 18:21:44.255627 DEBUG::Object: summary_function, Size: 49424
+2025-07-04 18:21:44.256321 DEBUG::Object: func_to_run, Size: 435336
+2025-07-04 18:21:44.257412 INFO::Fitting model to feature number 1, Euamoebida_Copromyxa_microcystidis
+2025-07-04 18:21:44.265889 WARNING::Fitting problem for feature 1 a warning was issued
+2025-07-04 18:21:44.271798 INFO::Fitting model to feature number 2, Euamoebida_Tubulinida_sp.
+2025-07-04 18:21:44.277692 WARNING::Fitting problem for feature 2 a warning was issued
+2025-07-04 18:21:44.282813 INFO::Fitting model to feature number 3, Arcellinida_metagenome
+2025-07-04 18:21:44.285758 INFO::Fitting model to feature number 4, BOLA868_uncultured_Hartmannellidae
+2025-07-04 18:21:44.28895 INFO::Fitting model to feature number 5, Cercomonas_uncultured_Cercozoa
+2025-07-04 18:21:44.294608 WARNING::Fitting problem for feature 5 a warning was issued
+2025-07-04 18:21:44.299248 INFO::Fitting model to feature number 6, Woronina_uncultured_Plasmodiophoridae
+2025-07-04 18:21:44.304185 WARNING::Fitting problem for feature 6 a warning was issued
+2025-07-04 18:21:44.309162 INFO::Fitting model to feature number 7, Cercozoa_Athalamea_environmental
+2025-07-04 18:21:44.314362 WARNING::Fitting problem for feature 7 a warning was issued
+2025-07-04 18:21:44.319649 INFO::Fitting model to feature number 8, Goniomonas_Goniomonas_truncata
+2025-07-04 18:21:44.324901 WARNING::Fitting problem for feature 8 a warning was issued
+2025-07-04 18:21:44.329621 INFO::Fitting model to feature number 9, Nuclearia_metagenome
+2025-07-04 18:21:44.334639 WARNING::Fitting problem for feature 9 a warning was issued
+2025-07-04 18:21:44.341538 INFO::Fitting model to feature number 10, Monosiga_uncultured_freshwater
+2025-07-04 18:21:44.347819 WARNING::Fitting problem for feature 10 a warning was issued
+2025-07-04 18:21:44.353644 INFO::Fitting model to feature number 11, Saccamoeba_Saccamoeba_limax
+2025-07-04 18:21:44.359889 WARNING::Fitting problem for feature 11 a warning was issued
+2025-07-04 18:21:44.365276 INFO::Fitting model to feature number 12, Mycamoeba_uncultured_freshwater
+2025-07-04 18:21:44.371766 WARNING::Fitting problem for feature 12 a warning was issued
+2025-07-04 18:21:44.376938 INFO::Fitting model to feature number 13, Codosiga_Codosiga_hollandica
+2025-07-04 18:21:44.382348 WARNING::Fitting problem for feature 13 a warning was issued
+2025-07-04 18:21:44.387679 INFO::Fitting model to feature number 14, Reclinomonas_Reclinomonas_americana
+2025-07-04 18:21:44.392915 WARNING::Fitting problem for feature 14 a warning was issued
+2025-07-04 18:21:44.398069 INFO::Fitting model to feature number 15, Spirogyra_Spirogyra_pratensis
+2025-07-04 18:21:44.404456 WARNING::Fitting problem for feature 15 a warning was issued
+2025-07-04 18:21:44.409815 INFO::Fitting model to feature number 16, Incertae_Sedis_metagenome
+2025-07-04 18:21:44.415226 WARNING::Fitting problem for feature 16 a warning was issued
+2025-07-04 18:21:44.420706 INFO::Fitting model to feature number 17, Diplostraca_Diaphanosoma_sp.
+2025-07-04 18:21:44.425802 WARNING::Fitting problem for feature 17 a warning was issued
+2025-07-04 18:21:44.431109 INFO::Fitting model to feature number 18, Diplostraca_Chydorus_sphaericus
+2025-07-04 18:21:44.437025 WARNING::Fitting problem for feature 18 a warning was issued
+2025-07-04 18:21:44.44262 INFO::Fitting model to feature number 19, Diplostraca_Pleuroxus_aduncus
+2025-07-04 18:21:44.44551 INFO::Fitting model to feature number 20, Diplostraca_Bosmina_longirostris
+2025-07-04 18:21:44.450557 WARNING::Fitting problem for feature 20 a warning was issued
+2025-07-04 18:21:44.45544 INFO::Fitting model to feature number 21, Diplostraca_Oxyurella_longicaudis
+2025-07-04 18:21:44.4614 WARNING::Fitting problem for feature 21 a warning was issued
+2025-07-04 18:21:44.467034 INFO::Fitting model to feature number 22, Diplostraca_Acroperus_harpae
+2025-07-04 18:21:44.472998 WARNING::Fitting problem for feature 22 a warning was issued
+2025-07-04 18:21:44.478247 INFO::Fitting model to feature number 23, Diplostraca_Acantholeberis_curvirostris
+2025-07-04 18:21:44.484451 WARNING::Fitting problem for feature 23 a warning was issued
+2025-07-04 18:21:44.490037 INFO::Fitting model to feature number 24, Zoophagus_Zoophagus_insidians
+2025-07-04 18:21:44.496614 WARNING::Fitting problem for feature 24 a warning was issued
+2025-07-04 18:21:44.661317 INFO::Fitting model to feature number 25, Legeriomycetaceae_Legeriosimilis_sp.
+2025-07-04 18:21:44.66755 WARNING::Fitting problem for feature 25 a warning was issued
+2025-07-04 18:21:44.672693 INFO::Fitting model to feature number 26, Discosea_metagenome
+2025-07-04 18:21:44.677941 WARNING::Fitting problem for feature 26 a warning was issued
+2025-07-04 18:21:44.683014 INFO::Fitting model to feature number 27, Rigifila_Rigifila_ramosa
+2025-07-04 18:21:44.688278 WARNING::Fitting problem for feature 27 a warning was issued
+2025-07-04 18:21:44.693829 INFO::Fitting model to feature number 28, H15-6_Choanocystis_symna
+2025-07-04 18:21:44.699797 WARNING::Fitting problem for feature 28 a warning was issued
+2025-07-04 18:21:44.705089 INFO::Fitting model to feature number 29, CV1-B1-93_uncultured_centroheliozoan
+2025-07-04 18:21:44.708369 INFO::Fitting model to feature number 30, Pterocystis_Pterocystis_sp.
+2025-07-04 18:21:44.716681 WARNING::Fitting problem for feature 30 a warning was issued
+2025-07-04 18:21:44.722385 INFO::Fitting model to feature number 31, Acanthocystidae_uncultured_eukaryote
+2025-07-04 18:21:44.728597 WARNING::Fitting problem for feature 31 a warning was issued
+2025-07-04 18:21:44.733937 INFO::Fitting model to feature number 32, H1-10_uncultured_eukaryote
+2025-07-04 18:21:44.739447 WARNING::Fitting problem for feature 32 a warning was issued
+2025-07-04 18:21:44.747606 INFO::Fitting model to feature number 33, Haptophyta_Spironema_cf.
+2025-07-04 18:21:44.756649 WARNING::Fitting problem for feature 33 a warning was issued
+2025-07-04 18:21:44.763535 INFO::Fitting model to feature number 34, Parvilucifera_uncultured_alveolate
+2025-07-04 18:21:44.772538 WARNING::Fitting problem for feature 34 a warning was issued
+2025-07-04 18:21:44.785418 INFO::Performing tests against medians
+2025-07-04 18:21:44.805545 INFO::Counting total values for each feature
+2025-07-04 18:21:44.812404 INFO::Re-running abundances for warn_prevalence
+2025-07-04 18:21:44.814028 INFO::Running selected normalization method: TSS
+2025-07-04 18:21:44.81779 INFO::Running selected transform method: LOG
+2025-07-04 18:21:44.823756 DEBUG::Object: augment, Size: 56
+2025-07-04 18:21:44.824901 DEBUG::Object: cluster, Size: 0
+2025-07-04 18:21:44.825864 DEBUG::Object: cores, Size: 56
+2025-07-04 18:21:44.826757 DEBUG::Object: correction, Size: 112
+2025-07-04 18:21:44.82762 DEBUG::Object: extract_out, Size: 1416
+2025-07-04 18:21:44.828464 DEBUG::Object: feature_specific_covariate, Size: 0
+2025-07-04 18:21:44.829151 DEBUG::Object: feature_specific_covariate_name, Size: 0
+2025-07-04 18:21:44.829793 DEBUG::Object: feature_specific_covariate_record, Size: 0
+2025-07-04 18:21:44.830461 DEBUG::Object: features, Size: 11008
+2025-07-04 18:21:44.831248 DEBUG::Object: formula, Size: 1008
+2025-07-04 18:21:44.832292 DEBUG::Object: fun_list, Size: 58768
+2025-07-04 18:21:44.833315 DEBUG::Object: func_to_run, Size: 435336
+2025-07-04 18:21:44.834107 DEBUG::Object: groups, Size: 48
+2025-07-04 18:21:44.834864 DEBUG::Object: median_comparison, Size: 56
+2025-07-04 18:21:44.835838 DEBUG::Object: median_comparison_threshold, Size: 56
+2025-07-04 18:21:44.83688 DEBUG::Object: metadata, Size: 13952
+2025-07-04 18:21:44.837987 DEBUG::Object: model, Size: 112
+2025-07-04 18:21:44.838763 DEBUG::Object: model_function, Size: 8864
+2025-07-04 18:21:44.839466 DEBUG::Object: ordereds, Size: 48
+2025-07-04 18:21:44.840207 DEBUG::Object: random_effects_formula, Size: 0
+2025-07-04 18:21:44.840998 DEBUG::Object: ranef_function, Size: 0
+2025-07-04 18:21:44.84172 DEBUG::Object: save_models, Size: 56
+2025-07-04 18:21:44.842382 DEBUG::Object: small_random_effects, Size: 56
+2025-07-04 18:21:44.843099 DEBUG::Object: strata, Size: 48
+2025-07-04 18:21:44.844046 DEBUG::Object: subtract_median, Size: 56
+2025-07-04 18:21:44.844856 DEBUG::Object: summary_function, Size: 49424
+2025-07-04 18:21:44.84571 DEBUG::Object: func_to_run, Size: 435336
+2025-07-04 18:21:44.846849 INFO::Fitting model to feature number 1, Euamoebida_Copromyxa_microcystidis
+2025-07-04 18:21:44.855973 INFO::Fitting model to feature number 2, Euamoebida_Tubulinida_sp.
+2025-07-04 18:21:46.061135 INFO::Fitting model to feature number 3, Arcellinida_metagenome
+2025-07-04 18:21:46.067488 INFO::Fitting model to feature number 4, BOLA868_uncultured_Hartmannellidae
+2025-07-04 18:21:46.073029 INFO::Fitting model to feature number 5, Cercomonas_uncultured_Cercozoa
+2025-07-04 18:21:46.0796 INFO::Fitting model to feature number 6, Woronina_uncultured_Plasmodiophoridae
+2025-07-04 18:21:46.085747 INFO::Fitting model to feature number 7, Cercozoa_Athalamea_environmental
+2025-07-04 18:21:46.092187 INFO::Fitting model to feature number 8, Goniomonas_Goniomonas_truncata
+2025-07-04 18:21:46.098293 INFO::Fitting model to feature number 9, Nuclearia_metagenome
+2025-07-04 18:21:46.105359 INFO::Fitting model to feature number 10, Monosiga_uncultured_freshwater
+2025-07-04 18:21:53.089219 INFO::Fitting model to feature number 11, Saccamoeba_Saccamoeba_limax
+2025-07-04 18:21:54.310614 INFO::Fitting model to feature number 12, Mycamoeba_uncultured_freshwater
+2025-07-04 18:21:54.316909 INFO::Fitting model to feature number 13, Codosiga_Codosiga_hollandica
+2025-07-04 18:21:54.322492 INFO::Fitting model to feature number 14, Reclinomonas_Reclinomonas_americana
+2025-07-04 18:21:54.328054 INFO::Fitting model to feature number 15, Spirogyra_Spirogyra_pratensis
+2025-07-04 18:21:54.334068 INFO::Fitting model to feature number 16, Incertae_Sedis_metagenome
+2025-07-04 18:21:54.340352 INFO::Fitting model to feature number 17, Diplostraca_Diaphanosoma_sp.
+2025-07-04 18:21:54.346557 INFO::Fitting model to feature number 18, Diplostraca_Chydorus_sphaericus
+2025-07-04 18:21:54.354684 INFO::Fitting model to feature number 19, Diplostraca_Pleuroxus_aduncus
+2025-07-04 18:21:54.563854 INFO::Fitting model to feature number 20, Diplostraca_Bosmina_longirostris
+2025-07-04 18:21:54.684011 INFO::Fitting model to feature number 21, Diplostraca_Oxyurella_longicaudis
+2025-07-04 18:21:54.687262 WARNING::Fitting problem for feature 21 returning NA
+2025-07-04 18:21:54.691224 INFO::Fitting model to feature number 22, Diplostraca_Acroperus_harpae
+2025-07-04 18:21:54.697682 INFO::Fitting model to feature number 23, Diplostraca_Acantholeberis_curvirostris
+2025-07-04 18:21:54.703829 INFO::Fitting model to feature number 24, Zoophagus_Zoophagus_insidians
+2025-07-04 18:21:54.709645 INFO::Fitting model to feature number 25, Legeriomycetaceae_Legeriosimilis_sp.
+2025-07-04 18:21:54.716181 INFO::Fitting model to feature number 26, Discosea_metagenome
+2025-07-04 18:21:54.721942 INFO::Fitting model to feature number 27, Rigifila_Rigifila_ramosa
+2025-07-04 18:21:54.727481 INFO::Fitting model to feature number 28, H15-6_Choanocystis_symna
+2025-07-04 18:21:54.779632 INFO::Fitting model to feature number 29, CV1-B1-93_uncultured_centroheliozoan
+2025-07-04 18:21:54.860112 INFO::Fitting model to feature number 30, Pterocystis_Pterocystis_sp.
+2025-07-04 18:21:54.86622 INFO::Fitting model to feature number 31, Acanthocystidae_uncultured_eukaryote
+2025-07-04 18:21:54.8705 INFO::Fitting model to feature number 32, H1-10_uncultured_eukaryote
+2025-07-04 18:21:54.876947 INFO::Fitting model to feature number 33, Haptophyta_Spironema_cf.
+2025-07-04 18:21:54.880748 INFO::Fitting model to feature number 34, Parvilucifera_uncultured_alveolate
+2025-07-04 18:21:56.760385 INFO::Creating fits folder
+2025-07-04 18:21:56.762337 INFO::Writing residuals to file R_output/MaAsLin3/MaAsLin3_biofilm/fits/residuals_linear.rds
+2025-07-04 18:21:56.764986 INFO::Writing fitted values to file R_output/MaAsLin3/MaAsLin3_biofilm/fits/fitted_linear.rds
+2025-07-04 18:21:56.767869 INFO::Writing residuals to file R_output/MaAsLin3/MaAsLin3_biofilm/fits/residuals_logistic.rds
+2025-07-04 18:21:56.77108 INFO::Writing fitted values to file R_output/MaAsLin3/MaAsLin3_biofilm/fits/fitted_logistic.rds
+2025-07-04 18:21:56.776311 INFO::Writing all the results to file (ordered 
+            by increasing individual q-values): R_output/MaAsLin3/MaAsLin3_biofilm/all_results.tsv
+2025-07-04 18:21:56.791068 INFO::Writing the significant results without errors (those which have joint q-values less than or equal to the threshold of 0.100000 ) to file (ordered by increasing individual q-values): R_output/MaAsLin3/MaAsLin3_biofilm/significant_results.tsv
+2025-07-04 18:21:56.794083 INFO::Creating output figures folder
+2025-07-04 18:21:56.79717 INFO::Writing summary plot of significant
+                        results to file: R_output/MaAsLin3/MaAsLin3_biofilm/figures/summary_plot.pdf
+2025-07-04 18:22:01.309071 INFO::Writing association plots (one for each significant association) to output folder: R_output/MaAsLin3/MaAsLin3_biofilm/figures
+2025-07-04 18:22:01.531254 INFO::All associations had errors 
+                                or were insignificant.
