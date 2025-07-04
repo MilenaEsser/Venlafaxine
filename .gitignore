@@ -1,0 +1,12 @@
+*.zip 
+*.fastq 
+*.fq 
+*.bam 
+.Rproj.user/ 
+.Rhistory 
+.RData 
+R_analysis/*/R_output/ 
+output/ 
+results/ 
+.DS_Store 
+Thumbs.db 
