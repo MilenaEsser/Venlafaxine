@@ -1,0 +1,276 @@
+---
+title: "Venlaflaxine - microbiome beta diversity analysis"
+author: "Milena Esser"
+date: "2025-05-20"
+output:
+  html_document: 
+    toc: true
+    toc_depth: 4
+    number_sections: true
+    toc_float: true
+  pdf_document: default
+editor_options:
+  chunk_output_type: console
+---
+
+```{r 3-setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
+rm(list=ls()) #Clears environment
+#Change margin size to be smaller so graphs fit in the plot panel
+par(mar = c(2, 2, 2, 2)) # Set the margin on all sides to 2
+#setwd("C:\\Users\\milen\\OneDrive - McMaster University\\Bow river microbiome\\R_analysis")
+
+###Loading packages
+library(phyloseq) #phyloseq will be the main package used for structuring microbiome data and diversity comparisons
+library(ggplot2) #For creating graphs
+library(ggtext)
+library(plyr) #if you load this after dpylr it messes up the dplyr functions
+library(dplyr) #Helps with data wrangling 
+library(vegan)
+library(tidyverse) #data wrangling
+library(knitr) #For R Markdown knitting
+library(RColorBrewer)
+library(ggpubr)
+library(MicEco) #to prune based on prevalence
+library(picante)
+library(ggh4x) # For facet_nested_wrap()
+library(multcompView)
+library(microbiome) #abundances function Retrieves the taxon abundance table from phyloseq-class object and ensures it is systematically returned as taxa x samples matrix.
+library(rdacca.hp) #package for hierarchical and variation partitioning in multiple regression and canonical ananlysis
+library(data.table)
+```
+
+### Biofilm
+
+```{r Loading data}
+
+# not rarefied dataset "ps_biofilm"
+load("R_analysis/18S/R_output/ps_objects/Venla_biofilm_phyloseq_filt_unnorm.RData")
+
+# rarefied dataset "ps_biofilm_rare"
+load("R_analysis/18S/R_output/ps_objects/Venla_biofilm_phyloseq_filt_rar.RData")
+
+# css-normalized dataset "ps_biofilm_css"
+load("R_analysis/18S/R_output/ps_objects/Venla_biofilm_phyloseq_filt_css.RData")
+
+# TSS-normalized dataset "ps_biofilm_prop"
+load("R_analysis/18S/R_output/ps_objects/Venla_biofilm_phyloseq_filt_propnorm.RData")
+```
+
+\# Create output directory
+
+output_dir \<- here::here("R_output", "Beta_diversity", dataset)
+
+dir.create(output_dir, recursive = TRUE, showWarnings = FALSE)
+
+```{r select-data-for-beta}
+dataset <- "css"
+ps <- get(paste0("ps_biofilm_", dataset))
+
+output_dir <- file.path("R_analysis/18S/R_output", "Beta_diversity", dataset)
+dir.create(output_dir, recursive = TRUE, showWarnings = FALSE)
+```
+
+### PCoA Bray Curtis
+
+Performed Principal Coordinates Analysis (PCoA) on the phyloseq object using Bray-Curtis distance. This method reduces multidimensional microbial community data into principal axes to visualize sample similarities.
+
+***PCoA plot***
+
+```{r Plot-PCoA}
+
+bray <- ordinate(ps, method = "PCoA", distance = "bray")
+
+metadata<- data.frame(sample_data(ps))
+
+metadata$enclosure <- factor(metadata$enclosure)
+metadata$treatment <- factor(metadata$treatment_tag)
+
+
+p <- plot_ordination(ps, bray, color = "treatment_tag") +
+  theme_classic()
+
+p
+#save plot
+
+filename <- file.path(output_dir, paste0("PCoA_Bray_biofilm_", dataset, ".png"))
+ggsave(filename = filename, height = 5, width = 7)
+
+
+```
+
+### NMDS Bray Curtis
+
+I looked at 2D (k=2) and 3D (k=3) NMDS
+
+Interpretation of stress values:
+
+-   \< 0.05 = excellent,
+
+-   0.05–0.1 = very good,
+
+-   0.1–0.2 = usable but some distortion,
+
+-   \> 0.2 = not reliable
+
+Weak ties mean that few identical distances were tied during ranking, which is good, it indicates the data have good variability.
+
+```{r NMDS-all-samples}
+# NMDS 
+set.seed(501)
+# Run NMDS with k=3
+ord_NMDS_k3 <- ordinate(ps, method = "NMDS", distance = "bray", trymax = 100, k = 3)
+cat("NMDS with k=3 results:\n")
+cat("Stress value:", ord_NMDS_k3$stress, "\n")
+
+
+# Run NMDS with k=2
+ord_NMDS_k2 <- ordinate(ps, method = "NMDS", distance = "bray", trymax = 100, k = 2)
+cat("NMDS with k=2 results:\n")
+cat("Stress value:", ord_NMDS_k2$stress, "\n")
+
+#Weak ties mean that few identical distances were tied during ranking, which is good — it indicates the data have good variability.
+
+```
+
+Based on stress values, I continued with:
+
+```{r select-NMDS-model}
+
+selected_model_name <- "ord_NMDS_k2"
+ord_NMDS <- ord_NMDS_k2
+
+cat("Selected model:", selected_model_name, "; Stress value:", ord_NMDS$stress, "\n")
+```
+
+```{r plotting-NMDS, fig.height=10, fig.width=14, message=FALSE}
+#Plotting all sites and taxa in one facet
+plotNMDS1<-plot_ordination(ps, ord_NMDS, color = "treatment_tag") + 
+  theme_classic() +
+  geom_point(size=3)+
+  theme(strip.background = element_blank())+
+  theme(legend.key.size = unit(0.3, 'cm'), 
+        legend.title = element_text(size=20), 
+        legend.text = element_text(size=18), 
+        axis.text = element_text(size=16, color="black"),
+        axis.title = element_text(size=18, color="black"),
+        legend.position = "right")+
+  guides(color=guide_legend(title="Treatment")) +
+  scale_color_discrete(palette(c("orange","blue","red","black","magenta","peachpuff")))
+
+
+newtab1 = data.table(plotNMDS1$data)
+newtab1$treatment_tag <- ordered(newtab1$treatment_tag,
+ levels=c("control", "4", "26", "138", "3,727", "100,000"), labels=c("control", "4", "26", "138", "3,727", "100,000"))
+plotNMDS1$data <- newtab1
+print(plotNMDS1)
+
+#save plot
+filename <- file.path(output_dir, paste0("NMDS_biofilm_", dataset, ".png"))
+ggsave(filename = filename, height = 10, width = 14)
+
+
+
+```
+
+#### Statistics
+
+##### PERMANOVA
+
+```{r PERMANOVA-all-samples-together}
+## Create Bray-Curtis distance matrix
+df_bray <- phyloseq::distance(ps, method = "bray")
+
+## PERMANOVA testing for effects of Site and Sample Type on community composition
+test.adonis.all <- adonis2(df_bray ~ treatment_tag, data = metadata)
+
+## Print a clean, reader-friendly summary for the report
+cat("PERMANOVA Results for Bray-Curtis Distance:\n")
+cat("Testing effects of treatment on microbial community composition.\n\n")
+
+# Format the output nicely
+adonis_table <- as.data.frame(test.adonis.all)
+
+print(adonis_table)
+
+cat("\nInterpretation:\n")
+cat("- Significant p-values (< 0.05) indicate a statistically significant effect of that factor on community composition.\n")
+cat("- R² values represent the proportion of variation explained by each factor.\n")
+```
+
+##### Beta dispersion
+
+betadisper measures the spread (i.e., variability) of samples around the group centroid in NMDS (or distance) space. It’s analogous to a Levene’s test for homogeneity of variance, but for multivariate data. It helps to understand if your PERMANOVA results are driven more by location (centroid differences) or spread (dispersion differences).
+
+If dispersions differ too much, you have to be cautious in interpreting PERMANOVA results. As this is highly significant: Differences in microbial composition among Families are not only due to changes in the mean community but also because some Families are more variable than others.
+
+-   **If p \> 0.05**: No evidence of unequal dispersion → You can trust group separation in PERMANOVA.
+-   **If p \< 0.05**: Significant dispersion → Group differences in PERMANOVA **may be confounded** by group variance, **not just location**.
+
+```{r beta-dispersion-all-samples-together}
+
+#Are microbial (or community) compositions more variable in some Families than in others?
+bd_all<-betadisper(df_bray, metadata$treatment_tag) 
+anova(bd_all)
+
+
+#### Boxplot to show dispersion #####
+# Extract distances to centroids
+beta_df <- data.frame(
+  treatment = bd_all$group,
+  DistanceToCentroid = bd_all$distances
+)
+
+# Show first few rows to verify structure
+cat("Summary of distances to group centroids:\n")
+print(head(beta_df))
+
+```
+
+```{r tukey-to-identify-sig-diff-dispersion, eval=F}
+
+#In case of p< 0.05: pairwise comparison to identify group with significantly different dispersion
+
+tukey_res <- TukeyHSD(bd_all_fam)
+sig_disp <- as.data.frame(tukey_res$group)
+sig_disp$Comparison <- rownames(sig_disp)
+sig_disp <- sig_disp[sig_disp$`p adj` < 0.05, ]
+
+# View the significant ones
+cat("All significant results:\n")
+sig_disp[order(sig_disp$`p adj`), ]
+```
+
+Create boxplot
+
+```{r beta-dispersion-boxplot-all, fig.height=5, fig.width=8}
+# Create a ggplot boxplot
+ggplot(beta_df, aes(x = treatment, y = DistanceToCentroid, fill = treatment)) +
+  geom_boxplot(alpha = 0.7, outlier.color = "black", outlier.size = 1.5) +
+  geom_jitter(width = 0.2, alpha=0.5, size=1.5) + # add jittered points
+  theme_classic() +
+  theme(
+    axis.text.x = element_text(angle = 45, hjust = 1, size=12),
+    axis.text.y = element_text(size=12),
+    axis.title = element_text(size=14, face="bold"),
+    legend.position = "none"
+  ) +
+  labs(
+    x = "treatment",
+    y = "Distance to Group Centroid",
+ #   title = "Beta Dispersion across Invertebrate Families"
+  ) +
+  scale_fill_brewer(palette = "Set2")  # optional color palette
+
+#Save plots
+
+#Save plot as png
+filename <- file.path(output_dir, paste0("Beta_Dispersion_across_treatmentgroups_", dataset, ".png"))
+ggsave(filename = filename, height = 5, width = 8)
+#save plot as pdf
+filename <- file.path(output_dir, paste0("Beta_Dispersion_across_Invertebrate_treatmentgroups_", dataset, ".pdf"))
+ggsave(filename = filename, height = 5, width = 8)
+
+
+#Beta dispersion differed significantly among Families, suggesting that observed differences in community composition are associated with both shifts in mean composition and differences in within-group variability.
+```

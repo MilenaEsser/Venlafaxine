@@ -1,0 +1,54 @@
+---
+title: "Venlaflaxine 18S Report"
+author: "Milena Esser"
+date: "`r Sys.Date()`"
+output: 
+  html_document: 
+    toc: true
+    toc_depth: 3
+    toc_float: true
+    number_sections: true
+    df_print: paged
+  pdf_document: default
+  editor_options:
+  chunk_output_type: console
+---
+
+```{r setup-here, include=FALSE}
+# Load necessary library
+library(rmarkdown)
+library(here)
+```
+
+# **Introduction**
+
+This report provides a comprehensive overview of eukaryotic data processing and analysis for the Venlaflaxine mesocosm data on water,biofilm, and sediment data taken in 2023.
+
+# **Data Import, Filtering & Normalization**
+
+```{r child = "R_analysis/18S/1_Create_physeq_Venla18_MEsser.Rmd", eval=TRUE}
+
+```
+
+# **Alpha diversity**
+
+```{r child = "R_analysis/18S/2_Venla18_alphadiversity_MEsser.Rmd", eval=TRUE}
+```
+
+# **Beta diversity**
+
+```{r child = "R_analysis/18S/3_Venla18_betadiversity_MEsser.Rmd", eval=TRUE}
+
+```
+
+# **Barplots**
+
+```{r child = "R_analysis/18S/4_Venla18_barplots_MEsser.Rmd", eval=TRUE}
+```
+
+# **Differential Abundance Analysis**
+
+## MaAsLin3
+
+```{r child = "R_analysis/18S/5_Venla18_MaAsLin3_MEsser.Rmd", eval=TRUE}
+```
